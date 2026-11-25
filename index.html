@@ -1,825 +1,271 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="es-AR">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Farías Finanzas · Asesoría financiera en el NEA</title>
+<meta name="description" content="Fabián Farías, asesor financiero en Resistencia, Chaco. Mercado de capitales explicado claro para el campo, el comercio y las familias de Chaco, Corrientes, Formosa y Misiones.">
+<link rel="canonical" href="https://fariasfinanzas.com.ar/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://fariasfinanzas.com.ar/">
+<meta property="og:title" content="Farías Finanzas · Finanzas con los pies en la tierra">
+<meta property="og:description" content="Asesoría financiera para el agro, las pymes y las familias del NEA.">
+<meta property="og:image" content="https://fariasfinanzas.com.ar/img/og-image.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@fariasfinanzas">
+<meta name="theme-color" content="#1F4A3A">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,600;0,8..60,700;1,8..60,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FinancialService","name":"Farías Finanzas","founder":{"@type":"Person","name":"Fabián Farías"},"url":"https://fariasfinanzas.com.ar/","email":"contacto@fariasfinanzas.com.ar","image":"https://fariasfinanzas.com.ar/img/og-image.png","address":{"@type":"PostalAddress","addressLocality":"Resistencia","addressRegion":"Chaco","addressCountry":"AR"},"areaServed":["Chaco","Corrientes","Formosa","Misiones"],"sameAs":["https://www.instagram.com/fariasfinanzas","https://x.com/fariasfinanzas","https://www.facebook.com/fariasfinanzas","https://www.linkedin.com/company/fariasfinanzas"]}
+</script>
+<style>
+:root{--verde:#1F4A3A;--verde-osc:#163729;--tierra:#A8492A;--dorado:#C9962E;--algodon:#F6F1E7;--arena:#D9C9A3;--carbon:#1C2321;--gris:#4A524F;--linea:#E4DED0;--fondo:#FBFAF6;
+--serif:'Source Serif 4',Georgia,serif;--sans:Inter,system-ui,-apple-system,'Segoe UI',sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:var(--sans);color:var(--carbon);background:var(--fondo);line-height:1.6;font-size:17px}
+img,svg{display:block;max-width:100%}
+a{color:var(--verde)}a:hover{color:var(--tierra)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+h1,h2,h3{font-family:var(--serif);line-height:1.15;margin:0;color:var(--verde)}
+.kicker{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--tierra);font-weight:600;margin:0 0 10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 22px;border-radius:10px;font-weight:600;text-decoration:none;font-size:16px;min-height:48px}
+.btn-claro{background:var(--algodon);color:var(--verde)}.btn-claro:hover{background:#fff;color:var(--verde)}
+.btn-borde{border:1.5px solid var(--arena);color:var(--algodon)}.btn-borde:hover{border-color:var(--algodon);color:#fff}
+.btn-verde{background:var(--verde);color:#fff}.btn-verde:hover{background:var(--verde-osc);color:#fff}
 
-  <title>Fabian Farias - Asesor Financiero</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
+/* encabezado */
+header{background:var(--verde);color:var(--algodon)}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:18px 0;flex-wrap:wrap}
+.marca{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--algodon)}
+.marca:hover{color:#fff}
+.marca span{font-family:var(--serif);font-weight:700;font-size:24px}
+.nav ul{list-style:none;display:flex;gap:22px;margin:0;padding:0;flex-wrap:wrap}
+.nav ul a{color:var(--arena);text-decoration:none;font-weight:500;font-size:15px}
+.nav ul a:hover{color:#fff}
+.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:48px;align-items:center;padding:56px 0 88px}
+.hero h1{color:var(--algodon);font-size:clamp(40px,6vw,66px)}
+.hero p.lema{font-family:var(--serif);font-style:italic;font-size:clamp(20px,2.4vw,26px);color:var(--arena);margin:16px 0 0}
+.hero p.bajada{color:#E9DFC6;max-width:560px;margin:20px 0 32px}
+.hero .acciones{display:flex;gap:12px;flex-wrap:wrap}
+.hero .simbolo{justify-self:center;width:min(300px,70vw)}
+.region{font-size:13px;letter-spacing:.16em;text-transform:uppercase;color:var(--arena);margin-top:28px}
 
-  <!-- Favicons -->
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+section{padding:88px 0}
+.titulo-seccion{max-width:720px;margin-bottom:40px}
+.titulo-seccion h2{font-size:clamp(30px,4vw,42px)}
+.titulo-seccion p{color:var(--gris);margin:14px 0 0}
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+/* servicios */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:#fff;border:1px solid var(--linea);border-radius:16px;padding:28px}
+.card .icono{width:48px;height:48px;border-radius:12px;background:var(--algodon);display:flex;align-items:center;justify-content:center;margin-bottom:16px}
+.card h3{font-size:24px;margin-bottom:10px}
+.card p{color:var(--gris);margin:0 0 14px}
+.card ul{margin:0;padding-left:18px;color:var(--carbon);font-size:15px}
+.card li{margin:4px 0}
 
-  <!-- Vendor CSS Files -->
-  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
-  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+/* como trabajo */
+.pasos{background:var(--algodon);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
+.lista-pasos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;counter-reset:paso;list-style:none;margin:0;padding:0}
+.lista-pasos li{counter-increment:paso}
+.lista-pasos li::before{content:counter(paso);display:flex;align-items:center;justify-content:center;width:40px;height:40px;border-radius:50%;background:var(--verde);color:#fff;font-weight:600;margin-bottom:14px}
+.lista-pasos h3{font-size:21px;margin-bottom:6px}
+.lista-pasos p{margin:0;color:var(--gris);font-size:15px}
 
-  <!-- Template Main CSS File -->
-  <link href="assets/css/style.css" rel="stylesheet">
+/* quien soy */
+.quien{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:center}
+.foto{aspect-ratio:4/5;border-radius:20px;background:var(--verde);display:flex;align-items:center;justify-content:center;padding:22%}
+.quien p{color:var(--gris)}
+.credenciales{list-style:none;padding:0;margin:24px 0 0;display:grid;gap:10px}
+.credenciales li{display:flex;gap:12px;align-items:flex-start}
+.credenciales svg{flex:none;margin-top:3px}
 
-  <!-- =======================================================
-  * Template Name: Gp - v4.10.0
-  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-  * Author: BootstrapMade.com
-  * License: https://bootstrapmade.com/license/
-  ======================================================== -->
+/* contacto */
+.contacto{background:var(--verde);color:var(--algodon);border-radius:24px;padding:56px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.contacto h2{color:var(--algodon);font-size:clamp(30px,4vw,42px)}
+.contacto p{color:#E9DFC6}
+.canales{display:grid;gap:12px}
+.canal{display:flex;align-items:center;gap:14px;background:rgba(246,241,231,.08);border:1px solid rgba(217,201,163,.35);border-radius:12px;padding:14px 18px;color:var(--algodon);text-decoration:none;min-height:56px}
+.canal:hover{background:rgba(246,241,231,.16);color:#fff}
+.canal small{display:block;color:var(--arena);font-size:13px}
+
+footer{padding:40px 0 56px;color:var(--gris);font-size:14px}
+.aviso{border-top:1px solid var(--linea);padding-top:24px;display:grid;gap:10px}
+.aviso strong{color:var(--carbon)}
+
+@media (max-width:860px){
+  .hero,.quien,.contacto{grid-template-columns:1fr}
+  .hero .simbolo{display:none}
+  .cards{grid-template-columns:1fr}
+  .lista-pasos{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .contacto{padding:36px 24px}
+  .foto{max-width:320px}
+  section{padding:64px 0}
+}
+@media (max-width:520px){.lista-pasos{grid-template-columns:1fr}.nav ul{gap:14px}}
+</style>
 </head>
-
 <body>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="fixed-top ">
-    <div class="container d-flex align-items-center justify-content-lg-between">
+<header>
+  <div class="wrap">
+    <nav class="nav" aria-label="Principal">
+      <a class="marca" href="#">
+        <svg width="40" height="40" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44" fill="none" stroke="#F6F1E7" stroke-width="16" stroke-dasharray="207 69" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="44" fill="none" stroke="#C9962E" stroke-width="16" stroke-dasharray="62 214" stroke-dashoffset="-214" transform="rotate(-90 60 60)"/></svg>
+        <span>Farías Finanzas</span>
+      </a>
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#como-trabajo">Cómo trabajo</a></li>
+        <li><a href="#quien-soy">Quién soy</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <div class="hero">
+      <div>
+        <p class="kicker" style="color:var(--arena)">Asesoría financiera · NEA</p>
+        <h1>Tu plata, pensada desde el NEA.</h1>
+        <p class="lema">Finanzas con los pies en la tierra.</p>
+        <p class="bajada">Mercado de capitales explicado claro, con números concretos y los riesgos a la vista, para productores, comercios, pymes y familias de la región.</p>
+        <div class="acciones">
+          <a class="btn btn-claro" href="#contacto">Escribime</a>
+          <a class="btn btn-borde" href="#servicios">Ver servicios</a>
+        </div>
+        <div class="region">Chaco · Corrientes · Formosa · Misiones</div>
+      </div>
+      <svg class="simbolo" viewBox="0 0 120 120" role="img" aria-label="Isotipo de Farías Finanzas: un capullo de algodón con forma de gráfico de torta y un brote en el centro"><circle cx="60" cy="60" r="44" fill="none" stroke="#F6F1E7" stroke-width="16" stroke-dasharray="207 69" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="44" fill="none" stroke="#C9962E" stroke-width="16" stroke-dasharray="62 214" stroke-dashoffset="-214" transform="rotate(-90 60 60)"/><path d="M60 78 C60 66 60 58 60 50 M60 62 C52 60 47 54 46 46 C54 47 59 53 60 62 M60 56 C66 53 71 48 72 40 C64 41 61 47 60 56" fill="none" stroke="#F6F1E7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+  </div>
+</header>
 
-      <h1 class="logo me-auto me-lg-0"><a href="index.html">FF<span>.</span></a></h1>
-      <!-- Uncomment below if you prefer to use an image logo -->
-      <!-- <a href="index.html" class="logo me-auto me-lg-0"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
-
-      <nav id="navbar" class="navbar order-last order-lg-0">
+<main>
+<section id="servicios">
+  <div class="wrap">
+    <div class="titulo-seccion">
+      <p class="kicker">Servicios</p>
+      <h2>Tres realidades distintas, un mismo criterio</h2>
+      <p>No es lo mismo la caja de un productor entre cosechas que la de un comercio o el ahorro de una familia. Cada uno necesita una conversación diferente.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <div class="icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21V10"/><path d="M12 14c-3 0-5-2-5.5-5 3 0 5 2 5.5 5z"/><path d="M12 11c.5-3 2.5-5 5.5-5-.5 3-2.5 5-5.5 5z"/><path d="M4 21h16"/></svg></div>
+        <h3>Campo</h3>
+        <p>Para productores agrícolas, ganaderos, yerbateros y forestales.</p>
         <ul>
-          <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Acerca</a></li>
-          <li><a class="nav-link scrollto" href="#services">Servicios</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Portfolio</a></li>
-          <li><a class="nav-link scrollto" href="#team">Equipo</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li>Qué hacer con los pesos entre cosecha y siembra</li>
+          <li>Cheques de pago diferido y pagarés: cobrar antes o financiarse</li>
+          <li>Cómo funciona la cobertura de precios, explicada simple</li>
         </ul>
-        <i class="bi bi-list mobile-nav-toggle"></i>
-      </nav><!-- .navbar -->
-
-      <a href="#about" class="get-started-btn scrollto">Get Started</a>
-
+      </article>
+      <article class="card">
+        <div class="icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 9l1.5-5h15L21 9"/><path d="M4 9v11h16V9"/><path d="M3 9h18"/><path d="M9 20v-6h6v6"/></svg></div>
+        <h3>Comercio y pymes</h3>
+        <p>Para comercios, distribuidoras, profesionales y empresas familiares.</p>
+        <ul>
+          <li>Dónde estacionar la caja del día a día</li>
+          <li>Descuento de cheques avalados por SGR</li>
+          <li>Obligaciones negociables pyme y otras alternativas de financiamiento</li>
+        </ul>
+      </article>
+      <article class="card">
+        <div class="icono"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#1F4A3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M12 13v4"/><path d="M10 15h4"/></svg></div>
+        <h3>Familias</h3>
+        <p>Para quien quiere ordenar sus ahorros o empezar a invertir.</p>
+        <ul>
+          <li>Ahorro en pesos y en dólares: dólar MEP, fondos comunes, plazos</li>
+          <li>CEDEARs y acciones para principiantes</li>
+          <li>Un plan de ahorro pensando en el retiro</li>
+        </ul>
+      </article>
     </div>
-  </header><!-- End Header -->
+  </div>
+</section>
 
-  <!-- ======= Hero Section ======= -->
-  <section id="hero" class="d-flex align-items-center justify-content-center">
-    <div class="container" data-aos="fade-up">
-
-      <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="150">
-        <div class="col-xl-6 col-lg-8">
-          <h1>Asesoria Financiera Personalizada<span>.</span></h1>
-          <h2>Apoyamos tus sueños.</h2>
-        </div>
-      </div>
-
-      <div class="row gy-4 mt-5 justify-content-center" data-aos="zoom-in" data-aos-delay="250">
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-store-line"></i>
-            <h3><a href="">Diseño Portfolio</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-bar-chart-box-line"></i>
-            <h3><a href="">Analisis Cartera</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-calendar-todo-line"></i>
-            <h3><a href="">Sedare Perspiciatis</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-paint-brush-line"></i>
-            <h3><a href="">Magni Dolores</a></h3>
-          </div>
-        </div>
-        <div class="col-xl-2 col-md-4">
-          <div class="icon-box">
-            <i class="ri-database-2-line"></i>
-            <h3><a href="coti_dolar.html">Cotizacion Dolar</a></h3>
-          </div>
-        </div>
-      </div>
-
+<section id="como-trabajo" class="pasos">
+  <div class="wrap">
+    <div class="titulo-seccion">
+      <p class="kicker">Cómo trabajo</p>
+      <h2>Simple, claro y sin letra chica</h2>
     </div>
-  </section><!-- End Hero -->
+    <ol class="lista-pasos">
+      <li><h3>Charlamos</h3><p>Una primera conversación para entender tu actividad, tus plazos y qué te preocupa.</p></li>
+      <li><h3>Definimos tu perfil</h3><p>Cuánto riesgo podés y querés asumir, y para cuándo vas a necesitar la plata.</p></li>
+      <li><h3>Te explico las opciones</h3><p>Alternativas concretas, con lo que pueden rendir y lo que pueden salir mal, en el mismo papel.</p></li>
+      <li><h3>Seguimiento</h3><p>Revisamos juntos cada tanto, porque en Argentina las condiciones cambian rápido.</p></li>
+    </ol>
+  </div>
+</section>
 
-  <main id="main">
+<section id="quien-soy">
+  <div class="wrap quien">
+    <div class="foto" role="img" aria-label="Espacio para la foto de Fabián Farías">
+      <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44" fill="none" stroke="#F6F1E7" stroke-width="16" stroke-dasharray="207 69" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="44" fill="none" stroke="#C9962E" stroke-width="16" stroke-dasharray="62 214" stroke-dashoffset="-214" transform="rotate(-90 60 60)"/><path d="M60 78 C60 66 60 58 60 50 M60 62 C52 60 47 54 46 46 C54 47 59 53 60 62 M60 56 C66 53 71 48 72 40 C64 41 61 47 60 56" fill="none" stroke="#F6F1E7" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </div>
+    <div>
+      <p class="kicker">Quién soy</p>
+      <h2 style="font-size:clamp(30px,4vw,42px)">Fabián Farías</h2>
+      <p>Vivo en Resistencia, Chaco, y conozco de primera mano cómo se mueve la economía de la región: la campaña, el comercio, el aguinaldo, el dólar. Mi objetivo es que el mercado de capitales deje de ser algo de Buenos Aires y pase a ser una herramienta para la gente del NEA.</p>
+      <p>Vengo del mundo de los datos y la tecnología, y eso se nota en cómo trabajo: con números, comparaciones claras y sin vender humo.</p>
+      <ul class="credenciales">
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8492A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Examen de Idoneidad de la Comisión Nacional de Valores (CNV) aprobado · inscripción en el Registro de Idóneos en trámite</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8492A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Licenciado en Sistemas de Información, Universidad Nacional del Nordeste (UNNE)</span></li>
+        <li><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#A8492A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg><span>Inversor en el mercado argentino: acciones del MERVAL, CEDEARs, renta fija y opciones</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-    <!-- ======= About Section ======= -->
-    <section id="about" class="about">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="100">
-            <img src="assets/img/about.jpg" class="img-fluid" alt="">
-          </div>
-          <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content" data-aos="fade-right" data-aos-delay="100">
-            <h3>Brindamos asesoramiento financiero personalizado segun el perfil del cliente.</h3>
-            <p class="fst-italic">
-              Conocé nuestros servicios de asesoramiento personalizado para ahorristas, inversores minoristas y empresas: 
-            </p>
-            <ul>
-              <li><i class="ri-check-double-line"></i> Planificacion de inversiones.</li>
-              <li><i class="ri-check-double-line"></i> Diseño y revisión de carteras de inversión.</li>
-              <li><i class="ri-check-double-line"></i> Gestión de capital de trabajo.</li>
-            </ul>
-            <p>
-              Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident
-            </p>
-          </div>
-        </div>
-
+<section id="contacto" style="padding-top:0">
+  <div class="wrap">
+    <div class="contacto">
+      <div>
+        <p class="kicker" style="color:var(--arena)">Contacto</p>
+        <h2>¿Charlamos?</h2>
+        <p>Contame en dos líneas a qué te dedicás y qué querés resolver. Te respondo personalmente. Atiendo en Resistencia, Corrientes y de forma virtual en todo el NEA.</p>
       </div>
-    </section><!-- End About Section -->
-
-    <!-- ======= Clients Section ======= -->
-    <section id="clients" class="clients">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="clients-slider swiper">
-          <div class="swiper-wrapper align-items-center">
-            <div class="swiper-slide"><img src="assets/img/clients/client-1.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-2.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-3.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-4.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-5.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-6.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-7.png" class="img-fluid" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img/clients/client-8.png" class="img-fluid" alt=""></div>
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Clients Section -->
-
-    <!-- ======= Features Section ======= -->
-    <section id="features" class="features">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row">
-          <div class="image col-lg-6" style='background-image: url("assets/img/features.jpg");' data-aos="fade-right"></div>
-          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
-            <div class="icon-box mt-5 mt-lg-0" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-receipt"></i>
-              <h4>Est labore ad</h4>
-              <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-cube-alt"></i>
-              <h4>Harum esse qui</h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-images"></i>
-              <h4>Aut occaecati</h4>
-              <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
-            </div>
-            <div class="icon-box mt-5" data-aos="zoom-in" data-aos-delay="150">
-              <i class="bx bx-shield"></i>
-              <h4>Beatae veritatis</h4>
-              <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Features Section -->
-
-    <!-- ======= Services Section ======= -->
-    <section id="services" class="services">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Services</h2>
-          <p>Check our Services</p>
-        </div>
-
-        <div class="row">
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bxl-dribbble"></i></div>
-              <h4><a href="">Lorem Ipsum</a></h4>
-              <p>Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-file"></i></div>
-              <h4><a href="">Sed ut perspiciatis</a></h4>
-              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-tachometer"></i></div>
-              <h4><a href="">Magni Dolores</a></h4>
-              <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="100">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-world"></i></div>
-              <h4><a href="">Nemo Enim</a></h4>
-              <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="200">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-slideshow"></i></div>
-              <h4><a href="">Dele cardo</a></h4>
-              <p>Quis consequatur saepe eligendi voluptatem consequatur dolor consequuntur</p>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4" data-aos="zoom-in" data-aos-delay="300">
-            <div class="icon-box">
-              <div class="icon"><i class="bx bx-arch"></i></div>
-              <h4><a href="">Divera don</a></h4>
-              <p>Modi nostrum vel laborum. Porro fugit error sit minus sapiente sit aspernatur</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Services Section -->
-
-    <!-- ======= Cta Section ======= -->
-    <section id="cta" class="cta">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="text-center">
-          <h3>Call To Action</h3>
-          <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-          <a class="cta-btn" href="#">Call To Action</a>
-        </div>
-
-      </div>
-    </section><!-- End Cta Section -->
-
-    <!-- ======= Portfolio Section ======= -->
-    <section id="portfolio" class="portfolio">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Portfolio</h2>
-          <p>Check our Portfolio</p>
-        </div>
-
-        <div class="row" data-aos="fade-up" data-aos-delay="100">
-          <div class="col-lg-12 d-flex justify-content-center">
-            <ul id="portfolio-flters">
-              <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Portfolio Section -->
-
-    <!-- ======= Counts Section ======= -->
-    <section id="counts" class="counts">
-      <div class="container" data-aos="fade-up">
-
-        <div class="row no-gutters">
-          <div class="image col-xl-5 d-flex align-items-stretch justify-content-center justify-content-lg-start" data-aos="fade-right" data-aos-delay="100"></div>
-          <div class="col-xl-7 ps-0 ps-lg-5 pe-lg-1 d-flex align-items-stretch" data-aos="fade-left" data-aos-delay="100">
-            <div class="content d-flex flex-column justify-content-center">
-              <h3>Voluptatem dignissimos provident quasi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
-              </p>
-              <div class="row">
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-emoji-smile"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="65" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Happy Clients</strong> consequuntur voluptas nostrum aliquid ipsam architecto ut.</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-journal-richtext"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="85" data-purecounter-duration="2" class="purecounter"></span>
-                    <p><strong>Projects</strong> adipisci atque cum quia aspernatur totam laudantium et quia dere tan</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-clock"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="35" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Years of experience</strong> aut commodi quaerat modi aliquam nam ducimus aut voluptate non vel</p>
-                  </div>
-                </div>
-
-                <div class="col-md-6 d-md-flex align-items-md-stretch">
-                  <div class="count-box">
-                    <i class="bi bi-award"></i>
-                    <span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="4" class="purecounter"></span>
-                    <p><strong>Awards</strong> rerum asperiores dolor alias quo reprehenderit eum et nemo pad der</p>
-                  </div>
-                </div>
-              </div>
-            </div><!-- End .content-->
-          </div>
-        </div>
-
-      </div>
-    </section><!-- End Counts Section -->
-
-    <!-- ======= Testimonials Section ======= -->
-    <section id="testimonials" class="testimonials">
-      <div class="container" data-aos="zoom-in">
-
-        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
-          <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
-                <h4>Ceo &amp; Founder</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
-                <h4>Designer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
-                <h4>Store Owner</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
-                <h4>Freelancer</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-
-            <div class="swiper-slide">
-              <div class="testimonial-item">
-                <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
-                <h4>Entrepreneur</h4>
-                <p>
-                  <i class="bx bxs-quote-alt-left quote-icon-left"></i>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-                  <i class="bx bxs-quote-alt-right quote-icon-right"></i>
-                </p>
-              </div>
-            </div><!-- End testimonial item -->
-          </div>
-          <div class="swiper-pagination"></div>
-        </div>
-
-      </div>
-    </section><!-- End Testimonials Section -->
-
-    <!-- ======= Team Section ======= -->
-    <section id="team" class="team">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Team</h2>
-          <p>Check our Team</p>
-        </div>
-
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="100">
-              <div class="member-img">
-                <img src="assets/img/team/team-1.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Walter White</h4>
-                <span>Chief Executive Officer</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="200">
-              <div class="member-img">
-                <img src="assets/img/team/team-2.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Sarah Jhonson</h4>
-                <span>Product Manager</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="300">
-              <div class="member-img">
-                <img src="assets/img/team/team-3.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>William Anderson</h4>
-                <span>CTO</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-3 col-md-6 d-flex align-items-stretch">
-            <div class="member" data-aos="fade-up" data-aos-delay="400">
-              <div class="member-img">
-                <img src="assets/img/team/team-4.jpg" class="img-fluid" alt="">
-                <div class="social">
-                  <a href=""><i class="bi bi-twitter"></i></a>
-                  <a href=""><i class="bi bi-facebook"></i></a>
-                  <a href=""><i class="bi bi-instagram"></i></a>
-                  <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
-              </div>
-              <div class="member-info">
-                <h4>Amanda Jepson</h4>
-                <span>Accountant</span>
-              </div>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Team Section -->
-
-    <!-- ======= Contact Section ======= -->
-    <section id="contact" class="contact">
-      <div class="container" data-aos="fade-up">
-
-        <div class="section-title">
-          <h2>Contact</h2>
-          <p>Contact Us</p>
-        </div>
-
-        <div>
-          <iframe style="border:0; width: 100%; height: 270px;" src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d4210.23143979991!2d-59.03520331311694!3d-27.45778410332911!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1678025060033!5m2!1ses!2sar" frameborder="0" allowfullscreen></iframe>
-        </div>
-
-        <div class="row mt-5">
-
-          <div class="col-lg-4">
-            <div class="info">
-              <div class="address">
-                <i class="bi bi-geo-alt"></i>
-                <h4>Location:</h4>
-                <p>Jeremias 3060, Resistencia, Chaco, Argentina</p>
-              </div>
-
-              <div class="email">
-                <i class="bi bi-envelope"></i>
-                <h4>Email:</h4>
-                <p>fabianfar@gmail.com</p>
-              </div>
-
-              <div class="phone">
-                <i class="bi bi-phone"></i>
-                <h4>Call:</h4>
-                <p>+54 362 4225643</p>
-              </div>
-
-            </div>
-
-          </div>
-
-          <div class="col-lg-8 mt-5 mt-lg-0">
-
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Su Nombre" required>
-                </div>
-                <div class="col-md-6 form-group mt-3 mt-md-0">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Su Email" required>
-                </div>
-              </div>
-              <div class="form-group mt-3">
-                <input type="text" class="form-control" name="subject" id="subject" placeholder="Motivo" required>
-              </div>
-              <div class="form-group mt-3">
-                <textarea class="form-control" name="message" rows="5" placeholder="Mensaje" required></textarea>
-              </div>
-              <div class="my-3">
-                <div class="loading">Loading</div>
-                <div class="error-message"></div>
-                <div class="sent-message">Your message has been sent. Thank you!</div>
-              </div>
-              <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
-          </div>
-
-        </div>
-
-      </div>
-    </section><!-- End Contact Section -->
-
-  </main><!-- End #main -->
-
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-    <div class="footer-top">
-      <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6">
-            <div class="footer-info">
-              <h3>FF<span>.</span></h3>
-              <p>
-                Jeremias 3060 <br>
-                Resistencia, Chaco, Argentina<br><br>
-                <strong>Phone:</strong> +54 362 4225643<br>
-                <strong>Email:</strong> fabianfar@gmail.com<br>
-              </p>
-              <div class="social-links mt-3">
-                <a href="https://twitter.com/fabianfar" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="https://www.facebook.com/fabian.farias.501" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="https://www.instagram.com/fabian_far/" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="https://www.linkedin.com/in/fabian-farias-15473b43/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Acerca de</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Servicios</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Servicios</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Asesoramiento Personalizado</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Diseño de Portfolio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Armado de Cartera</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Analisis decisorio</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-
-          </div>
-
-        </div>
+      <div class="canales">
+        <a class="canal" href="mailto:contacto@fariasfinanzas.com.ar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+          <span>contacto@fariasfinanzas.com.ar<small>Correo</small></span>
+        </a>
+        <!-- WhatsApp: reemplazá 549XXXXXXXXXX por tu número (549 + característica sin 0 + número sin 15) y borrá estas dos líneas de comentario
+        <a class="canal" href="https://wa.me/549XXXXXXXXXX"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.5 7.8L3 21l1.2-4.5A9 9 0 1 1 21 12z"/></svg><span>WhatsApp<small>Respuesta en el día</small></span></a>
+        -->
+        <a class="canal" href="https://www.instagram.com/fariasfinanzas" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962E" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#C9962E"/></svg>
+          <span>@fariasfinanzas<small>Instagram</small></span>
+        </a>
+        <a class="canal" href="https://www.linkedin.com/company/fariasfinanzas" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962E" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M8 10v7M8 7v.01M12 17v-4a2 2 0 0 1 4 0v4M12 10v7"/></svg>
+          <span>Farías Finanzas<small>LinkedIn</small></span>
+        </a>
+        <a class="canal" href="https://x.com/fariasfinanzas" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962E" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 4l16 16M20 4L4 20"/></svg>
+          <span>@fariasfinanzas<small>X · Pizarra NEA diaria</small></span>
+        </a>
+        <a class="canal" href="https://www.facebook.com/fariasfinanzas" rel="noopener">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9962E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h-2a4 4 0 0 0-4 4v3H7v4h2v7h4v-7h3l1-4h-4V7a1 1 0 0 1 1-1h2z"/></svg>
+          <span>Farías Finanzas<small>Facebook</small></span>
+        </a>
       </div>
     </div>
+  </div>
+</section>
+</main>
 
-    <div class="container">
-      <div class="copyright">
-        &copy; Copyright <strong><span>FF</span></strong>. All Rights Reserved
-      </div>
-      <div class="credits">
-        <!-- All the links in the footer should remain intact. -->
-        <!-- You can delete the links only if you purchased the pro version. -->
-        <!-- Licensing information: https://bootstrapmade.com/license/ -->
-        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
-        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
-    </div>
-  </footer><!-- End Footer -->
-
-  <div id="preloader"></div>
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Vendor JS Files -->
-  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="assets/vendor/aos/aos.js"></script>
-  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+<footer>
+  <div class="wrap aviso">
+    <p style="margin:0"><strong>Aviso importante.</strong> El contenido de este sitio y de las redes de Farías Finanzas es educativo e informativo. No constituye una recomendación de inversión ni una oferta de valores negociables. Invertir implica riesgos, incluida la posible pérdida del capital invertido; los rendimientos pasados no garantizan rendimientos futuros.</p>
+    <p style="margin:0">Podés verificar a cualquier persona o agente que te ofrezca inversiones en el registro público de la <a href="https://www.argentina.gob.ar/cnv" rel="noopener">Comisión Nacional de Valores</a>.</p>
+    <p style="margin:0">© 2026 Fabián Farías · Farías Finanzas · Resistencia, Chaco, Argentina</p>
+  </div>
+</footer>
 
 </body>
-
 </html>
