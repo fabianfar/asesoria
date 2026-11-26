@@ -121,12 +121,6 @@
         "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/?outputType=xml",
         "region_default": "ar",
         "estado_url": "patrón estándar de Arc Publishing; sin verificar"
-      },
-      {
-        "nombre": "BAE Negocios",
-        "url": "https://www.baenegocios.com/rss/economia.xml",
-        "region_default": "ar",
-        "estado_url": "sin verificar"
       }
     ],
     "palabras_clave": [
