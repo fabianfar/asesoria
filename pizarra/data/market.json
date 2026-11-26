@@ -1,11 +1,11 @@
 {
  "version": 1,
- "asof": "2026-11-25T20:31:46-03:00",
+ "asof": "2026-11-25T22:44:46-03:00",
  "rueda": "2026-11-25",
  "rueda_prev": "2026-11-24",
  "liquidacion": "2026-11-26",
  "snapshot_cronogramas": "2026-11-25",
- "indicadores": {"mep":{"valor":1669.39,"fuente":"Cálculo propio: AL30 / AL30D (data912/BYMA)","fecha":"2026-11-25"},"ccl":{"valor":1772.1,"fuente":"Cálculo propio: AL30 / AL30C (data912/BYMA)","fecha":"2026-11-25"},"oficial":null,"mayorista":null,"blue":null,"riesgo_pais":null},
+ "indicadores": {"mep":{"valor":1669.39,"fuente":"Cálculo propio: AL30 / AL30D (data912/BYMA)","fecha":"2026-11-25"},"ccl":{"valor":1772.1,"fuente":"Cálculo propio: AL30 / AL30C (data912/BYMA)","fecha":"2026-11-25"},"oficial":{"compra":1580.0,"venta":1630.0,"fuente":"dolarapi.com","fecha":"2026-11-25T15:00:00-03:00"},"mayorista":{"compra":1595.0,"venta":1604.0,"fuente":"dolarapi.com","fecha":"2026-11-25T12:28:00-03:00"},"blue":{"compra":1690.0,"venta":1710.0,"fuente":"dolarapi.com","fecha":"2026-11-25T17:55:00-03:00"},"riesgo_pais":{"valor":1094.0,"fuente":"argentinadatos.com","fecha":"2026-11-24"}},
  "cer": null,
  "stale": {"bonos":false,"letras":false,"cedears":false,"acciones":false},
  "bonos": [
@@ -125,9 +125,9 @@
   {"ticker":"S26F7","name":"Lecap vto. 26/02/27","family":"letra_lecap","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2027-02-26","price":101.315,"pct":0.04,"volume_ars":33063151005,"price_usd":null,"pct_usd":null,"q_op":591,"tir":31.09,"md":0.19,"tna":28.02,"tea":31.09,"dias":92,"base_precio":"pesos","flags":["estimado"]},
   {"ticker":"X30N6","name":"Lecer vto. 30/11/26","family":"letra_lecer","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2026-11-30","price":131.509,"pct":0.06,"volume_ars":11494915683,"price_usd":null,"pct_usd":null,"q_op":129,"tir":5.59,"md":0.01,"tna":5.44,"tea":5.59,"dias":4,"base_precio":"pesos","flags":["cer_snapshot","corto_plazo","estimado"]},
   {"ticker":"X29E7","name":"Lecer vto. 29/01/27","family":"letra_lecer","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2027-01-29","price":106.25,"pct":0.09,"volume_ars":7390168197,"price_usd":null,"pct_usd":null,"q_op":148,"tir":1.04,"md":0.17,"tna":1.03,"tea":1.04,"dias":64,"base_precio":"pesos","flags":["cer_snapshot","estimado"]},
-  {"ticker":"D30N6","name":"Lelink vto. 30/11/26","family":"letra_dlk","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2026-11-30","price":160.41,"pct":1.07,"volume_ars":214044517565,"price_usd":null,"pct_usd":null,"q_op":402,"tir":-46.93,"md":0.02,"tna":-63.14,"tea":-46.93,"dias":4,"base_precio":"pesos","flags":["corto_plazo","estimado","sin_analitica_iol"]},
-  {"ticker":"D31M7","name":"Lelink vto. 31/03/27","family":"letra_dlk","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2027-03-31","price":158.4,"pct":0.51,"volume_ars":7305156144,"price_usd":null,"pct_usd":null,"q_op":729,"tir":1.67,"md":0.34,"tna":1.66,"tea":1.67,"dias":125,"base_precio":"pesos","flags":["estimado","sin_analitica_iol"]},
-  {"ticker":"D15E7","name":"Lelink vto. 15/01/27","family":"letra_dlk","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2027-01-15","price":158.82,"pct":0.3,"volume_ars":168694790732,"price_usd":null,"pct_usd":null,"q_op":575,"tir":2.23,"md":0.13,"tna":2.21,"tea":2.23,"dias":50,"base_precio":"pesos","flags":["estimado","sin_analitica_iol"]}
+  {"ticker":"D30N6","name":"Lelink vto. 30/11/26","family":"letra_dlk","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2026-11-30","price":160.41,"pct":1.07,"volume_ars":214044517565,"price_usd":null,"pct_usd":null,"q_op":402,"tir":-0.57,"md":0.01,"tna":-0.57,"tea":-0.57,"dias":4,"base_precio":"pesos","flags":["corto_plazo","estimado","sin_analitica_iol"]},
+  {"ticker":"D31M7","name":"Lelink vto. 31/03/27","family":"letra_dlk","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2027-03-31","price":158.4,"pct":0.51,"volume_ars":7305156144,"price_usd":null,"pct_usd":null,"q_op":729,"tir":3.73,"md":0.33,"tna":3.69,"tea":3.73,"dias":125,"base_precio":"pesos","flags":["estimado","sin_analitica_iol"]},
+  {"ticker":"D15E7","name":"Lelink vto. 15/01/27","family":"letra_dlk","issuer":"Tesoro Nacional","currency_pay":"ARS","maturity":"2027-01-15","price":158.82,"pct":0.3,"volume_ars":168694790732,"price_usd":null,"pct_usd":null,"q_op":575,"tir":7.49,"md":0.13,"tna":7.26,"tea":7.49,"dias":50,"base_precio":"pesos","flags":["estimado","sin_analitica_iol"]}
  ],
  "cedears": [
   {"tk":"MU","name":"Micron Technology","sector":"Semiconductores","price":215000.0,"pct":-5.33,"monto":81263335000},
