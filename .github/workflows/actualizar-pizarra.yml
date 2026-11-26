@@ -1,1 +1,70 @@
+name: Actualizar Pizarra de Mercado
+
+# Horarios en UTC (Buenos Aires = UTC-3). Lunes a viernes.
+#   12:30 UTC = 09:30 ART  (titulares)
+#   15:30 UTC = 12:30 ART  (titulares)
+#   20:10 UTC = 17:10 ART  (cierre de rueda)
+#   20:40 UTC = 17:40 ART  (cierre de rueda, reintento)
+#   21:30 UTC = 18:30 ART  (cierre de rueda, reintento)
+# GitHub puede demorar los cron (a veces 10-30 min) y desactiva los schedules de repos inactivos 60 días.
+on:
+  schedule:
+    - cron: "30 12 * * 1-5"
+    - cron: "30 15 * * 1-5"
+    - cron: "10 20 * * 1-5"
+    - cron: "40 20 * * 1-5"
+    - cron: "30 21 * * 1-5"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Forzar el recálculo del mercado aunque el feed no haya cambiado (no aplica durante la rueda)"
+        type: boolean
+        default: false
+
+concurrency:
+  group: actualizar-pizarra
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: pizarra
+    steps:
+      - name: Descargar el repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Actualizar datos (solo biblioteca estándar, sin secrets)
+        env:
+          FORZAR: ${{ inputs.force }}
+        run: |
+          if [ "$FORZAR" = "true" ]; then
+            python scripts/update_data.py --force
+          else
+            python scripts/update_data.py
+          fi
+
+      - name: Publicar cambios (solo si cambiaron los datos)
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/market.json data/news.json data/status.json
+          if git diff --cached --quiet; then
+            echo "Sin cambios en los datos: no se hace commit."
+            exit 0
+          fi
+          FECHA=$(TZ=America/Argentina/Buenos_Aires date '+%d/%m/%Y %H:%M')
+          git commit -m "datos: actualización automática $FECHA ART"
+          git pull --rebase
+          git push
 
