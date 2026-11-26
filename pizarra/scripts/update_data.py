@@ -340,6 +340,11 @@ def filtrar_acciones(rows, cfg):
 def parse_cer(series, fecha_snapshot, fecha_ref):
     """series: lista de {fecha, valor}. Devuelve dict con factor = CER(ref)/CER(snapshot)."""
     pts = {}
+    if isinstance(series, dict):  # API BCRA v4.0: {results:[{detalle:[{fecha, valor}]}]}
+        det = []
+        for r in series.get("results") or []:
+            det.extend(r.get("detalle") or [])
+        series = det
     for it in series:
         try:
             pts[it["fecha"][:10]] = float(it["valor"])
@@ -359,7 +364,7 @@ def parse_cer(series, fecha_snapshot, fecha_ref):
     if v0 <= 0:
         raise ValueError("CER inválido")
     return {"fecha_snapshot": f0, "valor_snapshot": v0, "fecha_hoy": f1, "valor_hoy": v1,
-            "factor": round(v1 / v0, 6), "fuente": "argentinadatos.com (serie CER del BCRA)"}
+            "factor": round(v1 / v0, 6), "fuente": "BCRA (API Estadísticas Monetarias v4.0, variable 30)"}
 
 
 # --------------------------------------------------------------------------
@@ -711,7 +716,9 @@ def main(argv=None):
             if not e["ok"]:
                 log("  - feed con error: %s (%s)" % (e["url"], e.get("error")))
         fuentes["rss"] = {"estado": "ok" if ok_n else "error",
-                          "detalle": "%d de %d feeds" % (ok_n, len(estados_feeds))}
+                          "detalle": "%d de %d feeds" % (ok_n, len(estados_feeds)) + "".join(
+                              " | falla: %s (%s)" % (e["url"].split("/")[2], (e.get("error") or "")[:60])
+                              for e in estados_feeds if not e["ok"])}
     except Exception as e:  # noqa: BLE001
         log("Noticias: error inesperado: %s" % e)
         fuentes["rss"] = {"estado": "error", "detalle": str(e)[:160]}
@@ -859,7 +866,10 @@ def construir_mercado(cfg, fetcher, cal, now, rueda, instrumentos, snapshot, sec
     # --- CER
     cer = None
     try:
-        cer = parse_cer(fetcher.get_json(cfg["apis"]["cer"]), snapshot, liquidacion.isoformat())
+        d0 = (dt.date.fromisoformat(str(snapshot)) - dt.timedelta(days=10)).isoformat()
+        d1 = (liquidacion + dt.timedelta(days=3)).isoformat()
+        url_cer = "%s?desde=%s&hasta=%s&limit=100" % (cfg["apis"]["cer"], d0, d1)
+        cer = parse_cer(fetcher.get_json(url_cer), snapshot, liquidacion.isoformat())
         fuentes["cer"] = {"estado": "ok"}
         log("CER: factor %.6f (%s / %s)" % (cer["factor"], cer["fecha_hoy"], cer["fecha_snapshot"]))
     except Exception as e:  # noqa: BLE001

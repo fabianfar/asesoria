@@ -72,7 +72,7 @@
   "apis": {
     "dolarapi": "https://dolarapi.com/v1/dolares",
     "riesgo_pais": "https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais/ultimo",
-    "cer": "https://api.argentinadatos.com/v1/finanzas/indices/cer"
+    "cer": "https://api.bcra.gob.ar/estadisticas/v4.0/monetarias/30"
   },
   "noticias": {
     "horas_maximas": 36,
