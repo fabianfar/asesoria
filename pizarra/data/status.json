@@ -1,11 +1,11 @@
 {
  "version_script": "1.0.0",
- "ultima_corrida": "2026-11-25T22:44:46-03:00",
+ "ultima_corrida": "2026-11-26T18:49:19-03:00",
  "modo": "cierre",
- "rueda": "2026-11-25",
- "mercado_actualizado": "2026-11-25T22:44:46-03:00",
+ "rueda": "2026-11-26",
+ "mercado_actualizado": "2026-11-26T18:49:19-03:00",
  "mensaje": "mercado actualizado",
- "fuentes": {"rss":{"estado":"ok","detalle":"7 de 8 feeds","hora":"2026-11-25T22:44:46-03:00"},"dolarapi":{"estado":"ok","hora":"2026-11-25T22:44:46-03:00"},"riesgo_pais":{"estado":"ok","hora":"2026-11-25T22:44:46-03:00"},"data912":{"estado":"ok","detalle":"5 de 5 endpoints","hora":"2026-11-25T22:44:46-03:00"},"cer":{"estado":"error","detalle":"HTTPError: HTTP Error 404: Not Found","hora":"2026-11-25T22:44:46-03:00"}},
- "huella": {"hash":"71d202cf71aca96eee8a89758c7909d8bbf35e0a","tickers":22},
+ "fuentes": {"rss":{"estado":"ok","detalle":"7 de 8 feeds","hora":"2026-11-26T18:49:19-03:00"},"dolarapi":{"estado":"ok","hora":"2026-11-26T18:49:19-03:00"},"riesgo_pais":{"estado":"ok","hora":"2026-11-26T18:49:19-03:00"},"data912":{"estado":"ok","detalle":"5 de 5 endpoints","hora":"2026-11-26T18:49:19-03:00"},"cer":{"estado":"error","detalle":"HTTPError: HTTP Error 404: Not Found","hora":"2026-11-26T18:49:19-03:00"}},
+ "huella": {"hash":"68c7337b8dba06fc64db559942828d5c9ba4edbd","tickers":22},
  "feriados_a_confirmar": ["2027-03-25"]
 }
