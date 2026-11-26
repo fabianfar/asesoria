@@ -70,6 +70,14 @@ section{padding:88px 0}
 .card ul{margin:0;padding-left:18px;color:var(--carbon);font-size:15px}
 .card li{margin:4px 0}
 
+/* pizarra */
+#pizarra{padding-top:0}
+.banda-pizarra{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-wrap:wrap;background:#fff;border:1px solid var(--linea);border-radius:16px;padding:32px 36px}
+.banda-pizarra .texto{max-width:680px}
+.banda-pizarra h2{font-size:clamp(26px,3.4vw,34px);margin-bottom:10px}
+.banda-pizarra p{color:var(--gris);margin:0}
+.banda-pizarra .nota{font-size:14px;margin-top:10px}
+
 /* como trabajo */
 .pasos{background:var(--algodon);border-top:1px solid var(--linea);border-bottom:1px solid var(--linea)}
 .lista-pasos{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:22px;counter-reset:paso;list-style:none;margin:0;padding:0}
@@ -107,6 +115,8 @@ footer{padding:40px 0 56px;color:var(--gris);font-size:14px}
   .contacto{padding:36px 24px}
   .foto{max-width:320px}
   section{padding:64px 0}
+  #pizarra{padding-top:0}
+  .banda-pizarra{padding:26px 22px}
 }
 @media (max-width:520px){.lista-pasos{grid-template-columns:1fr}.nav ul{gap:14px}}
 </style>
@@ -122,6 +132,7 @@ footer{padding:40px 0 56px;color:var(--gris);font-size:14px}
       </a>
       <ul>
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="pizarra/">Pizarra</a></li>
         <li><a href="#como-trabajo">Cómo trabajo</a></li>
         <li><a href="#quien-soy">Quién soy</a></li>
         <li><a href="#contacto">Contacto</a></li>
@@ -136,6 +147,7 @@ footer{padding:40px 0 56px;color:var(--gris);font-size:14px}
         <div class="acciones">
           <a class="btn btn-claro" href="#contacto">Escribime</a>
           <a class="btn btn-borde" href="#servicios">Ver servicios</a>
+          <a class="btn btn-borde" href="pizarra/">Pizarra de mercado</a>
         </div>
         <div class="region">Chaco · Corrientes · Formosa · Misiones</div>
       </div>
@@ -183,6 +195,20 @@ footer{padding:40px 0 56px;color:var(--gris);font-size:14px}
           <li>Un plan de ahorro pensando en el retiro</li>
         </ul>
       </article>
+    </div>
+  </div>
+</section>
+
+<section id="pizarra">
+  <div class="wrap">
+    <div class="banda-pizarra">
+      <div class="texto">
+        <p class="kicker">Herramienta gratuita</p>
+        <h2>Pizarra de mercado argentino</h2>
+        <p>Bonos, letras, CEDEARs, acciones, obligaciones negociables y titulares del día en un solo lugar, con una calculadora para ver cuándo y cuánto paga cada bono. Se actualiza sola con las cotizaciones de cada rueda.</p>
+        <p class="nota">Información con fines educativos. No es una recomendación de inversión.</p>
+      </div>
+      <a class="btn btn-verde" href="pizarra/">Abrir la pizarra</a>
     </div>
   </div>
 </section>
@@ -263,6 +289,7 @@ footer{padding:40px 0 56px;color:var(--gris);font-size:14px}
   <div class="wrap aviso">
     <p style="margin:0"><strong>Aviso importante.</strong> El contenido de este sitio y de las redes de Farías Finanzas es educativo e informativo. No constituye una recomendación de inversión ni una oferta de valores negociables. Invertir implica riesgos, incluida la posible pérdida del capital invertido; los rendimientos pasados no garantizan rendimientos futuros.</p>
     <p style="margin:0">Podés verificar a cualquier persona o agente que te ofrezca inversiones en el registro público de la <a href="https://www.argentina.gob.ar/cnv" rel="noopener">Comisión Nacional de Valores</a>.</p>
+    <p style="margin:0"><a href="pizarra/">Pizarra de mercado</a> · <a href="pizarra/aviso-legal.html">Aviso legal</a></p>
     <p style="margin:0">© 2026 Fabián Farías · Farías Finanzas · Resistencia, Chaco, Argentina</p>
   </div>
 </footer>
