@@ -1,0 +1,3061 @@
+{
+ "snapshot": "2026-11-25",
+ "source": "IOL get_fixed_income_analytics (solo lectura)",
+ "instruments": [
+  {
+   "ticker": "BACG",
+   "name": "ON Banco Macro 8% 2029",
+   "issuer": "Banco Macro S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-06-23",
+   "maturity": "2029-06-23",
+   "coupon_text": "8% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-23",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-23",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-23",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-23",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-23",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-23",
+     "interest": 4.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "BACGO",
+    "usd_mep": "BACGD",
+    "usd_cable": "BACGC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina BACGD)"
+  },
+  {
+   "ticker": "BYCW",
+   "name": "ON Banco Galicia Cl. 30 6% 2026",
+   "issuer": "Banco de Galicia y Buenos Aires S.A.U.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-11-30",
+   "maturity": "2026-11-30",
+   "coupon_text": "6% anual, cupón semestral; amortización íntegra (bullet) al vencimiento (30/11/2026)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-11-30",
+     "interest": 3.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "BYCWO",
+    "usd_mep": "BYCWD",
+    "usd_cable": "BYCWC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina BYCWD)"
+  },
+  {
+   "ticker": "CICA",
+   "name": "ON CNH Industrial Capital Argentina Cl. 10 8% 2028",
+   "issuer": "CNH Industrial Capital Argentina S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-12-03",
+   "maturity": "2028-06-03",
+   "coupon_text": "8% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-03",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-03",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-03",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-03",
+     "interest": 4.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "CICAO",
+    "usd_mep": "CICAD",
+    "usd_cable": "CICAC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina CICAD)"
+  },
+  {
+   "ticker": "CS47",
+   "name": "ON Cresud Cl. 47 7% 2028",
+   "issuer": "Cresud S.A.C.I.F. y A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-11-15",
+   "maturity": "2028-11-15",
+   "coupon_text": "7% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-15",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-15",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-15",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-15",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "CS47O",
+    "usd_mep": "CS47D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina CS47D)"
+  },
+  {
+   "ticker": "CS48",
+   "name": "ON Cresud Cl. 48 8% 2028",
+   "issuer": "Cresud S.A.C.I.F. y A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-07-11",
+   "maturity": "2028-07-11",
+   "coupon_text": "8% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-11",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-11",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-11",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-11",
+     "interest": 4.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "CS48O",
+    "usd_mep": "CS48D",
+    "usd_cable": "CS48C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina CS48D)"
+  },
+  {
+   "ticker": "CS53",
+   "name": "ON Cresud Cl. 53 8% 2030",
+   "issuer": "Cresud S.A.C.I.F. y A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-30",
+   "maturity": "2030-04-30",
+   "coupon_text": "8% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-04-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-10-30",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-04-30",
+     "interest": 4.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "CS53O",
+    "usd_mep": "CS53D",
+    "usd_cable": "CS53C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina CS53D)"
+  },
+  {
+   "ticker": "DNC5",
+   "name": "ON Edenor Cl. 5 9,5% 2028",
+   "issuer": "Empresa Distribuidora y Comercializadora Norte S.A. (Edenor)",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-08-05",
+   "maturity": "2028-08-05",
+   "coupon_text": "9,5% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-05",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-08-05",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-02-05",
+     "interest": 4.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-08-05",
+     "interest": 4.75,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "DNC5O",
+    "usd_mep": "DNC5D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina DNC5D)"
+  },
+  {
+   "ticker": "DNC7",
+   "name": "ON Edenor Cl. VII 9,75% 2030",
+   "issuer": "Empresa Distribuidora y Comercializadora Norte S.A. (Edenor)",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-24",
+   "maturity": "2030-10-24",
+   "coupon_text": "9,75% anual (IOL redondea a 9,8%), cupón semestral; amortización en 3 cuotas (33,33% oct-2028, 33,33% oct-2029 y 33,34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-24",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-24",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-24",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-24",
+     "interest": 4.9,
+     "amortization": 33.33
+    },
+    {
+     "date": "2029-04-24",
+     "interest": 3.26683,
+     "amortization": 0
+    },
+    {
+     "date": "2029-10-24",
+     "interest": 3.26683,
+     "amortization": 33.33
+    },
+    {
+     "date": "2030-04-24",
+     "interest": 1.63366,
+     "amortization": 0
+    },
+    {
+     "date": "2030-10-24",
+     "interest": 1.63366,
+     "amortization": 33.34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "DNC7O",
+    "usd_mep": "DNC7D",
+    "usd_cable": "DNC7C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina DNC7D). IOL redondea la tasa (9,75% nominal en descripción vs 9,8% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "EMC1",
+   "name": "ON Compañía Mega Cl. 1 8% 2027",
+   "issuer": "Compañía Mega S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-07-04",
+   "maturity": "2027-07-04",
+   "coupon_text": "8% anual (tasa según IOL), cupón semestral sobre saldo; amortización en cuotas, resta un 33,34% del capital original que se paga el 04/07/2027",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-04",
+     "interest": 1.3336,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-04",
+     "interest": 1.3336,
+     "amortization": 33.34
+    }
+   ],
+   "residual_pct": 33.34,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "EMC1O",
+    "usd_mep": "EMC1D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina EMC1D)"
+  },
+  {
+   "ticker": "GN49",
+   "name": "ON Genneia Cl. XLIX 7,75% 2033",
+   "issuer": "Genneia S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-12-02",
+   "maturity": "2033-12-02",
+   "coupon_text": "7,75% anual (IOL redondea a 7,8%), cupón semestral; amortización en 3 cuotas (33% dic-2031, 33% dic-2032 y 34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-02",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-12-02",
+     "interest": 3.9,
+     "amortization": 33
+    },
+    {
+     "date": "2032-06-02",
+     "interest": 2.613,
+     "amortization": 0
+    },
+    {
+     "date": "2032-12-02",
+     "interest": 2.613,
+     "amortization": 33
+    },
+    {
+     "date": "2033-06-02",
+     "interest": 1.326,
+     "amortization": 0
+    },
+    {
+     "date": "2033-12-02",
+     "interest": 1.326,
+     "amortization": 34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "GN49O",
+    "usd_mep": "GN49D",
+    "usd_cable": "GN49C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina GN49D). IOL redondea la tasa (7,75% nominal en descripción vs 7,8% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "HJCH",
+   "name": "ON John Deere Credit Cl. 16 5,5% 2028",
+   "issuer": "John Deere Credit Compañía Financiera S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-01-17",
+   "maturity": "2028-01-17",
+   "coupon_text": "5,5% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-17",
+     "interest": 2.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-17",
+     "interest": 2.75,
+     "amortization": 0
+    },
+    {
+     "date": "2028-01-17",
+     "interest": 2.75,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "HJCHO",
+    "usd_mep": "HJCHD"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina HJCHD)"
+  },
+  {
+   "ticker": "IRCJ",
+   "name": "ON IRSA Cl. 18 7% 2027",
+   "issuer": "IRSA Inversiones y Representaciones S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-02-28",
+   "maturity": "2027-02-28",
+   "coupon_text": "7% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-28",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "IRCJO",
+    "usd_mep": "IRCJD"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina IRCJD)"
+  },
+  {
+   "ticker": "LOC5",
+   "name": "ON Loma Negra Cl. 5 7% 2027",
+   "issuer": "Loma Negra C.I.A.S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-07-24",
+   "maturity": "2027-07-24",
+   "coupon_text": "7% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-24",
+     "interest": 3.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-24",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "LOC5O",
+    "usd_mep": "LOC5D",
+    "usd_cable": "LOC5C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina LOC5D)"
+  },
+  {
+   "ticker": "LOC6",
+   "name": "ON Loma Negra Cl. 6 7% 2029",
+   "issuer": "Loma Negra C.I.A.S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-07-24",
+   "maturity": "2029-01-23",
+   "coupon_text": "7% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-24",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-24",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-24",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-24",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-23",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "LOC6O",
+    "usd_mep": "LOC6D",
+    "usd_cable": "LOC6C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina LOC6D). descripción IOL: vto 23/01/29"
+  },
+  {
+   "ticker": "MGCM",
+   "name": "ON Pampa Energía 7,95% 2031",
+   "issuer": "Pampa Energía S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-09-10",
+   "maturity": "2031-09-10",
+   "coupon_text": "7,95% anual (IOL redondea a 8%), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-03-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-09-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-03-10",
+     "interest": 4.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-09-10",
+     "interest": 4.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "MGCMO",
+    "usd_mep": "MGCMD",
+    "usd_cable": "MGCMC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina MGCMD). IOL redondea la tasa (7,95% nominal en descripción vs 8,0% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "MGCN",
+   "name": "ON Pampa Energía Cl. 22 5,8% 2028",
+   "issuer": "Pampa Energía S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-04",
+   "maturity": "2028-10-04",
+   "coupon_text": "5,8% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-04",
+     "interest": 2.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-04",
+     "interest": 2.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-04",
+     "interest": 2.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-04",
+     "interest": 2.9,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "MGCNO",
+    "usd_mep": "MGCND"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina MGCND)"
+  },
+  {
+   "ticker": "MGCO",
+   "name": "ON Pampa Energía Cl. XXIII 7,9% 2034",
+   "issuer": "Pampa Energía S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-12-16",
+   "maturity": "2034-12-16",
+   "coupon_text": "7,9% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-12-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-06-16",
+     "interest": 3.95,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-12-16",
+     "interest": 3.95,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "MGCOO",
+    "usd_mep": "MGCOD",
+    "usd_cable": "MGCOC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina MGCOD)"
+  },
+  {
+   "ticker": "MGCR",
+   "name": "ON Pampa Energía Cl. XXVI 7,875% 2037",
+   "issuer": "Pampa Energía S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2023-11-14",
+   "maturity": "2037-11-14",
+   "coupon_text": "7,875% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2036-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2036-11-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2037-05-14",
+     "interest": 3.9375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2037-11-14",
+     "interest": 3.9375,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "MGCRO",
+    "usd_mep": "MGCRD",
+    "usd_cable": "MGCRC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina MGCRD). calculation_inputs.maturity_date de IOL dice 2027-11-14 pero cashflow y descripción indican 14/11/37"
+  },
+  {
+   "ticker": "OLC5",
+   "name": "ON Oleoductos del Valle Cl. 5 7% 2028",
+   "issuer": "Oleoductos del Valle S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-06-12",
+   "maturity": "2028-06-12",
+   "coupon_text": "7% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-12",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-12",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-12",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-12",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "OLC5O",
+    "usd_mep": "OLC5D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina OLC5D)"
+  },
+  {
+   "ticker": "OLC6",
+   "name": "ON Oleoductos del Valle Cl. 6 3,75% 2029",
+   "issuer": "Oleoductos del Valle S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-12-05",
+   "maturity": "2029-06-05",
+   "coupon_text": "3,75% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-05",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-05",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-05",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-05",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-05",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-05",
+     "interest": 1.875,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "OLC6O",
+    "usd_mep": "OLC6D",
+    "usd_cable": "OLC6C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina OLC6D)"
+  },
+  {
+   "ticker": "PLC4",
+   "name": "ON Pluspetrol Cl. IV 8,5% 2032",
+   "issuer": "Pluspetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-05-30",
+   "maturity": "2032-05-30",
+   "coupon_text": "8,5% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-30",
+     "interest": 4.25,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PLC4O",
+    "usd_mep": "PLC4D",
+    "usd_cable": "PLC4C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PLC4D)"
+  },
+  {
+   "ticker": "PLC5",
+   "name": "ON Pluspetrol Cl. V 8,1% 2031",
+   "issuer": "Pluspetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-11-18",
+   "maturity": "2031-05-18",
+   "coupon_text": "8,1% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-18",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-18",
+     "interest": 4.05,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PLC5O",
+    "usd_mep": "PLC5D",
+    "usd_cable": "PLC5C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PLC5D)"
+  },
+  {
+   "ticker": "PN34",
+   "name": "ON Pan American Energy Cl. 34 5% 2027",
+   "issuer": "Pan American Energy S.L. Sucursal Argentina",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-09-27",
+   "maturity": "2027-09-27",
+   "coupon_text": "5% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-27",
+     "interest": 2.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-09-27",
+     "interest": 2.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PN34O",
+    "usd_mep": "PN34D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PN34D)"
+  },
+  {
+   "ticker": "PN35",
+   "name": "ON Pan American Energy Cl. 35 7% 2029",
+   "issuer": "Pan American Energy S.L. Sucursal Argentina",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-09-27",
+   "maturity": "2029-09-27",
+   "coupon_text": "7% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-27",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PN35O",
+    "usd_mep": "PN35D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PN35D)"
+  },
+  {
+   "ticker": "PN36",
+   "name": "ON Pan American Energy Cl. 36 7,3% 2031",
+   "issuer": "Pan American Energy S.L. Sucursal Argentina",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-11-13",
+   "maturity": "2031-11-13",
+   "coupon_text": "7,3% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-13",
+     "interest": 3.65,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-13",
+     "interest": 3.65,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PN36O",
+    "usd_mep": "PN36D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PN36D)"
+  },
+  {
+   "ticker": "PN38",
+   "name": "ON Pan American Energy Cl. 38 6,5% 2027",
+   "issuer": "Pan American Energy S.L. Sucursal Argentina",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-02-11",
+   "maturity": "2027-08-11",
+   "coupon_text": "6,5% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-11",
+     "interest": 3.25,
+     "amortization": 0
+    },
+    {
+     "date": "2027-08-11",
+     "interest": 3.25,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PN38O",
+    "usd_mep": "PN38D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PN38D)"
+  },
+  {
+   "ticker": "PN41",
+   "name": "ON Pan American Energy Cl. 41 7% 2029",
+   "issuer": "Pan American Energy S.L. Sucursal Argentina",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-08-27",
+   "maturity": "2029-08-27",
+   "coupon_text": "7% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-08-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-02-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-08-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-02-27",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-08-27",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PN41O",
+    "usd_mep": "PN41D",
+    "usd_cable": "PN41C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PN41D)"
+  },
+  {
+   "ticker": "PNXC",
+   "name": "ON Pan American Energy 8,5% 2032",
+   "issuer": "Pan American Energy S.L. Sucursal Argentina",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-04-30",
+   "maturity": "2032-04-30",
+   "coupon_text": "8,5% anual, cupón semestral; amortización en 3 cuotas (33,33% abr-2030, 33,33% abr-2031 y 33,34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-04-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-10-30",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-04-30",
+     "interest": 4.25,
+     "amortization": 33.33
+    },
+    {
+     "date": "2030-10-30",
+     "interest": 2.833475,
+     "amortization": 0
+    },
+    {
+     "date": "2031-04-30",
+     "interest": 2.833475,
+     "amortization": 33.33
+    },
+    {
+     "date": "2031-10-30",
+     "interest": 1.41695,
+     "amortization": 0
+    },
+    {
+     "date": "2032-04-30",
+     "interest": 1.41695,
+     "amortization": 33.34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "PNXCO",
+    "usd_mep": "PNXCD",
+    "usd_cable": "PNXCC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina PNXCD)"
+  },
+  {
+   "ticker": "RC1C",
+   "name": "ON Arcor Serie I 7,6% 2033",
+   "issuer": "Arcor S.A.I.C.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-07-31",
+   "maturity": "2033-07-31",
+   "coupon_text": "7,6% anual, cupón semestral; amortización en 3 cuotas (33% jul-2031, 33% jul-2032 y 34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-31",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-07-31",
+     "interest": 3.8,
+     "amortization": 33
+    },
+    {
+     "date": "2032-01-31",
+     "interest": 2.546,
+     "amortization": 0
+    },
+    {
+     "date": "2032-07-31",
+     "interest": 2.546,
+     "amortization": 33
+    },
+    {
+     "date": "2033-01-31",
+     "interest": 1.292,
+     "amortization": 0
+    },
+    {
+     "date": "2033-07-31",
+     "interest": 1.292,
+     "amortization": 34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "RC1CO",
+    "usd_mep": "RC1CD",
+    "usd_cable": "RC1CC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina RC1CD)"
+  },
+  {
+   "ticker": "RCCR",
+   "name": "ON Arcor Cl. 26 7% 2027",
+   "issuer": "Arcor S.A.I.C.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-05-09",
+   "maturity": "2027-05-09",
+   "coupon_text": "7% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-09",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "RCCRO",
+    "usd_mep": "RCCRD"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina RCCRD)"
+  },
+  {
+   "ticker": "RUCD",
+   "name": "ON MSU Energy 9,75% 2030",
+   "issuer": "MSU Energy S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-12-05",
+   "maturity": "2030-12-05",
+   "coupon_text": "9,75% anual (IOL redondea a 9,8%), cupón semestral; amortización en 3 cuotas (17,5% dic-2028, 17,5% dic-2029 y 65% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-05",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-05",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-05",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-05",
+     "interest": 4.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-05",
+     "interest": 4.9,
+     "amortization": 17.5
+    },
+    {
+     "date": "2029-06-05",
+     "interest": 4.0425,
+     "amortization": 0
+    },
+    {
+     "date": "2029-12-05",
+     "interest": 4.0425,
+     "amortization": 17.5
+    },
+    {
+     "date": "2030-06-05",
+     "interest": 3.185,
+     "amortization": 0
+    },
+    {
+     "date": "2030-12-05",
+     "interest": 3.185,
+     "amortization": 65
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "RUCDO",
+    "usd_mep": "RUCDD",
+    "usd_cable": "RUCDC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina RUCDD). IOL redondea la tasa (9,75% nominal en descripción vs 9,8% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "TSC3",
+   "name": "ON TGS 8,5% 2031",
+   "issuer": "Transportadora de Gas del Sur S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-07-24",
+   "maturity": "2031-07-24",
+   "coupon_text": "8,5% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-24",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-07-24",
+     "interest": 4.25,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TSC3O",
+    "usd_mep": "TSC3D",
+    "usd_cable": "TSC3C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TSC3D)"
+  },
+  {
+   "ticker": "TSC4",
+   "name": "ON TGS 7,75% 2035",
+   "issuer": "Transportadora de Gas del Sur S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-11-20",
+   "maturity": "2035-11-20",
+   "coupon_text": "7,75% anual (IOL redondea a 7,8%), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-11-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-05-20",
+     "interest": 3.9,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-11-20",
+     "interest": 3.9,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TSC4O",
+    "usd_mep": "TSC4D",
+    "usd_cable": "TSC4C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TSC4D). IOL redondea la tasa (7,75% nominal en descripción vs 7,8% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "TTC9",
+   "name": "ON Tecpetrol Cl. 9 6,8% 2029",
+   "issuer": "Tecpetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-24",
+   "maturity": "2029-10-24",
+   "coupon_text": "6,8% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-24",
+     "interest": 3.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-24",
+     "interest": 3.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-24",
+     "interest": 3.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-24",
+     "interest": 3.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-04-24",
+     "interest": 3.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-10-24",
+     "interest": 3.4,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TTC9O",
+    "usd_mep": "TTC9D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TTC9D)"
+  },
+  {
+   "ticker": "TTCA",
+   "name": "ON Tecpetrol 7,625% 2033",
+   "issuer": "Tecpetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-01-22",
+   "maturity": "2033-01-22",
+   "coupon_text": "7,625% anual (IOL redondea a 7,6%), cupón semestral; amortización en 3 cuotas (33% en ene-2031, 33% en ene-2032 y 34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-22",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-22",
+     "interest": 3.8,
+     "amortization": 33
+    },
+    {
+     "date": "2031-07-22",
+     "interest": 2.546,
+     "amortization": 0
+    },
+    {
+     "date": "2032-01-22",
+     "interest": 2.546,
+     "amortization": 33
+    },
+    {
+     "date": "2032-07-22",
+     "interest": 1.292,
+     "amortization": 0
+    },
+    {
+     "date": "2033-01-22",
+     "interest": 1.292,
+     "amortization": 34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TTCAO",
+    "usd_mep": "TTCAD",
+    "usd_cable": "TTCAC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TTCAD). IOL redondea la tasa (7,625% nominal en descripción vs 7,6% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "TTCB",
+   "name": "ON Tecpetrol Cl. 11 7,5% 2027",
+   "issuer": "Tecpetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-16",
+   "maturity": "2027-10-16",
+   "coupon_text": "7,5% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-16",
+     "interest": 3.75,
+     "amortization": 0
+    },
+    {
+     "date": "2027-10-16",
+     "interest": 3.75,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TTCBO",
+    "usd_mep": "TTCBD",
+    "usd_cable": "TTCBC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TTCBD)"
+  },
+  {
+   "ticker": "TTCD",
+   "name": "ON Tecpetrol Cl. XII 7,6% 2030",
+   "issuer": "Tecpetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-11-03",
+   "maturity": "2030-11-03",
+   "coupon_text": "7,6% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-03",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-03",
+     "interest": 3.8,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TTCDO",
+    "usd_mep": "TTCDD",
+    "usd_cable": "TTCDC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TTCDD)"
+  },
+  {
+   "ticker": "TTCE",
+   "name": "ON Tecpetrol Cl. 13 2,75% 2029",
+   "issuer": "Tecpetrol S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2026-05-21",
+   "maturity": "2029-05-21",
+   "coupon_text": "2,75% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-21",
+     "interest": 1.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-21",
+     "interest": 1.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-21",
+     "interest": 1.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-21",
+     "interest": 1.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-21",
+     "interest": 1.375,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "TTCEO",
+    "usd_mep": "TTCED",
+    "usd_cable": "TTCEC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina TTCED)"
+  },
+  {
+   "ticker": "VSCR",
+   "name": "ON Vista Energy Cl. 26 7,7% 2031",
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-10",
+   "maturity": "2031-10-10",
+   "coupon_text": "7,7% anual (tasa según IOL), cupón semestral; amortización en 3 cuotas (33% oct-2029, 33% oct-2030 y 34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-10",
+     "interest": 3.85,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-10",
+     "interest": 3.85,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-10",
+     "interest": 3.85,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-10",
+     "interest": 3.85,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-04-10",
+     "interest": 3.85,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-10-10",
+     "interest": 3.85,
+     "amortization": 33
+    },
+    {
+     "date": "2030-04-10",
+     "interest": 2.5795,
+     "amortization": 0
+    },
+    {
+     "date": "2030-10-10",
+     "interest": 2.5795,
+     "amortization": 33
+    },
+    {
+     "date": "2031-04-10",
+     "interest": 1.309,
+     "amortization": 0
+    },
+    {
+     "date": "2031-10-10",
+     "interest": 1.309,
+     "amortization": 34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "VSCRO",
+    "usd_mep": "VSCRD",
+    "usd_cable": "VSCRC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina VSCRD)"
+  },
+  {
+   "ticker": "VSCT",
+   "name": "ON Vista Energy Cl. XXVII 7,6% 2035",
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-12-10",
+   "maturity": "2035-12-10",
+   "coupon_text": "7,6% anual (tasa según IOL), cupón semestral; amortización en 3 cuotas (33% dic-2033, 33% dic-2034 y 34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-12-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-06-10",
+     "interest": 3.8,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-12-10",
+     "interest": 3.8,
+     "amortization": 33
+    },
+    {
+     "date": "2034-06-10",
+     "interest": 2.546,
+     "amortization": 0
+    },
+    {
+     "date": "2034-12-10",
+     "interest": 2.546,
+     "amortization": 33
+    },
+    {
+     "date": "2035-06-10",
+     "interest": 1.292,
+     "amortization": 0
+    },
+    {
+     "date": "2035-12-10",
+     "interest": 1.292,
+     "amortization": 34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "VSCTO",
+    "usd_mep": "VSCTD"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina VSCTD)"
+  },
+  {
+   "ticker": "VSCV",
+   "name": "ON Vista Energy 8,5% 2033",
+   "issuer": "Vista Energy Argentina S.A.U.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-06-10",
+   "maturity": "2033-06-10",
+   "coupon_text": "8,5% anual, cupón semestral; amortización en 3 cuotas (33% jun-2031, 33% jun-2032 y 34% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-10",
+     "interest": 4.25,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-10",
+     "interest": 4.25,
+     "amortization": 33
+    },
+    {
+     "date": "2031-12-10",
+     "interest": 2.8475,
+     "amortization": 0
+    },
+    {
+     "date": "2032-06-10",
+     "interest": 2.8475,
+     "amortization": 33
+    },
+    {
+     "date": "2032-12-10",
+     "interest": 1.445,
+     "amortization": 0
+    },
+    {
+     "date": "2033-06-10",
+     "interest": 1.445,
+     "amortization": 34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "VSCVO",
+    "usd_mep": "VSCVD",
+    "usd_cable": "VSCVC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina VSCVD)"
+  },
+  {
+   "ticker": "YFCJ",
+   "name": "ON YPF Energía Eléctrica Cl. XVIII 7,88% 2032",
+   "issuer": "YPF Energía Eléctrica S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-10-18",
+   "maturity": "2032-10-18",
+   "coupon_text": "7,88% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-04-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-10-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-04-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-10-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-04-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-10-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-04-18",
+     "interest": 3.94,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-10-18",
+     "interest": 3.94,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YFCJO",
+    "usd_mep": "YFCJD"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YFCJD). descripción IOL: vto 16/10/32; analytics IOL: 18/10/32 (ajuste por día hábil)"
+  },
+  {
+   "ticker": "YM34",
+   "name": "ON YPF Cl. XXXIV 8,25% 2034",
+   "issuer": "YPF S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-01-17",
+   "maturity": "2034-01-17",
+   "coupon_text": "8,25% anual (IOL usa 8,3%), cupón semestral; amortización en 3 cuotas (30% ene-2032, 30% ene-2033 y 40% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-07-17",
+     "interest": 4.15,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-01-17",
+     "interest": 4.15,
+     "amortization": 30
+    },
+    {
+     "date": "2032-07-17",
+     "interest": 2.905,
+     "amortization": 0
+    },
+    {
+     "date": "2033-01-17",
+     "interest": 2.905,
+     "amortization": 30
+    },
+    {
+     "date": "2033-07-17",
+     "interest": 1.66,
+     "amortization": 0
+    },
+    {
+     "date": "2034-01-17",
+     "interest": 1.66,
+     "amortization": 40
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YM34O",
+    "usd_mep": "YM34D",
+    "usd_cable": "YM34C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YM34D). IOL redondea la tasa (8,25% nominal en descripción vs 8,3% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "YM38",
+   "name": "ON YPF Cl. 38 7% 2027",
+   "issuer": "YPF S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-07-22",
+   "maturity": "2027-07-22",
+   "coupon_text": "7% anual, cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-22",
+     "interest": 3.5,
+     "amortization": 0
+    },
+    {
+     "date": "2027-07-22",
+     "interest": 3.5,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YM38O",
+    "usd_mep": "YM38D",
+    "usd_cable": "YM38C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YM38D)"
+  },
+  {
+   "ticker": "YM39",
+   "name": "ON YPF Cl. 39 8,8% 2030",
+   "issuer": "YPF S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-07-22",
+   "maturity": "2030-07-22",
+   "coupon_text": "8,8% anual (tasa según IOL, posiblemente redondeada), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-22",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-22",
+     "interest": 4.4,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YM39O",
+    "usd_mep": "YM39D",
+    "usd_cable": "YM39C"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YM39D)"
+  },
+  {
+   "ticker": "YMCI",
+   "name": "ON YPF Cl. XVII 9% 2029",
+   "issuer": "YPF S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2021-02-12",
+   "maturity": "2029-07-02",
+   "coupon_text": "9% anual, cupón semestral; amortización en cuotas semestrales iguales hasta el vencimiento; capital residual 85,72% (según IOL)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-30",
+     "interest": 3.8574,
+     "amortization": 14.28
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 3.2148,
+     "amortization": 14.28
+    },
+    {
+     "date": "2027-12-30",
+     "interest": 2.5722,
+     "amortization": 14.28
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 1.9296,
+     "amortization": 14.28
+    },
+    {
+     "date": "2028-12-30",
+     "interest": 1.287,
+     "amortization": 14.28
+    },
+    {
+     "date": "2029-07-02",
+     "interest": 0.6444,
+     "amortization": 14.32
+    }
+   ],
+   "residual_pct": 85.72,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YMCIO",
+    "usd_mep": "YMCID",
+    "usd_cable": "YMCIC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YMCID). vto efectivo 2029-07-02 (30/06 inhábil)"
+  },
+  {
+   "ticker": "YMCJ",
+   "name": "ON YPF Cl. XVIII 7% 2033",
+   "issuer": "YPF S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2021-02-12",
+   "maturity": "2033-09-30",
+   "coupon_text": "7% anual, cupón semestral; amortización en 4 cuotas (25% sep-2030, 18,75% sep-2031, 14,06% sep-2032 y 42,19% al vencimiento, según IOL)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-03-30",
+     "interest": 3.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-09-30",
+     "interest": 3.5,
+     "amortization": 25
+    },
+    {
+     "date": "2031-03-30",
+     "interest": 2.625,
+     "amortization": 0
+    },
+    {
+     "date": "2031-09-30",
+     "interest": 2.625,
+     "amortization": 18.75
+    },
+    {
+     "date": "2032-03-30",
+     "interest": 1.96875,
+     "amortization": 0
+    },
+    {
+     "date": "2032-09-30",
+     "interest": 1.96875,
+     "amortization": 14.06
+    },
+    {
+     "date": "2033-03-30",
+     "interest": 1.47665,
+     "amortization": 0
+    },
+    {
+     "date": "2033-09-30",
+     "interest": 1.47665,
+     "amortization": 42.19
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YMCJO",
+    "usd_mep": "YMCJD",
+    "usd_cable": "YMCJC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YMCJD)"
+  },
+  {
+   "ticker": "YMCX",
+   "name": "ON YPF 8,75% 2031",
+   "issuer": "YPF S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-09-11",
+   "maturity": "2031-09-11",
+   "coupon_text": "8,75% anual (IOL redondea a 8,8%), cupón semestral; amortización en 3 cuotas (20% sep-2029, 20% sep-2030 y 60% al vencimiento)",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-11",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-11",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-11",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-11",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-11",
+     "interest": 4.4,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-11",
+     "interest": 4.4,
+     "amortization": 20
+    },
+    {
+     "date": "2030-03-11",
+     "interest": 3.52,
+     "amortization": 0
+    },
+    {
+     "date": "2030-09-11",
+     "interest": 3.52,
+     "amortization": 20
+    },
+    {
+     "date": "2031-03-11",
+     "interest": 2.64,
+     "amortization": 0
+    },
+    {
+     "date": "2031-09-11",
+     "interest": 2.64,
+     "amortization": 60
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "YMCXO",
+    "usd_mep": "YMCXD",
+    "usd_cable": "YMCXC"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina YMCXD). IOL redondea la tasa (8,75% nominal en descripción vs 8,8% en cálculo): cupones levemente sobrestimados/subestimados",
+   "flags": [
+    "estimado"
+   ]
+  },
+  {
+   "ticker": "ZZC1",
+   "name": "ON Camuzzi Gas del Sur Cl. 1 8% 2027",
+   "issuer": "Camuzzi Gas del Sur S.A.",
+   "family": "on",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-02-21",
+   "maturity": "2027-02-21",
+   "coupon_text": "8% anual (tasa según IOL), cupón semestral; amortización íntegra (bullet) al vencimiento",
+   "fixed_flows": true,
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-21",
+     "interest": 4.0,
+     "amortization": 100
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste: flujos en dólares por cada 100 VN originales",
+   "quote": {
+    "pesos": "ZZC1O",
+    "usd_mep": "ZZC1D"
+   },
+   "price_unit": "per_100_vn",
+   "source_note": "IOL analytics 25/11/2026 (lámina ZZC1D). emisor inferido del texto \"Camuzzi\" de IOL; confirmar razón social"
+  }
+ ]
+}

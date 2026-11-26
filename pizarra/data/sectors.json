@@ -1,0 +1,735 @@
+{
+ "_nota": "Clasificación manual por ticker (nombre y sector). Los tickers que no figuren se muestran como \"Sin clasificar\". Editable. Los CEDEARs agregados el 25/11/2026 son clasificación propia a partir de conocimiento público de cada empresa.",
+ "cedears": {
+  "AAPL": {
+   "name": "Apple",
+   "sector": "Tecnología"
+  },
+  "ADGO": {
+   "name": "Adecoagro",
+   "sector": "Agro y Alimentos"
+  },
+  "ADI": {
+   "name": "Analog Devices",
+   "sector": "Sin clasificar"
+  },
+  "AMAT": {
+   "name": "Applied Materials",
+   "sector": "Semiconductores"
+  },
+  "AMD": {
+   "name": "Advanced Micro Devices",
+   "sector": "Semiconductores"
+  },
+  "AMGN": {
+   "name": "Amgen",
+   "sector": "Salud"
+  },
+  "AMZN": {
+   "name": "Amazon",
+   "sector": "Consumo"
+  },
+  "ANF": {
+   "name": "Abercrombie & Fitch",
+   "sector": "Consumo"
+  },
+  "ANT": {
+   "name": "Anthropic",
+   "sector": "Tecnología"
+  },
+  "ASML": {
+   "name": "ASML Holding",
+   "sector": "Semiconductores"
+  },
+  "ASTS": {
+   "name": "AST SpaceMobile",
+   "sector": "Telecomunicaciones"
+  },
+  "AVGO": {
+   "name": "Broadcom",
+   "sector": "Semiconductores"
+  },
+  "AZN": {
+   "name": "AstraZeneca",
+   "sector": "Salud"
+  },
+  "BABA": {
+   "name": "Alibaba",
+   "sector": "Consumo"
+  },
+  "BRKB": {
+   "name": "Berkshire Hathaway B",
+   "sector": "Financiero"
+  },
+  "CAT": {
+   "name": "Caterpillar",
+   "sector": "Industriales"
+  },
+  "COIN": {
+   "name": "Coinbase",
+   "sector": "Cripto"
+  },
+  "CRM": {
+   "name": "Salesforce",
+   "sector": "Tecnología"
+  },
+  "CRWD": {
+   "name": "CrowdStrike",
+   "sector": "Tecnología"
+  },
+  "CRWV": {
+   "name": "CoreWeave",
+   "sector": "Tecnología"
+  },
+  "CSCO": {
+   "name": "Cisco Systems",
+   "sector": "Tecnología"
+  },
+  "CVX": {
+   "name": "Chevron",
+   "sector": "Energía"
+  },
+  "DELL": {
+   "name": "Dell Technologies",
+   "sector": "Tecnología"
+  },
+  "DIA": {
+   "name": "SPDR Dow Jones Industrial Average ETF (ETF)",
+   "sector": "ETF"
+  },
+  "DISN": {
+   "name": "The Walt Disney Company",
+   "sector": "Consumo"
+  },
+  "EEM": {
+   "name": "iShares MSCI Emerging Markets (ETF)",
+   "sector": "ETF"
+  },
+  "ETHA": {
+   "name": "iShares Ethereum Trust (ETF)",
+   "sector": "ETF"
+  },
+  "EWZ": {
+   "name": "iShares MSCI Brazil (ETF)",
+   "sector": "ETF"
+  },
+  "GDX": {
+   "name": "VanEck Gold Miners (ETF)",
+   "sector": "ETF"
+  },
+  "GE": {
+   "name": "GE Aerospace",
+   "sector": "Industriales"
+  },
+  "GLD": {
+   "name": "SPDR Gold Shares (ETF)",
+   "sector": "ETF"
+  },
+  "GLOB": {
+   "name": "Globant",
+   "sector": "Tecnología"
+  },
+  "GOOGL": {
+   "name": "Alphabet (Google)",
+   "sector": "Tecnología"
+  },
+  "HL": {
+   "name": "Hecla Mining",
+   "sector": "Materiales"
+  },
+  "HPQ": {
+   "name": "HP Inc.",
+   "sector": "Tecnología"
+  },
+  "HSBC": {
+   "name": "HSBC Holdings",
+   "sector": "Financiero"
+  },
+  "HUT": {
+   "name": "Hut 8",
+   "sector": "Cripto"
+  },
+  "IBIT": {
+   "name": "iShares Bitcoin Trust (ETF)",
+   "sector": "ETF"
+  },
+  "IBM": {
+   "name": "IBM",
+   "sector": "Tecnología"
+  },
+  "INTC": {
+   "name": "Intel",
+   "sector": "Semiconductores"
+  },
+  "IREN": {
+   "name": "IREN (Iris Energy)",
+   "sector": "Cripto"
+  },
+  "IVV": {
+   "name": "iShares Core S&P 500 ETF (ETF)",
+   "sector": "ETF"
+  },
+  "IWM": {
+   "name": "iShares Russell 2000 (ETF)",
+   "sector": "ETF"
+  },
+  "JMIA": {
+   "name": "Jumia Technologies",
+   "sector": "Consumo"
+  },
+  "JNJ": {
+   "name": "Johnson & Johnson",
+   "sector": "Salud"
+  },
+  "JPM": {
+   "name": "JPMorgan Chase",
+   "sector": "Financiero"
+  },
+  "KO": {
+   "name": "Coca-Cola",
+   "sector": "Consumo"
+  },
+  "LAC": {
+   "name": "Lithium Americas",
+   "sector": "Materiales"
+  },
+  "LLY": {
+   "name": "Eli Lilly",
+   "sector": "Salud"
+  },
+  "MCD": {
+   "name": "McDonalds",
+   "sector": "Consumo"
+  },
+  "MELI": {
+   "name": "Mercado Libre",
+   "sector": "Consumo"
+  },
+  "META": {
+   "name": "Meta Platforms",
+   "sector": "Tecnología"
+  },
+  "MRNA": {
+   "name": "Moderna",
+   "sector": "Salud"
+  },
+  "MRVL": {
+   "name": "Marvell Technology",
+   "sector": "Semiconductores"
+  },
+  "MSFT": {
+   "name": "Microsoft",
+   "sector": "Tecnología"
+  },
+  "MSTR": {
+   "name": "MicroStrategy (Strategy)",
+   "sector": "Cripto"
+  },
+  "MU": {
+   "name": "Micron Technology",
+   "sector": "Semiconductores"
+  },
+  "NATU3": {
+   "name": "Natura Cosméticos",
+   "sector": "Consumo"
+  },
+  "NBIS": {
+   "name": "Nebius Group",
+   "sector": "Tecnología"
+  },
+  "NFLX": {
+   "name": "Netflix",
+   "sector": "Tecnología"
+  },
+  "NIO": {
+   "name": "NIO",
+   "sector": "Consumo"
+  },
+  "NKE": {
+   "name": "Nike",
+   "sector": "Consumo"
+  },
+  "NU": {
+   "name": "Nu Holdings (Nubank)",
+   "sector": "Fintech"
+  },
+  "NVDA": {
+   "name": "Nvidia",
+   "sector": "Semiconductores"
+  },
+  "ORCL": {
+   "name": "Oracle",
+   "sector": "Tecnología"
+  },
+  "PBR": {
+   "name": "Petrobras (ADR)",
+   "sector": "Energía"
+  },
+  "PEP": {
+   "name": "PepsiCo",
+   "sector": "Consumo"
+  },
+  "PETR3": {
+   "name": "Petrobras",
+   "sector": "Energía"
+  },
+  "PFE": {
+   "name": "Pfizer",
+   "sector": "Salud"
+  },
+  "PG": {
+   "name": "Procter & Gamble",
+   "sector": "Consumo"
+  },
+  "PLTR": {
+   "name": "Palantir Technologies",
+   "sector": "Tecnología"
+  },
+  "PSQ": {
+   "name": "ProShares Short QQQ (ETF inverso)",
+   "sector": "ETF"
+  },
+  "PYPL": {
+   "name": "PayPal",
+   "sector": "Fintech"
+  },
+  "QCOM": {
+   "name": "Qualcomm",
+   "sector": "Semiconductores"
+  },
+  "QQQ": {
+   "name": "Invesco QQQ Trust (ETF)",
+   "sector": "ETF"
+  },
+  "RACE": {
+   "name": "Ferrari",
+   "sector": "Consumo"
+  },
+  "RBLX": {
+   "name": "Roblox",
+   "sector": "Tecnología"
+  },
+  "RIO": {
+   "name": "Rio Tinto",
+   "sector": "Materiales"
+  },
+  "SATL": {
+   "name": "Satellogic",
+   "sector": "Tecnología"
+  },
+  "SCCO": {
+   "name": "Southern Copper",
+   "sector": "Materiales"
+  },
+  "SH": {
+   "name": "ProShares Short S&P500 (ETF inverso)",
+   "sector": "ETF"
+  },
+  "SHEL": {
+   "name": "Shell",
+   "sector": "Energía"
+  },
+  "SLV": {
+   "name": "iShares Silver Trust (ETF)",
+   "sector": "ETF"
+  },
+  "SMH": {
+   "name": "VanEck Semiconductor ETF",
+   "sector": "ETF"
+  },
+  "SNDK": {
+   "name": "Sandisk",
+   "sector": "Semiconductores"
+  },
+  "SPCX": {
+   "name": "Space Exploration Technologies (SpaceX)",
+   "sector": "Otro"
+  },
+  "SPOT": {
+   "name": "Spotify",
+   "sector": "Tecnología"
+  },
+  "SPY": {
+   "name": "SPDR S&P 500 ETF Trust (ETF)",
+   "sector": "ETF"
+  },
+  "STLA": {
+   "name": "Stellantis",
+   "sector": "Consumo"
+  },
+  "T": {
+   "name": "AT&T",
+   "sector": "Telecomunicaciones"
+  },
+  "TQQQ": {
+   "name": "ProShares UltraPro QQQ (ETF 3x apalancado)",
+   "sector": "ETF"
+  },
+  "TRVV": {
+   "name": "TRVV",
+   "sector": "Otro"
+  },
+  "TSLA": {
+   "name": "Tesla",
+   "sector": "Consumo"
+  },
+  "TSM": {
+   "name": "Taiwan Semiconductor (TSMC)",
+   "sector": "Semiconductores"
+  },
+  "UBER": {
+   "name": "Uber",
+   "sector": "Tecnología"
+  },
+  "UNH": {
+   "name": "UnitedHealth Group",
+   "sector": "Salud"
+  },
+  "UPST": {
+   "name": "Upstart",
+   "sector": "Fintech"
+  },
+  "URA": {
+   "name": "Global X Uranium (ETF)",
+   "sector": "ETF"
+  },
+  "USO": {
+   "name": "United States Oil Fund (ETF)",
+   "sector": "ETF"
+  },
+  "V": {
+   "name": "Visa",
+   "sector": "Financiero"
+  },
+  "VALE": {
+   "name": "Vale",
+   "sector": "Materiales"
+  },
+  "VIST": {
+   "name": "Vista Energy",
+   "sector": "Energía"
+  },
+  "VST": {
+   "name": "Vistra Corp",
+   "sector": "Utilities"
+  },
+  "VXX": {
+   "name": "iPath Series B S&P 500 VIX Short-Term Futures (ETN)",
+   "sector": "ETF"
+  },
+  "WMT": {
+   "name": "Walmart",
+   "sector": "Consumo"
+  },
+  "XLE": {
+   "name": "Energy Select Sector SPDR (ETF)",
+   "sector": "ETF"
+  },
+  "XLF": {
+   "name": "Financial Select Sector SPDR (ETF)",
+   "sector": "ETF"
+  },
+  "XLP": {
+   "name": "Consumer Staples Select Sector SPDR (ETF)",
+   "sector": "ETF"
+  },
+  "XLU": {
+   "name": "Utilities Select Sector SPDR (ETF)",
+   "sector": "ETF"
+  },
+  "XLV": {
+   "name": "Health Care Select Sector SPDR (ETF)",
+   "sector": "ETF"
+  },
+  "XP": {
+   "name": "XP Inc.",
+   "sector": "Financiero"
+  },
+  "XROX": {
+   "name": "Xerox",
+   "sector": "Sin clasificar"
+  }
+ },
+ "acciones": {
+  "A3": {
+   "name": "Matba Rofex",
+   "sector": "Bancos y Financiero"
+  },
+  "AGRO": {
+   "name": "Agrometal",
+   "sector": "Materiales"
+  },
+  "ALUA": {
+   "name": "Aluar",
+   "sector": "Materiales"
+  },
+  "AUSO": {
+   "name": "Autopistas del Sol",
+   "sector": "Infraestructura"
+  },
+  "BBAR": {
+   "name": "BBVA Banco Francés",
+   "sector": "Bancos y Financiero"
+  },
+  "BHIP": {
+   "name": "Banco Hipotecario",
+   "sector": "Bancos y Financiero"
+  },
+  "BMA": {
+   "name": "Banco Macro",
+   "sector": "Bancos y Financiero"
+  },
+  "BOLT": {
+   "name": "Boldt",
+   "sector": "Consumo"
+  },
+  "BPAT": {
+   "name": "Banco Patagonia",
+   "sector": "Bancos y Financiero"
+  },
+  "BYMA": {
+   "name": "Bolsas y Mercados Argentinos",
+   "sector": "Bancos y Financiero"
+  },
+  "CADO": {
+   "name": "Carlos Casado",
+   "sector": "Agro y Alimentos"
+  },
+  "CAPX": {
+   "name": "Capex",
+   "sector": "Energía"
+  },
+  "CARC": {
+   "name": "Carboclor",
+   "sector": "Materiales"
+  },
+  "CECO2": {
+   "name": "Endesa Costanera",
+   "sector": "Utilities"
+  },
+  "CELU": {
+   "name": "Celulosa Argentina",
+   "sector": "Materiales"
+  },
+  "CEPU": {
+   "name": "Central Puerto",
+   "sector": "Energía"
+  },
+  "CGPA2": {
+   "name": "Camuzzi Gas Pampeana",
+   "sector": "Utilities"
+  },
+  "COME": {
+   "name": "Sociedad Comercial del Plata",
+   "sector": "Consumo"
+  },
+  "CRES": {
+   "name": "Cresud",
+   "sector": "Agro y Alimentos"
+  },
+  "CTIO": {
+   "name": "Consultatio",
+   "sector": "Real Estate"
+  },
+  "CVH": {
+   "name": "Cablevisión Holding",
+   "sector": "Telecom y Medios"
+  },
+  "DGCU2": {
+   "name": "Distribuidora de Gas Cuyana",
+   "sector": "Utilities"
+  },
+  "DOME": {
+   "name": "Domec",
+   "sector": "Consumo"
+  },
+  "ECOG": {
+   "name": "Ecogas",
+   "sector": "Utilities"
+  },
+  "EDN": {
+   "name": "Edenor",
+   "sector": "Utilities"
+  },
+  "EDSH": {
+   "name": "Edesa Holding",
+   "sector": "Materiales"
+  },
+  "FERR": {
+   "name": "Ferrum",
+   "sector": "Consumo"
+  },
+  "FIPL": {
+   "name": "Fiplasto",
+   "sector": "Materiales"
+  },
+  "GAMI": {
+   "name": "B-Gaming",
+   "sector": "Consumo"
+  },
+  "GARO": {
+   "name": "Garovaglio y Zorraquín",
+   "sector": "Agro y Alimentos"
+  },
+  "GBAN": {
+   "name": "Gas Natural Ban",
+   "sector": "Utilities"
+  },
+  "GCDI": {
+   "name": "GCDI",
+   "sector": "Telecom y Medios"
+  },
+  "GCLA": {
+   "name": "Grupo Clarín",
+   "sector": "Telecom y Medios"
+  },
+  "GGAL": {
+   "name": "Grupo Financiero Galicia",
+   "sector": "Bancos y Financiero"
+  },
+  "GRIM": {
+   "name": "Grimoldi",
+   "sector": "Consumo"
+  },
+  "HARG": {
+   "name": "Holcim Argentina",
+   "sector": "Materiales"
+  },
+  "HAVA": {
+   "name": "Havanna Holdings",
+   "sector": "Consumo"
+  },
+  "HSAT": {
+   "name": "Holdsat",
+   "sector": "Telecom y Medios"
+  },
+  "IEB": {
+   "name": "Dycasa",
+   "sector": "Materiales"
+  },
+  "INAG": {
+   "name": "Insumos Agroquímicos",
+   "sector": "Agro y Alimentos"
+  },
+  "INTR": {
+   "name": "Cía. Introductora de Buenos Aires",
+   "sector": "Consumo"
+  },
+  "INVJ": {
+   "name": "Inversora Juramento",
+   "sector": "Agro y Alimentos"
+  },
+  "IRSA": {
+   "name": "IRSA",
+   "sector": "Real Estate"
+  },
+  "LEDE": {
+   "name": "Ledesma",
+   "sector": "Agro y Alimentos"
+  },
+  "LOMA": {
+   "name": "Loma Negra",
+   "sector": "Materiales"
+  },
+  "LONG": {
+   "name": "Longvie",
+   "sector": "Consumo"
+  },
+  "METR": {
+   "name": "Metrogas",
+   "sector": "Utilities"
+  },
+  "MIRG": {
+   "name": "Mirgor",
+   "sector": "Materiales"
+  },
+  "MOLA": {
+   "name": "Molinos Agro",
+   "sector": "Agro y Alimentos"
+  },
+  "MOLI": {
+   "name": "Molinos Río de la Plata",
+   "sector": "Agro y Alimentos"
+  },
+  "MORI": {
+   "name": "Morixe Hermanos",
+   "sector": "Agro y Alimentos"
+  },
+  "OEST": {
+   "name": "Grupo Concesionario del Oeste",
+   "sector": "Infraestructura"
+  },
+  "PAMP": {
+   "name": "Pampa Energía",
+   "sector": "Energía"
+  },
+  "PATA": {
+   "name": "Importadora y Exportadora de la Patagonia",
+   "sector": "Consumo"
+  },
+  "POLL": {
+   "name": "Polledo",
+   "sector": "Agro y Alimentos"
+  },
+  "REGE": {
+   "name": "García Reguera",
+   "sector": "Real Estate"
+  },
+  "REIT": {
+   "name": "REIT Argentina (primer REIT local)",
+   "sector": "Real Estate"
+  },
+  "RICH": {
+   "name": "Laboratorios Richmond",
+   "sector": "Salud"
+  },
+  "RIGO": {
+   "name": "Rigolleau",
+   "sector": "Materiales"
+  },
+  "ROSE": {
+   "name": "Instituto Rosenbusch",
+   "sector": "Salud"
+  },
+  "SAMI": {
+   "name": "San Miguel",
+   "sector": "Agro y Alimentos"
+  },
+  "SEMI": {
+   "name": "Molinos Juan Semino",
+   "sector": "Agro y Alimentos"
+  },
+  "SUPV": {
+   "name": "Grupo Supervielle",
+   "sector": "Bancos y Financiero"
+  },
+  "TECO2": {
+   "name": "Telecom Argentina",
+   "sector": "Telecom y Medios"
+  },
+  "TGNO4": {
+   "name": "Transportadora de Gas del Norte",
+   "sector": "Utilities"
+  },
+  "TGSU2": {
+   "name": "Transportadora de Gas del Sur",
+   "sector": "Utilities"
+  },
+  "TRAN": {
+   "name": "Transener",
+   "sector": "Utilities"
+  },
+  "TXAR": {
+   "name": "Ternium Argentina",
+   "sector": "Materiales"
+  },
+  "VALO": {
+   "name": "Banco de Valores",
+   "sector": "Bancos y Financiero"
+  },
+  "YPFD": {
+   "name": "YPF",
+   "sector": "Energía"
+  }
+ }
+}

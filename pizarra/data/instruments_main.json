@@ -1,0 +1,4063 @@
+{
+ "snapshot": "2026-11-25",
+ "source": "IOL get_fixed_income_analytics (solo lectura)",
+ "instruments": [
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "AL29",
+   "name": "Bonar 2029",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2029-07-09",
+   "coupon_text": "1,00% anual sobre saldo, pagadero semestralmente (9/1 y 9/7); amortiza 10% de la VN original por semestre hasta jul-2029.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 0.3,
+     "amortization": 10.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 0.25,
+     "amortization": 10.0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 0.2,
+     "amortization": 10.0
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 0.15,
+     "amortization": 10.0
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 0.1,
+     "amortization": 10.0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.05,
+     "amortization": 10.0
+    }
+   ],
+   "residual_pct": 60.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 60% de la VN original (ya se amortizó el 40%).",
+   "quote": {
+    "pesos": "AL29",
+    "usd_mep": "AL29D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 60 = residual 60%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "GD29",
+   "name": "Global 2029",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2029-07-09",
+   "coupon_text": "1,00% anual sobre saldo, pagadero semestralmente (9/1 y 9/7); amortiza 10% de la VN original por semestre hasta jul-2029.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 0.3,
+     "amortization": 10.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 0.25,
+     "amortization": 10.0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 0.2,
+     "amortization": 10.0
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 0.15,
+     "amortization": 10.0
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 0.1,
+     "amortization": 10.0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.05,
+     "amortization": 10.0
+    }
+   ],
+   "residual_pct": 60.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 60% de la VN original (ya se amortizó el 40%).",
+   "quote": {
+    "pesos": "GD29",
+    "usd_mep": "GD29D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 60 = residual 60%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "AL30",
+   "name": "Bonar 2030",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2030-07-09",
+   "coupon_text": "0,75% anual hasta jul-2027 y 1,75% anual desde ene-2028, sobre saldo, pagadero semestralmente (9/1 y 9/7); amortiza 8% de la VN original por semestre hasta jul-2030.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-11",
+     "interest": 0.24,
+     "amortization": 8.0
+    },
+    {
+     "date": "2027-07-12",
+     "interest": 0.21,
+     "amortization": 8.0
+    },
+    {
+     "date": "2028-01-10",
+     "interest": 0.42,
+     "amortization": 8.0
+    },
+    {
+     "date": "2028-07-10",
+     "interest": 0.35,
+     "amortization": 8.0
+    },
+    {
+     "date": "2029-01-10",
+     "interest": 0.28,
+     "amortization": 8.0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.21,
+     "amortization": 8.0
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 0.14,
+     "amortization": 8.0
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 0.07,
+     "amortization": 8.0
+    }
+   ],
+   "residual_pct": 64.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 64% de la VN original. Algunas fechas son las de IOL ajustadas a dia habil.",
+   "quote": {
+    "pesos": "AL30",
+    "usd_mep": "AL30D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 64 = residual 64%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "GD30",
+   "name": "Global 2030",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2030-07-09",
+   "coupon_text": "0,75% anual hasta jul-2027 y 1,75% anual desde ene-2028, sobre saldo, pagadero semestralmente (9/1 y 9/7); amortiza 8% de la VN original por semestre hasta jul-2030.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-11",
+     "interest": 0.24,
+     "amortization": 8.0
+    },
+    {
+     "date": "2027-07-12",
+     "interest": 0.21,
+     "amortization": 8.0
+    },
+    {
+     "date": "2028-01-10",
+     "interest": 0.42,
+     "amortization": 8.0
+    },
+    {
+     "date": "2028-07-10",
+     "interest": 0.35,
+     "amortization": 8.0
+    },
+    {
+     "date": "2029-01-10",
+     "interest": 0.28,
+     "amortization": 8.0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 0.21,
+     "amortization": 8.0
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 0.14,
+     "amortization": 8.0
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 0.07,
+     "amortization": 8.0
+    }
+   ],
+   "residual_pct": 64.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 64% de la VN original. Algunas fechas son las de IOL ajustadas a dia habil.",
+   "quote": {
+    "pesos": "GD30",
+    "usd_mep": "GD30D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 64 = residual 64%. IOL informa para GD30 una fecha de emision 2026-07-09 (inconsistente); se usa 2020-09-04 como en AL30."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "AL35",
+   "name": "Bonar 2035",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2035-07-09",
+   "coupon_text": "Step-up anual sobre saldo, pagadero semestralmente (9/1 y 9/7): 4,125% hasta jul-2027, 4,75% durante 2028 y 5,00% desde 2029; amortiza 10% de la VN original por semestre desde ene-2031 hasta jul-2035.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 2.0625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.0625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 2.5,
+     "amortization": 10.0
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 2.25,
+     "amortization": 10.0
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 2.0,
+     "amortization": 10.0
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.75,
+     "amortization": 10.0
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.5,
+     "amortization": 10.0
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.25,
+     "amortization": 10.0
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.0,
+     "amortization": 10.0
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.75,
+     "amortization": 10.0
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.5,
+     "amortization": 10.0
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.25,
+     "amortization": 10.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100% (aun no amortizo).",
+   "quote": {
+    "pesos": "AL35",
+    "usd_mep": "AL35D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. IOL informa fecha de emision 2021-07-09 (inicio de devengamiento del tramo); se usa 2020-09-04, fecha de emision del canje."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "GD35",
+   "name": "Global 2035",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2035-07-09",
+   "coupon_text": "Step-up anual sobre saldo, pagadero semestralmente (9/1 y 9/7): 4,125% hasta jul-2027, 4,75% durante 2028 y 5,00% desde 2029; amortiza 10% de la VN original por semestre desde ene-2031 hasta jul-2035.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 2.0625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.0625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 2.5,
+     "amortization": 10.0
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 2.25,
+     "amortization": 10.0
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 2.0,
+     "amortization": 10.0
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.75,
+     "amortization": 10.0
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.5,
+     "amortization": 10.0
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.25,
+     "amortization": 10.0
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.0,
+     "amortization": 10.0
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.75,
+     "amortization": 10.0
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.5,
+     "amortization": 10.0
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.25,
+     "amortization": 10.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100% (aun no amortizo).",
+   "quote": {
+    "pesos": "GD35",
+    "usd_mep": "GD35D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. IOL informa fecha de emision 2021-07-09 (inicio de devengamiento del tramo); se usa 2020-09-04, fecha de emision del canje."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "AL41",
+   "name": "Bonar 2041",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2041-07-09",
+   "coupon_text": "Step-up anual sobre saldo, pagadero semestralmente (9/1 y 9/7): 3,50% hasta jul-2029 y 4,875% desde ene-2030; amortiza en 28 cuotas semestrales (3,57% c/u, la ultima 3,61%) desde ene-2028 hasta jul-2041.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 1.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 1.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 1.75,
+     "amortization": 3.57
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 1.687525,
+     "amortization": 3.57
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 1.62505,
+     "amortization": 3.57
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 1.562575,
+     "amortization": 3.57
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.089425,
+     "amortization": 3.57
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.002406,
+     "amortization": 3.57
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.915388,
+     "amortization": 3.57
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.828369,
+     "amortization": 3.57
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.74135,
+     "amortization": 3.57
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.654331,
+     "amortization": 3.57
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.567313,
+     "amortization": 3.57
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.480294,
+     "amortization": 3.57
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.393275,
+     "amortization": 3.57
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 1.306256,
+     "amortization": 3.57
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 1.219238,
+     "amortization": 3.57
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 1.132219,
+     "amortization": 3.57
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 1.0452,
+     "amortization": 3.57
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.958181,
+     "amortization": 3.57
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.871163,
+     "amortization": 3.57
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.784144,
+     "amortization": 3.57
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.697125,
+     "amortization": 3.57
+    },
+    {
+     "date": "2038-07-09",
+     "interest": 0.610106,
+     "amortization": 3.57
+    },
+    {
+     "date": "2039-01-09",
+     "interest": 0.523088,
+     "amortization": 3.57
+    },
+    {
+     "date": "2039-07-09",
+     "interest": 0.436069,
+     "amortization": 3.57
+    },
+    {
+     "date": "2040-01-09",
+     "interest": 0.34905,
+     "amortization": 3.57
+    },
+    {
+     "date": "2040-07-09",
+     "interest": 0.262031,
+     "amortization": 3.57
+    },
+    {
+     "date": "2041-01-09",
+     "interest": 0.175013,
+     "amortization": 3.57
+    },
+    {
+     "date": "2041-07-09",
+     "interest": 0.087994,
+     "amortization": 3.61
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100% (aun no amortizo).",
+   "quote": {
+    "pesos": "AL41",
+    "usd_mep": "AL41D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. IOL informa fecha de emision 2021-07-09; se usa 2020-09-04, fecha de emision del canje."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "GD41",
+   "name": "Global 2041",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2041-07-09",
+   "coupon_text": "Step-up anual sobre saldo, pagadero semestralmente (9/1 y 9/7): 3,50% hasta jul-2029 y 4,875% desde ene-2030; amortiza en 28 cuotas semestrales (3,57% c/u, la ultima 3,61%) desde ene-2028 hasta jul-2041.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 1.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 1.75,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 1.75,
+     "amortization": 3.57
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 1.687525,
+     "amortization": 3.57
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 1.62505,
+     "amortization": 3.57
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 1.562575,
+     "amortization": 3.57
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 2.089425,
+     "amortization": 3.57
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 2.002406,
+     "amortization": 3.57
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.915388,
+     "amortization": 3.57
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.828369,
+     "amortization": 3.57
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.74135,
+     "amortization": 3.57
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.654331,
+     "amortization": 3.57
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.567313,
+     "amortization": 3.57
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.480294,
+     "amortization": 3.57
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.393275,
+     "amortization": 3.57
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 1.306256,
+     "amortization": 3.57
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 1.219238,
+     "amortization": 3.57
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 1.132219,
+     "amortization": 3.57
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 1.0452,
+     "amortization": 3.57
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.958181,
+     "amortization": 3.57
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.871163,
+     "amortization": 3.57
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.784144,
+     "amortization": 3.57
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.697125,
+     "amortization": 3.57
+    },
+    {
+     "date": "2038-07-09",
+     "interest": 0.610106,
+     "amortization": 3.57
+    },
+    {
+     "date": "2039-01-09",
+     "interest": 0.523088,
+     "amortization": 3.57
+    },
+    {
+     "date": "2039-07-09",
+     "interest": 0.436069,
+     "amortization": 3.57
+    },
+    {
+     "date": "2040-01-09",
+     "interest": 0.34905,
+     "amortization": 3.57
+    },
+    {
+     "date": "2040-07-09",
+     "interest": 0.262031,
+     "amortization": 3.57
+    },
+    {
+     "date": "2041-01-09",
+     "interest": 0.175013,
+     "amortization": 3.57
+    },
+    {
+     "date": "2041-07-09",
+     "interest": 0.087994,
+     "amortization": 3.61
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100% (aun no amortizo).",
+   "quote": {
+    "pesos": "GD41",
+    "usd_mep": "GD41D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. IOL informa fecha de emision 2021-07-09; se usa 2020-09-04, fecha de emision del canje."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "GD38",
+   "name": "Global 2038",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2038-01-09",
+   "coupon_text": "5,00% anual sobre saldo, pagadero semestralmente (9/1 y 9/7); amortiza en 22 cuotas semestrales (4,54% c/u, la ultima 4,66%) desde jul-2027 hasta ene-2038.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.5,
+     "amortization": 4.54
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.3865,
+     "amortization": 4.54
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.273,
+     "amortization": 4.54
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.1595,
+     "amortization": 4.54
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.046,
+     "amortization": 4.54
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 1.9325,
+     "amortization": 4.54
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 1.819,
+     "amortization": 4.54
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.7055,
+     "amortization": 4.54
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.592,
+     "amortization": 4.54
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.4785,
+     "amortization": 4.54
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.365,
+     "amortization": 4.54
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.2515,
+     "amortization": 4.54
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.138,
+     "amortization": 4.54
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.0245,
+     "amortization": 4.54
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.911,
+     "amortization": 4.54
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.7975,
+     "amortization": 4.54
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.684,
+     "amortization": 4.54
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 0.5705,
+     "amortization": 4.54
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.457,
+     "amortization": 4.54
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.3435,
+     "amortization": 4.54
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.23,
+     "amortization": 4.54
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.1165,
+     "amortization": 4.66
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100% (aun no amortizo).",
+   "quote": {
+    "pesos": "GD38",
+    "usd_mep": "GD38D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. Emision 04/09/2020 y cupon 5% segun Rava (GD38); IOL informa emision 2021-07-09."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "AE38",
+   "name": "Bonar 2038",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2038-01-09",
+   "coupon_text": "5,00% anual sobre saldo, pagadero semestralmente (9/1 y 9/7); amortiza en 22 cuotas semestrales (4,54% c/u, la ultima 4,66%) desde jul-2027 hasta ene-2038.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 2.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 2.5,
+     "amortization": 4.54
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 2.3865,
+     "amortization": 4.54
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 2.273,
+     "amortization": 4.54
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.1595,
+     "amortization": 4.54
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 2.046,
+     "amortization": 4.54
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 1.9325,
+     "amortization": 4.54
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 1.819,
+     "amortization": 4.54
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.7055,
+     "amortization": 4.54
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.592,
+     "amortization": 4.54
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.4785,
+     "amortization": 4.54
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.365,
+     "amortization": 4.54
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.2515,
+     "amortization": 4.54
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.138,
+     "amortization": 4.54
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.0245,
+     "amortization": 4.54
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 0.911,
+     "amortization": 4.54
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 0.7975,
+     "amortization": 4.54
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 0.684,
+     "amortization": 4.54
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 0.5705,
+     "amortization": 4.54
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 0.457,
+     "amortization": 4.54
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 0.3435,
+     "amortization": 4.54
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 0.23,
+     "amortization": 4.54
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 0.1165,
+     "amortization": 4.66
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100% (aun no amortizo).",
+   "quote": {
+    "pesos": "AE38",
+    "usd_mep": "AE38D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. Emision 04/09/2020 y cupon 5% segun Rava (GD38); IOL informa emision 2021-07-09."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "GD46",
+   "name": "Global 2046",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-09-04",
+   "maturity": "2046-07-09",
+   "coupon_text": "Step-up anual sobre saldo, pagadero semestralmente (9/1 y 9/7): 4,125% hasta jul-2027, 4,375% durante 2028 y 5,00% desde 2029; amortiza semestralmente (2,27% de la VN original por cuota, la ultima 2,39%) hasta jul-2046.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-09",
+     "interest": 1.875225,
+     "amortization": 2.27
+    },
+    {
+     "date": "2027-07-09",
+     "interest": 1.828406,
+     "amortization": 2.27
+    },
+    {
+     "date": "2028-01-09",
+     "interest": 1.889563,
+     "amortization": 2.27
+    },
+    {
+     "date": "2028-07-09",
+     "interest": 1.839906,
+     "amortization": 2.27
+    },
+    {
+     "date": "2029-01-09",
+     "interest": 2.046,
+     "amortization": 2.27
+    },
+    {
+     "date": "2029-07-09",
+     "interest": 1.98925,
+     "amortization": 2.27
+    },
+    {
+     "date": "2030-01-09",
+     "interest": 1.9325,
+     "amortization": 2.27
+    },
+    {
+     "date": "2030-07-09",
+     "interest": 1.87575,
+     "amortization": 2.27
+    },
+    {
+     "date": "2031-01-09",
+     "interest": 1.819,
+     "amortization": 2.27
+    },
+    {
+     "date": "2031-07-09",
+     "interest": 1.76225,
+     "amortization": 2.27
+    },
+    {
+     "date": "2032-01-09",
+     "interest": 1.7055,
+     "amortization": 2.27
+    },
+    {
+     "date": "2032-07-09",
+     "interest": 1.64875,
+     "amortization": 2.27
+    },
+    {
+     "date": "2033-01-09",
+     "interest": 1.592,
+     "amortization": 2.27
+    },
+    {
+     "date": "2033-07-09",
+     "interest": 1.53525,
+     "amortization": 2.27
+    },
+    {
+     "date": "2034-01-09",
+     "interest": 1.4785,
+     "amortization": 2.27
+    },
+    {
+     "date": "2034-07-09",
+     "interest": 1.42175,
+     "amortization": 2.27
+    },
+    {
+     "date": "2035-01-09",
+     "interest": 1.365,
+     "amortization": 2.27
+    },
+    {
+     "date": "2035-07-09",
+     "interest": 1.30825,
+     "amortization": 2.27
+    },
+    {
+     "date": "2036-01-09",
+     "interest": 1.2515,
+     "amortization": 2.27
+    },
+    {
+     "date": "2036-07-09",
+     "interest": 1.19475,
+     "amortization": 2.27
+    },
+    {
+     "date": "2037-01-09",
+     "interest": 1.138,
+     "amortization": 2.27
+    },
+    {
+     "date": "2037-07-09",
+     "interest": 1.08125,
+     "amortization": 2.27
+    },
+    {
+     "date": "2038-01-09",
+     "interest": 1.0245,
+     "amortization": 2.27
+    },
+    {
+     "date": "2038-07-09",
+     "interest": 0.96775,
+     "amortization": 2.27
+    },
+    {
+     "date": "2039-01-09",
+     "interest": 0.911,
+     "amortization": 2.27
+    },
+    {
+     "date": "2039-07-09",
+     "interest": 0.85425,
+     "amortization": 2.27
+    },
+    {
+     "date": "2040-01-09",
+     "interest": 0.7975,
+     "amortization": 2.27
+    },
+    {
+     "date": "2040-07-09",
+     "interest": 0.74075,
+     "amortization": 2.27
+    },
+    {
+     "date": "2041-01-09",
+     "interest": 0.684,
+     "amortization": 2.27
+    },
+    {
+     "date": "2041-07-09",
+     "interest": 0.62725,
+     "amortization": 2.27
+    },
+    {
+     "date": "2042-01-09",
+     "interest": 0.5705,
+     "amortization": 2.27
+    },
+    {
+     "date": "2042-07-09",
+     "interest": 0.51375,
+     "amortization": 2.27
+    },
+    {
+     "date": "2043-01-09",
+     "interest": 0.457,
+     "amortization": 2.27
+    },
+    {
+     "date": "2043-07-09",
+     "interest": 0.40025,
+     "amortization": 2.27
+    },
+    {
+     "date": "2044-01-09",
+     "interest": 0.3435,
+     "amortization": 2.27
+    },
+    {
+     "date": "2044-07-09",
+     "interest": 0.28675,
+     "amortization": 2.27
+    },
+    {
+     "date": "2045-01-09",
+     "interest": 0.23,
+     "amortization": 2.27
+    },
+    {
+     "date": "2045-07-09",
+     "interest": 0.17325,
+     "amortization": 2.27
+    },
+    {
+     "date": "2046-01-09",
+     "interest": 0.1165,
+     "amortization": 2.27
+    },
+    {
+     "date": "2046-07-09",
+     "interest": 0.05975,
+     "amortization": 2.39
+    }
+   ],
+   "residual_pct": 90.92,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 90,92% de la VN original (ya se amortizo 9,08%).",
+   "quote": {
+    "pesos": "GD46",
+    "usd_mep": "GD46D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 90,92 = residual 90,92%. IOL informa fecha de emision 2021-07-09; se usa 2020-09-04, fecha de emision del canje."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "PAY0",
+   "name": "Par USD Ley Arg. 2038",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_usd",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": null,
+   "maturity": "2038-12-31",
+   "coupon_text": "Par USD Ley Argentina 2038 (step-up): 3,75% anual hasta mar-2029 y 5,25% anual hasta el vencimiento, pagadero 31/3 y 30/9 (30/360); amortiza en 20 cuotas iguales de 5% desde 30/9/2029 (ultima 31/12/2038). Cronograma contractual segun Rava (ficha PARAD).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-31",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-31",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-30",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-31",
+     "interest": 1.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-30",
+     "interest": 2.625,
+     "amortization": 5.0
+    },
+    {
+     "date": "2030-03-31",
+     "interest": 2.49375,
+     "amortization": 5.0
+    },
+    {
+     "date": "2030-09-30",
+     "interest": 2.3625,
+     "amortization": 5.0
+    },
+    {
+     "date": "2031-03-31",
+     "interest": 2.23125,
+     "amortization": 5.0
+    },
+    {
+     "date": "2031-09-30",
+     "interest": 2.1,
+     "amortization": 5.0
+    },
+    {
+     "date": "2032-03-31",
+     "interest": 1.96875,
+     "amortization": 5.0
+    },
+    {
+     "date": "2032-09-30",
+     "interest": 1.8375,
+     "amortization": 5.0
+    },
+    {
+     "date": "2033-03-31",
+     "interest": 1.70625,
+     "amortization": 5.0
+    },
+    {
+     "date": "2033-09-30",
+     "interest": 1.575,
+     "amortization": 5.0
+    },
+    {
+     "date": "2034-03-31",
+     "interest": 1.44375,
+     "amortization": 5.0
+    },
+    {
+     "date": "2034-09-30",
+     "interest": 1.3125,
+     "amortization": 5.0
+    },
+    {
+     "date": "2035-03-31",
+     "interest": 1.18125,
+     "amortization": 5.0
+    },
+    {
+     "date": "2035-09-30",
+     "interest": 1.05,
+     "amortization": 5.0
+    },
+    {
+     "date": "2036-03-31",
+     "interest": 0.91875,
+     "amortization": 5.0
+    },
+    {
+     "date": "2036-09-30",
+     "interest": 0.7875,
+     "amortization": 5.0
+    },
+    {
+     "date": "2037-03-31",
+     "interest": 0.65625,
+     "amortization": 5.0
+    },
+    {
+     "date": "2037-09-30",
+     "interest": 0.525,
+     "amortization": 5.0
+    },
+    {
+     "date": "2038-03-31",
+     "interest": 0.39375,
+     "amortization": 5.0
+    },
+    {
+     "date": "2038-09-30",
+     "interest": 0.2625,
+     "amortization": 5.0
+    },
+    {
+     "date": "2038-12-31",
+     "interest": 0.065625,
+     "amortization": 5.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales, calculados del cronograma contractual (no de IOL); capital residual 100%. Supuesto: PAY0 comparte terminos con la ficha PARAD (Par U$S Ley Arg. 2038) de Rava. La tasa del cupon del 31/3/2029 se aplica segun la fecha de devengamiento (3,75%); si el emisor aplicara la tasa nueva ese cupon cambiaria levemente.",
+   "quote": {
+    "pesos": "PAY0",
+    "usd_mep": "PAY0D"
+   },
+   "source_note": "IOL no tiene analitica (not_found 25/11/2026); get_asset_info IOL: 'PAR ... USD2038'. Cronograma de Rava (https://www.rava.com/perfil/PARAD, consultado 25/11/2026). Estimado, sin verificar contra el prospecto."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "T15E7",
+   "name": "Boncap ene-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_fija",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2025-01-31",
+   "maturity": "2027-01-15",
+   "coupon_text": "Bono capitalizable en pesos a tasa fija: no paga cupones; un unico pago al vencimiento (capital mas intereses capitalizados).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-15",
+     "interest": 61.103773,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN originales: interes = valor final calculado por IOL menos 100.",
+   "quote": {
+    "pesos": "T15E7",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026 (valor final proyectado por IOL)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "T30A7",
+   "name": "Boncap abr-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_fija",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2025-10-31",
+   "maturity": "2027-04-30",
+   "coupon_text": "Bono capitalizable en pesos a tasa fija: no paga cupones; un unico pago al vencimiento (capital mas intereses capitalizados).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 57.341021,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN originales: interes = valor final calculado por IOL menos 100.",
+   "quote": {
+    "pesos": "T30A7",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026 (valor final proyectado por IOL)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "T30J7",
+   "name": "Boncap jun-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_fija",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2026-01-16",
+   "maturity": "2027-06-30",
+   "coupon_text": "Bono capitalizable en pesos a tasa fija: no paga cupones; un unico pago al vencimiento (capital mas intereses capitalizados).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-06-30",
+     "interest": 56.037291,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN originales: interes = valor final calculado por IOL menos 100.",
+   "quote": {
+    "pesos": "T30J7",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026 (valor final proyectado por IOL)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "T31Y7",
+   "name": "Boncap may-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "soberano_fija",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2025-12-15",
+   "maturity": "2027-05-31",
+   "coupon_text": "Bono capitalizable en pesos a tasa fija: no paga cupones; un unico pago al vencimiento (capital mas intereses capitalizados).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-31",
+     "interest": 51.562784,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN originales: interes = valor final calculado por IOL menos 100.",
+   "quote": {
+    "pesos": "T31Y7",
+    "usd_mep": "TY7D"
+   },
+   "source_note": "IOL analytics 25/11/2026 (valor final proyectado por IOL)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXD6",
+   "name": "Boncer cupón cero dic-26",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2024-03-15",
+   "maturity": "2026-12-15",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-15",
+     "interest": 0.0,
+     "amortization": 320.258914
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 3,2026 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXD6",
+    "usd_mep": "TXD6D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXM7",
+   "name": "Boncer cupón cero mar-27",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2024-05-17",
+   "maturity": "2027-03-31",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-31",
+     "interest": 0.0,
+     "amortization": 242.767178
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 2,4277 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXM7",
+    "usd_mep": "TXM7D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXY7",
+   "name": "Boncer cupón cero may-27",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2025-12-15",
+   "maturity": "2027-05-31",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-31",
+     "interest": 0.0,
+     "amortization": 131.587368
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 1,3159 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXY7",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZX27",
+   "name": "Boncer cupón cero jun-27",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2024-02-01",
+   "maturity": "2027-06-30",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-06-30",
+     "interest": 0.0,
+     "amortization": 433.186668
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 4,3319 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZX27",
+    "usd_mep": "TZX7D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXS7",
+   "name": "Boncer cupón cero sep-27",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2026-03-31",
+   "maturity": "2027-09-30",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-09-30",
+     "interest": 0.0,
+     "amortization": 120.052845
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 1,2005 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXS7",
+    "usd_mep": "TXS7D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXD7",
+   "name": "Boncer cupón cero dic-27",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2024-03-15",
+   "maturity": "2027-12-15",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-12-15",
+     "interest": 0.0,
+     "amortization": 320.258914
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 3,2026 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXD7",
+    "usd_mep": "TXD7D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXM8",
+   "name": "Boncer cupón cero mar-28",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2026-04-01",
+   "maturity": "2028-03-31",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2028-03-31",
+     "interest": 0.0,
+     "amortization": 119.697523
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 1,1970 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXM8",
+    "usd_mep": "TXM8D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZX28",
+   "name": "Boncer cupón cero jun-28",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2024-02-01",
+   "maturity": "2028-06-30",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2028-06-30",
+     "interest": 0.0,
+     "amortization": 433.186668
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 4,3319 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZX28",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXS8",
+   "name": "Boncer cupón cero sep-28",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2026-03-31",
+   "maturity": "2028-09-29",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2028-09-29",
+     "interest": 0.0,
+     "amortization": 120.052845
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 1,2005 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXS8",
+    "usd_mep": "TXS8D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TZXM9",
+   "name": "Boncer cupón cero mar-29",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2026-04-01",
+   "maturity": "2029-03-28",
+   "coupon_text": "Cupon cero en pesos ajustado por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2029-03-28",
+     "interest": 0.0,
+     "amortization": 119.697523
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo esta en pesos ajustados por el CER al 25/11/2026 (coeficiente implicito 1,1970 por 100 VN originales). Para proyectar, multiplicar por (CER futuro / CER actual); residual 100%. La fecha puede ser la de IOL ajustada a dia habil.",
+   "quote": {
+    "pesos": "TZXM9",
+    "usd_mep": "TXM9D"
+   },
+   "source_note": "IOL analytics 25/11/2026"
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TX28",
+   "name": "Boncer 2,25% 2028",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2020-09-04",
+   "maturity": "2028-11-09",
+   "coupon_text": "2,25% anual sobre capital ajustado por CER, pagadero semestralmente (9/5 y 9/11); amortiza en 10 cuotas semestrales iguales de 10% (de mayo-2024 a nov-2028); quedan 4.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-09",
+     "interest": 17.327198,
+     "amortization": 385.048838
+    },
+    {
+     "date": "2027-11-09",
+     "interest": 12.995398,
+     "amortization": 385.048838
+    },
+    {
+     "date": "2028-05-09",
+     "interest": 8.663599,
+     "amortization": 385.048838
+    },
+    {
+     "date": "2028-11-09",
+     "interest": 4.331799,
+     "amortization": 385.048838
+    }
+   ],
+   "residual_pct": 40.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales. Coeficiente CER implicito 38,505 (cada 10% de capital = 385,05); capital residual 1.540,2 = 40% de la VN original ajustada. Para proyectar, multiplicar por (CER futuro / CER actual). El pago del 9/5/2027 cae domingo y se liquida el dia habil siguiente.",
+   "quote": {
+    "pesos": "TX28",
+    "usd_mep": "TX28D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Cronograma (10 cuotas de 10% desde 9/5/2024, cupon 2,25%) segun Rava (https://www.rava.com/perfil/TX28); coherente con los 4 pagos iguales de IOL. El tablero llama a TX28 'Boncer 2%': el cupon es 2,25%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "TX31",
+   "name": "Boncer 2,5% 2031",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2022-05-31",
+   "maturity": "2031-11-30",
+   "coupon_text": "2,50% anual sobre capital ajustado por CER, pagadero semestralmente (30/5 y 30/11); amortiza en 10 cuotas semestrales iguales de 10% desde may-2027 hasta nov-2031.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-11-30",
+     "interest": 22.986335,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-05-30",
+     "interest": 22.986335,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2027-11-30",
+     "interest": 20.687701,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2028-05-30",
+     "interest": 18.389068,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2028-11-30",
+     "interest": 16.090434,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2029-05-30",
+     "interest": 13.791801,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2029-11-30",
+     "interest": 11.493167,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2030-05-30",
+     "interest": 9.194534,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2030-11-30",
+     "interest": 6.8959,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2031-05-30",
+     "interest": 4.597267,
+     "amortization": 183.890677
+    },
+    {
+     "date": "2031-11-30",
+     "interest": 2.298633,
+     "amortization": 183.890677
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales. Coeficiente CER implicito 18,389 (capital ajustado 1.838,9 = 100% de la VN). Para proyectar, multiplicar por (CER futuro / CER actual).",
+   "quote": {
+    "pesos": "TX31",
+    "usd_mep": "TX31D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Estructura de amortizacion (10 cuotas iguales desde 30/5/2027) deducida de los flujos de IOL; no verificada en otra fuente. El tablero llama a TX31 'Boncer 2%': IOL informa cupon 2,5%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "DICP",
+   "name": "Discount $ CER 2033",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2003-12-31",
+   "maturity": "2033-12-31",
+   "coupon_text": "5,83% anual en efectivo sobre capital ajustado por CER, pagadero 30/6 y 31/12; amortiza en 20 cuotas semestrales iguales de 5% (de jun-2024 a dic-2033); quedan 15.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-31",
+     "interest": 1656.287844,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 1545.868619,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2027-12-31",
+     "interest": 1435.449395,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 1325.030171,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2028-12-31",
+     "interest": 1214.610946,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2029-06-30",
+     "interest": 1104.191722,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2029-12-31",
+     "interest": 993.772497,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2030-06-30",
+     "interest": 883.353273,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2030-12-31",
+     "interest": 772.934049,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2031-06-30",
+     "interest": 662.514824,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2031-12-31",
+     "interest": 552.0956,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2032-06-30",
+     "interest": 441.676376,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2032-12-31",
+     "interest": 331.257151,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2033-06-30",
+     "interest": 220.837927,
+     "amortization": 3787.96653
+    },
+    {
+     "date": "2033-12-31",
+     "interest": 110.418703,
+     "amortization": 3787.96653
+    }
+   ],
+   "residual_pct": 75.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales (incluyen los intereses capitalizados hasta 2013, por eso el capital ajustado 75.759 por 100 VN es mayor que 100 x CER). Residual: 15 de 20 cuotas pendientes = 75% del capital. Para proyectar, multiplicar por (CER futuro / CER actual).",
+   "quote": {
+    "pesos": "DICP",
+    "usd_mep": "DICPD"
+   },
+   "source_note": "IOL analytics 25/11/2026. Terminos (5,83%, 20 cuotas desde 30/6/2024) segun Rava (https://rava.com/perfil/DICP)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "PARP",
+   "name": "Par $ CER 2038",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2003-12-31",
+   "maturity": "2038-12-31",
+   "coupon_text": "Par en pesos ajustado por CER (step-up): 1,77% anual hasta mar-2029 y 2,48% anual desde esa fecha hasta el vencimiento, pagadero 31/3 y 30/9 (30/360); amortiza en 20 cuotas de 5% desde 30/9/2029 (ultima 31/12/2038).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-31",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-31",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-30",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-31",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-30",
+     "interest": 740.20064,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2030-03-31",
+     "interest": 703.190608,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2030-09-30",
+     "interest": 666.180576,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2031-03-31",
+     "interest": 629.170544,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2031-09-30",
+     "interest": 592.160512,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2032-03-31",
+     "interest": 555.15048,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2032-09-30",
+     "interest": 518.140448,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2033-03-31",
+     "interest": 481.130416,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2033-09-30",
+     "interest": 444.120384,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2034-03-31",
+     "interest": 407.110352,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2034-09-30",
+     "interest": 370.10032,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2035-03-31",
+     "interest": 333.090288,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2035-09-30",
+     "interest": 296.080256,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2036-03-31",
+     "interest": 259.070224,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2036-09-30",
+     "interest": 222.060192,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2037-03-31",
+     "interest": 185.05016,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2037-09-30",
+     "interest": 148.040128,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2038-03-31",
+     "interest": 111.030096,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2038-09-30",
+     "interest": 74.020064,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2038-12-31",
+     "interest": 18.505016,
+     "amortization": 2984.68
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales, calculados del cronograma contractual con capital ajustado 59.693,6 (coeficiente CER implicito 596,94 segun Rava); NO provienen de IOL. Capital residual 100% (aun sin amortizar). Para proyectar, multiplicar por (CER futuro / CER actual). El cupon del 31/3/2029 se calcula a 1,77% (devengamiento); la tabla de Rava aplica ya 2,48%.",
+   "quote": {
+    "pesos": "PARP",
+    "usd_mep": "PARPD"
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026). Ficha de Rava (https://www.rava.com/perfil/PARP, 25/11/2026): terminos y tabla de flujos."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "PAP0",
+   "name": "Par $ CER 2038 (canje 2010)",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2009-12-31",
+   "maturity": "2038-12-31",
+   "coupon_text": "Par en pesos ajustado por CER (step-up): 1,77% anual hasta mar-2029 y 2,48% anual desde esa fecha hasta el vencimiento, pagadero 31/3 y 30/9 (30/360); amortiza en 20 cuotas de 5% desde 30/9/2029 (ultima 31/12/2038).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-31",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-09-30",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-03-31",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-09-30",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-03-31",
+     "interest": 528.28836,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-09-30",
+     "interest": 740.20064,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2030-03-31",
+     "interest": 703.190608,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2030-09-30",
+     "interest": 666.180576,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2031-03-31",
+     "interest": 629.170544,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2031-09-30",
+     "interest": 592.160512,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2032-03-31",
+     "interest": 555.15048,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2032-09-30",
+     "interest": 518.140448,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2033-03-31",
+     "interest": 481.130416,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2033-09-30",
+     "interest": 444.120384,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2034-03-31",
+     "interest": 407.110352,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2034-09-30",
+     "interest": 370.10032,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2035-03-31",
+     "interest": 333.090288,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2035-09-30",
+     "interest": 296.080256,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2036-03-31",
+     "interest": 259.070224,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2036-09-30",
+     "interest": 222.060192,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2037-03-31",
+     "interest": 185.05016,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2037-09-30",
+     "interest": 148.040128,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2038-03-31",
+     "interest": 111.030096,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2038-09-30",
+     "interest": 74.020064,
+     "amortization": 2984.68
+    },
+    {
+     "date": "2038-12-31",
+     "interest": 18.505016,
+     "amortization": 2984.68
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales, calculados del cronograma contractual con capital ajustado 59.693,6 (coeficiente CER implicito 596,94 segun Rava); NO provienen de IOL. Capital residual 100% (aun sin amortizar). Para proyectar, multiplicar por (CER futuro / CER actual). El cupon del 31/3/2029 se calcula a 1,77% (devengamiento); la tabla de Rava aplica ya 2,48%.",
+   "quote": {
+    "pesos": "PAP0",
+    "usd_mep": null
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026). Supuesto: mismos terminos que PARP (Par $ canje 2010; TradingView: cupon 1,77%, vto 31/12/2038, emision 31/12/2009). No verificado en una ficha propia."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "sin_analitica_iol"
+   ],
+   "ticker": "DIP0",
+   "name": "Discount $ CER 2033 (canje 2010)",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2003-12-31",
+   "maturity": "2033-12-31",
+   "coupon_text": "Discount en pesos ajustado por CER, 5,83% anual en efectivo, pagadero 30/6 y 31/12; amortiza en 20 cuotas semestrales desde 30/6/2024 hasta 31/12/2033 (segun Rava); montos por 100 VN: ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 75.0,
+   "adjust_note": "Sin flujos: el capital por 100 VN (incluye intereses capitalizados 2010-2013 del canje) no se pudo verificar; no se asume el flujo de DICP. Residual 75% estimado por el calendario (15 de 20 cuotas pendientes).",
+   "quote": {
+    "pesos": "DIP0",
+    "usd_mep": null
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026); get_asset_info IOL: 'Bono Discount $ + CER 2033 (Ley Arg)'. Terminos segun Rava (https://www.rava.com/perfil/DIP0)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "CUAP",
+   "name": "Cuasipar $ CER 2045",
+   "issuer": "Tesoro Nacional",
+   "family": "cer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2003-12-31",
+   "maturity": "2045-12-31",
+   "coupon_text": "3,31% anual sobre capital ajustado por CER, pagadero 30/6 y 31/12 (30/360); amortiza en 20 cuotas semestrales iguales de 5% desde 30/6/2036 hasta 31/12/2045.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-06-30",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-12-31",
+     "interest": 1370.979989,
+     "amortization": 0.0
+    },
+    {
+     "date": "2036-06-30",
+     "interest": 1370.979989,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2036-12-31",
+     "interest": 1302.430989,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2037-06-30",
+     "interest": 1233.88199,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2037-12-31",
+     "interest": 1165.33299,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2038-06-30",
+     "interest": 1096.783991,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2038-12-31",
+     "interest": 1028.234991,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2039-06-30",
+     "interest": 959.685992,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2039-12-31",
+     "interest": 891.136993,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2040-06-30",
+     "interest": 822.587993,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2040-12-31",
+     "interest": 754.038994,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2041-06-30",
+     "interest": 685.489994,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2041-12-31",
+     "interest": 616.940995,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2042-06-30",
+     "interest": 548.391995,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2042-12-31",
+     "interest": 479.842996,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2043-06-30",
+     "interest": 411.293997,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2043-12-31",
+     "interest": 342.744997,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2044-06-30",
+     "interest": 274.195998,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2044-12-31",
+     "interest": 205.646998,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2045-06-30",
+     "interest": 137.097999,
+     "amortization": 4141.9335
+    },
+    {
+     "date": "2045-12-31",
+     "interest": 68.548999,
+     "amortization": 4141.9335
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales, calculados del cronograma contractual con capital ajustado 82.838,7 (incluye intereses capitalizados hasta 2013; derivado del cupon semestral de 1.370,97 de Rava); NO provienen de IOL. Residual 100%. Para proyectar, multiplicar por (CER futuro / CER actual). Las fechas son las contractuales (el pago cae al dia habil siguiente).",
+   "quote": {
+    "pesos": "CUAP",
+    "usd_mep": "CUAPD"
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026); get_asset_info IOL: 'Bonos Cuasi Par $ 3,31% 2045 (Ley Arg)'. Terminos segun Rava (https://www.rava.com/perfil/CUAP) y Portfolio Personal (https://publicador.portfoliopersonal.com/files/bonos/CUAP.pdf)."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TTD26",
+   "name": "Bono Dual dic-2026",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "other",
+   "issue_date": null,
+   "maturity": "2026-12-15",
+   "coupon_text": "Bono dual en pesos (tasa dual); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable/dual: los flujos no se pueden determinar de antemano; solo se informa la fecha de vencimiento. Capital nominal 100.",
+   "quote": {
+    "pesos": "TTD26",
+    "usd_mep": "TTD6D"
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TMF27",
+   "name": "Bonte TAMAR feb-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": null,
+   "maturity": "2027-02-26",
+   "coupon_text": "Bono del Tesoro a tasa TAMAR (variable); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable (TAMAR): los intereses no se pueden determinar de antemano; solo se informa la fecha de vencimiento. Capital nominal 100.",
+   "quote": {
+    "pesos": "TMF27",
+    "usd_mep": "TMF7D"
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TML27",
+   "name": "Bonte TAMAR jul-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": "2026-06-30",
+   "maturity": "2027-07-30",
+   "coupon_text": "TAMAR (TEM) capitalizable mensualmente (30/360), con margen fijado en la licitacion; sin cupones periodicos; amortizacion integra al vencimiento.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-07-30",
+     "interest": 0.0,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable (TAMAR): el interes capitalizado se paga al vencimiento y no se puede determinar de antemano; interest = 0 es un marcador, NO significa que no pague interes. Amortizacion integra de 100 al vencimiento.",
+   "quote": {
+    "pesos": "TML27",
+    "usd_mep": "TML7D"
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL. Terminos segun el llamado a licitacion del 26/06/2026 (https://www.argentina.gob.ar/node/505726); emision 30/06/2026 = liquidacion de esa licitacion, y que el titulo nuevo a 30/07/2027 sea TML27 se infiere de la fecha de vencimiento."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TMG27",
+   "name": "Bonte TAMAR ago-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": null,
+   "maturity": "2027-08-31",
+   "coupon_text": "Bono del Tesoro a tasa TAMAR (variable); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable (TAMAR): los intereses no se pueden determinar de antemano; solo se informa la fecha de vencimiento. Capital nominal 100.",
+   "quote": {
+    "pesos": "TMG27",
+    "usd_mep": null
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TMF28",
+   "name": "Bonte TAMAR feb-2028",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": null,
+   "maturity": "2028-02-25",
+   "coupon_text": "Bono del Tesoro a tasa TAMAR (variable); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable (TAMAR): los intereses no se pueden determinar de antemano; solo se informa la fecha de vencimiento. Capital nominal 100.",
+   "quote": {
+    "pesos": "TMF28",
+    "usd_mep": "TMF8D"
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TMG28",
+   "name": "Bonte TAMAR ago-2028",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": null,
+   "maturity": "2028-08-31",
+   "coupon_text": "Bono del Tesoro a tasa TAMAR (variable); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable (TAMAR): los intereses no se pueden determinar de antemano; solo se informa la fecha de vencimiento. Capital nominal 100.",
+   "quote": {
+    "pesos": "TMG28",
+    "usd_mep": null
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TMVE8",
+   "name": "Dual TAMAR/dólar-linked ene-2028",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "other",
+   "issue_date": null,
+   "maturity": "2028-01-31",
+   "coupon_text": "Bono dual en pesos (TAMAR o dolar oficial, segun cual rinda mas); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable/dual (TAMAR o tipo de cambio): los flujos no se pueden determinar de antemano; solo se informa la fecha de vencimiento.",
+   "quote": {
+    "pesos": "TMVE8",
+    "usd_mep": null
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL. Discrepancia de fecha: get_asset_info IOL indica 31/01/2028 y Ambito (via resumen) 28/01/2028; se usa la de IOL."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "TXMD9",
+   "name": "Dual CER/TAMAR dic-2029",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "other",
+   "issue_date": null,
+   "maturity": "2029-12-14",
+   "coupon_text": "Bono dual en pesos (CER o TAMAR, segun cual rinda mas); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable/dual (CER o TAMAR): los flujos no se pueden determinar de antemano; solo se informa la fecha de vencimiento.",
+   "quote": {
+    "pesos": "TXMD9",
+    "usd_mep": "TXD9D"
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL. Vencimiento 14/12/2029 coincide con el llamado a licitacion del 26/06/2026 (https://www.argentina.gob.ar/node/505726)."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "M30A7",
+   "name": "Bontam TAMAR abr-2027",
+   "issuer": "Tesoro Nacional",
+   "family": "tamar",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": null,
+   "maturity": "2027-04-30",
+   "coupon_text": "Letra del Tesoro a tasa TAMAR (variable); ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable (TAMAR): los intereses no se pueden determinar de antemano; solo se informa la fecha de vencimiento. Capital nominal 100.",
+   "quote": {
+    "pesos": "M30A7",
+    "usd_mep": null
+   },
+   "source_note": "No hay analitica de IOL (not_found 25/11/2026). Vencimiento segun get_asset_info IOL. El tablero cita TAMAR + 2,50 puntos (Infobae), no verificado."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "CO32",
+   "name": "Córdoba 2032 U$S",
+   "issuer": "Provincia de Córdoba",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-06-26",
+   "maturity": "2032-06-26",
+   "coupon_text": "9,75% anual sobre saldo, pagadero semestralmente (26/6 y 26/12); amortiza 33% en jun-2030, 33% en jun-2031 y 34% en jun-2032.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-26",
+     "interest": 4.875,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-26",
+     "interest": 4.875,
+     "amortization": 33.0
+    },
+    {
+     "date": "2030-12-26",
+     "interest": 3.26625,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-26",
+     "interest": 3.26625,
+     "amortization": 33.0
+    },
+    {
+     "date": "2031-12-26",
+     "interest": 1.6575,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-06-26",
+     "interest": 1.6575,
+     "amortization": 34.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "CO32",
+    "usd_mep": "CO32D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%. IOL informa vencimiento 2032-07-02 en sus metadatos pero su ultimo flujo es 2032-06-26; se usa la fecha del ultimo flujo."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "sin_analitica_iol"
+   ],
+   "ticker": "CO35",
+   "name": "Córdoba 2035 U$S",
+   "issuer": "Provincia de Córdoba",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": null,
+   "maturity": "2035-02-03",
+   "coupon_text": "ver prospecto",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin flujos: cronograma no verificado. Capital residual 100% (supuesto: no amortizo antes de 2033).",
+   "quote": {
+    "pesos": "CO35",
+    "usd_mep": "CO35D"
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026). Vencimiento 03/02/2035 segun get_asset_info IOL. Prensa (El Cronista 27/01/2026): bono a 9 anos por USD 800 M, cupon 8,6%, amortizacion escalonada 2033-2035; no verificado contra el prospecto."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "PBA27",
+   "name": "Bs. As. 2027",
+   "issuer": "Provincia de Buenos Aires",
+   "family": "provincial",
+   "currency_pay": "ARS",
+   "adjust": "TAMAR",
+   "issue_date": "2026-04-30",
+   "maturity": "2027-04-30",
+   "coupon_text": "Tasa variable (titulo 'TAMAR' con margen fijo de 7,00 puntos segun el aviso de resultados), interes trimestral (30/7, 30/10, 30/1 y 30/4); amortizacion integra al vencimiento.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-30",
+     "interest": 0.0,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-04-30",
+     "interest": 0.0,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable: los intereses no se pueden determinar de antemano; interest = 0 es un marcador de fecha, NO significa que no pague interes. Amortizacion integra de 100 el 30/4/2027. Si la fecha de pago no es habil, se paga el dia habil siguiente.",
+   "quote": {
+    "pesos": "PBA27",
+    "usd_mep": null
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026); get_asset_info IOL: 'TD PROV. BUENOS AIRES TASA VARIABLE 30/04/27 $'. Cronograma segun el aviso de resultados de abril 2026 (https://www.bancoprovincia.com.ar/CDN/Get/PBA_Aviso_de_Resultados_abril_2026); que ese titulo TAMAR sea PBA27 se infiere de la fecha de vencimiento."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado"
+   ],
+   "ticker": "PBA28",
+   "name": "Bs. As. 2028",
+   "issuer": "Provincia de Buenos Aires",
+   "family": "provincial",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2026-04-30",
+   "maturity": "2028-04-28",
+   "coupon_text": "9,00% nominal anual sobre capital ajustado por CER, pagadero semestralmente (30/4 y 30/10; ultimo 28/4/2028); amortizacion integra al vencimiento (28/4/2028).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 5.152553,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-30",
+     "interest": 5.152553,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-28",
+     "interest": 5.095303,
+     "amortization": 114.501186
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: flujos en pesos ajustados por el CER al 25/11/2026 por cada 100 VN originales (capital ajustado 114,50). Cada cupon = 4,5% del capital ajustado; el ultimo, 178/360 de 9% (30/360 desde 30/10/2027). Para proyectar, multiplicar por (CER futuro / CER actual).",
+   "quote": {
+    "pesos": "PBA28",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026: IOL devuelve un unico flujo final (interes 10,31 + capital 114,50), que no incluye los cupones intermedios; se reemplazo por el cronograma del aviso de resultados de abril 2026 (https://www.bancoprovincia.com.ar/CDN/Get/PBA_Aviso_de_Resultados_abril_2026): cupones 30/4/27, 30/10/27 y 28/4/28. Estimado: el tablero usaba un pago final de 124,35."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BA37D",
+   "name": "Bs. As. Regs New U$S 2037",
+   "issuer": "Provincia de Buenos Aires",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2021-09-13",
+   "maturity": "2037-09-01",
+   "coupon_text": "6,625% anual sobre saldo, pagadero semestralmente (1/3 y 1/9); amortiza en cuotas semestrales crecientes (3,28% a 4,83% de la VN original) hasta sep-2037.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-01",
+     "interest": 2.850075,
+     "amortization": 3.28
+    },
+    {
+     "date": "2027-09-01",
+     "interest": 2.741425,
+     "amortization": 3.28
+    },
+    {
+     "date": "2028-03-01",
+     "interest": 2.632775,
+     "amortization": 3.47
+    },
+    {
+     "date": "2028-09-01",
+     "interest": 2.517831,
+     "amortization": 3.47
+    },
+    {
+     "date": "2029-03-01",
+     "interest": 2.402888,
+     "amortization": 3.79
+    },
+    {
+     "date": "2029-09-01",
+     "interest": 2.277344,
+     "amortization": 3.79
+    },
+    {
+     "date": "2030-03-01",
+     "interest": 2.1518,
+     "amortization": 3.08
+    },
+    {
+     "date": "2030-09-01",
+     "interest": 2.049775,
+     "amortization": 3.08
+    },
+    {
+     "date": "2031-03-01",
+     "interest": 1.94775,
+     "amortization": 3.59
+    },
+    {
+     "date": "2031-09-01",
+     "interest": 1.828831,
+     "amortization": 3.59
+    },
+    {
+     "date": "2032-03-01",
+     "interest": 1.709913,
+     "amortization": 3.77
+    },
+    {
+     "date": "2032-09-01",
+     "interest": 1.585031,
+     "amortization": 3.77
+    },
+    {
+     "date": "2033-03-01",
+     "interest": 1.46015,
+     "amortization": 3.94
+    },
+    {
+     "date": "2033-09-01",
+     "interest": 1.329638,
+     "amortization": 3.94
+    },
+    {
+     "date": "2034-03-01",
+     "interest": 1.199125,
+     "amortization": 4.2
+    },
+    {
+     "date": "2034-09-01",
+     "interest": 1.06,
+     "amortization": 4.2
+    },
+    {
+     "date": "2035-03-01",
+     "interest": 0.920875,
+     "amortization": 4.4
+    },
+    {
+     "date": "2035-09-01",
+     "interest": 0.775125,
+     "amortization": 4.4
+    },
+    {
+     "date": "2036-03-01",
+     "interest": 0.629375,
+     "amortization": 4.67
+    },
+    {
+     "date": "2036-09-01",
+     "interest": 0.474681,
+     "amortization": 4.67
+    },
+    {
+     "date": "2037-03-01",
+     "interest": 0.319988,
+     "amortization": 4.83
+    },
+    {
+     "date": "2037-09-01",
+     "interest": 0.159994,
+     "amortization": 4.83
+    }
+   ],
+   "residual_pct": 86.04,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 86,04% de la VN original.",
+   "quote": {
+    "pesos": "BA37D",
+    "usd_mep": "BA7DD"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 86,04 = residual 86,04%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "SFD34",
+   "name": "Santa Fe 2034 U$S",
+   "issuer": "Provincia de Santa Fe",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-12-04",
+   "maturity": "2034-12-11",
+   "coupon_text": "8,10% anual sobre saldo, pagadero semestralmente (11/6 y 11/12); amortiza 25% en cada diciembre de 2031, 2032, 2033 y 2034.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-12-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-06-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-12-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-06-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-12-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-06-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-12-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-06-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-12-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-06-11",
+     "interest": 4.05,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-12-11",
+     "interest": 4.05,
+     "amortization": 25.0
+    },
+    {
+     "date": "2032-06-11",
+     "interest": 3.0375,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-12-11",
+     "interest": 3.0375,
+     "amortization": 25.0
+    },
+    {
+     "date": "2033-06-11",
+     "interest": 2.025,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-12-11",
+     "interest": 2.025,
+     "amortization": 25.0
+    },
+    {
+     "date": "2034-06-11",
+     "interest": 1.0125,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-12-11",
+     "interest": 1.0125,
+     "amortization": 25.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "SFD34",
+    "usd_mep": "SFD4D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "NDT25",
+   "name": "Neuquén 2025-30",
+   "issuer": "Provincia del Neuquén",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-11-12",
+   "maturity": "2030-05-12",
+   "coupon_text": "8,625% anual sobre saldo, pagadero trimestralmente (12/2, 12/5, 12/8 y 12/11); amortiza en cuotas trimestrales iguales (3,0726% de la VN original) hasta may-2030.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-12",
+     "interest": 0.927528,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2027-05-12",
+     "interest": 0.861275,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2027-08-12",
+     "interest": 0.795022,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2027-11-12",
+     "interest": 0.728769,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2028-02-12",
+     "interest": 0.662516,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2028-05-12",
+     "interest": 0.596264,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2028-08-12",
+     "interest": 0.530011,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2028-11-12",
+     "interest": 0.463758,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2029-02-12",
+     "interest": 0.397505,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2029-05-12",
+     "interest": 0.331252,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2029-08-12",
+     "interest": 0.264999,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2029-11-12",
+     "interest": 0.198746,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2030-02-12",
+     "interest": 0.132493,
+     "amortization": 3.0726
+    },
+    {
+     "date": "2030-05-12",
+     "interest": 0.06624,
+     "amortization": 3.0726
+    }
+   ],
+   "residual_pct": 43.0158,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 43,0158% de la VN original.",
+   "quote": {
+    "pesos": "NDT25",
+    "usd_mep": "NDT5D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 43,0164 vs residual 43,0158 (diferencia de 0,0006 por redondeo de IOL, copiada tal cual)."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "sin_analitica_iol"
+   ],
+   "ticker": "NDG34",
+   "name": "Neuquén 2034 U$S",
+   "issuer": "Provincia del Neuquén",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": null,
+   "maturity": "2034-08-25",
+   "coupon_text": "Tasa fija 7,35% anual (segun el aviso de emision); periodicidad y amortizacion: ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin flujos: cronograma no verificado. Capital residual 100% (supuesto).",
+   "quote": {
+    "pesos": "NDG34",
+    "usd_mep": "NDG4D"
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026). Vencimiento 25/08/2034 segun get_asset_info IOL; cupon 7,35% segun abogados.com.ar (https://abogados.com.ar/index.php/la-provincia-del-neuquen-emitio-exitosamente-sus-titulos-al-7350-con-vencimiento-en-2034-en-el-mercado-internacional-de-capitales/39789); sin verificar contra el prospecto."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "PMM29",
+   "name": "Mendoza 2029 U$S",
+   "issuer": "Provincia de Mendoza",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2020-03-19",
+   "maturity": "2029-03-19",
+   "coupon_text": "5,75% anual sobre saldo, pagadero semestralmente (19/3 y 19/9); amortiza en cuotas semestrales iguales (7,692% de la VN original) hasta mar-2029.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-19",
+     "interest": 1.105668,
+     "amortization": 7.692
+    },
+    {
+     "date": "2027-09-19",
+     "interest": 0.884523,
+     "amortization": 7.692
+    },
+    {
+     "date": "2028-03-19",
+     "interest": 0.663378,
+     "amortization": 7.692
+    },
+    {
+     "date": "2028-09-19",
+     "interest": 0.442233,
+     "amortization": 7.692
+    },
+    {
+     "date": "2029-03-19",
+     "interest": 0.221088,
+     "amortization": 7.69
+    }
+   ],
+   "residual_pct": 38.458,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; el capital residual vigente es 38,458% de la VN original.",
+   "quote": {
+    "pesos": "PMM29",
+    "usd_mep": "PM29D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 38,458 = residual 38,458%."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "tasa_variable",
+    "sin_analitica_iol"
+   ],
+   "ticker": "BDC28",
+   "name": "CABA 2028",
+   "issuer": "Ciudad de Buenos Aires",
+   "family": "provincial",
+   "currency_pay": "ARS",
+   "adjust": "other",
+   "issue_date": "2022-09-29",
+   "maturity": "2028-02-22",
+   "coupon_text": "Titulo de deuda Clase N° 23 a tasa variable en pesos; tasa de referencia, margen y fechas de pago: ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Tasa variable: no se pudo verificar el cronograma de intereses ni de amortizacion; solo se informa el vencimiento.",
+   "quote": {
+    "pesos": "BDC28",
+    "usd_mep": null
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026); get_asset_info IOL: 'TITULOS DE DEUDA PUBLICA CLASE N° 23 A TASA VARIABLE CON VENCIMIENTO EN 2028'. Vencimiento 22/02/2028 y emision de los adicionales 29/09/2022 segun Resolucion 5645/2022 de la Ciudad (https://boletinoficial.buenosaires.gob.ar/normativaba/norma/623226)."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "BDC33",
+   "name": "CABA 2033 U$S",
+   "issuer": "Ciudad de Buenos Aires",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-11-26",
+   "maturity": "2033-11-26",
+   "coupon_text": "Tasa fija 7,80% anual (Serie 13, USD 600 M, segun el aviso de emision); periodicidad y amortizacion: ver prospecto.",
+   "flows_per_100_vn": [],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin flujos: cronograma no verificado. Capital residual 100% (supuesto).",
+   "quote": {
+    "pesos": "BDC33",
+    "usd_mep": "BC33D"
+   },
+   "source_note": "IOL sin analitica (not_found 25/11/2026). Cupon 7,8%, vencimiento 2033 y emision 26/11/2025 segun Bruchou y Funes (https://bruchoufunes.com/ciudad-buenos-aires-serie-13-us600m-7-800-2033/). El dia/mes del vencimiento (26/11/2033) es una inferencia de la descripcion truncada de IOL ('VTO. 26/1...') y de la fecha de emision."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BDC36",
+   "name": "CABA 2036 U$S",
+   "issuer": "Ciudad de Buenos Aires",
+   "family": "provincial",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2026-05-13",
+   "maturity": "2036-05-13",
+   "coupon_text": "7,05% anual sobre saldo, pagadero semestralmente (13/5 y 13/11); amortiza un tercio en cada mayo de 2034, 2035 y 2036.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2029-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2030-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2031-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2032-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-05-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2033-11-13",
+     "interest": 3.525,
+     "amortization": 0.0
+    },
+    {
+     "date": "2034-05-13",
+     "interest": 3.525,
+     "amortization": 33.33
+    },
+    {
+     "date": "2034-11-13",
+     "interest": 2.350118,
+     "amortization": 0.0
+    },
+    {
+     "date": "2035-05-13",
+     "interest": 2.350118,
+     "amortization": 33.33
+    },
+    {
+     "date": "2035-11-13",
+     "interest": 1.175235,
+     "amortization": 0.0
+    },
+    {
+     "date": "2036-05-13",
+     "interest": 1.175235,
+     "amortization": 33.34
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BDC36",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BPOA7",
+   "name": "BOPREAL Serie 1 (clase A)",
+   "issuer": "Banco Central de la República Argentina",
+   "family": "bopreal",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-01-05",
+   "maturity": "2027-10-31",
+   "coupon_text": "5,00% anual sobre saldo, pagadero semestralmente (30/4 y 31/10); amortiza 50% el 30/4/2027 y 50% el 31/10/2027.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50.0
+    },
+    {
+     "date": "2027-10-31",
+     "interest": 1.25,
+     "amortization": 50.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BPOA7",
+    "usd_mep": "BPA7D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Cronograma de Serie 1 (5%, dos amortizaciones de 50%) confirmado por Schroders (https://www.schroders.com/es-ar/ar/inversores-profesionales/perspectivas/bopreal-2027-serie-1/) y Rava (BPOA7). Las cuatro clases (A a D) de la Serie 1 tienen el mismo cronograma; segun Schroders las clases A, B y C tienen rescate anticipado (30/4/2025, 30/4/2026 y 30/4/2027) que IOL no refleja. IOL informa emision 2024-10-31; se usa 2024-01-05 (Rava). El tablero rotula BPOB7/C7/D7 como Series 2/3: son clases de la Serie 1."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BPOB7",
+   "name": "BOPREAL Serie 1 (clase B)",
+   "issuer": "Banco Central de la República Argentina",
+   "family": "bopreal",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-01-05",
+   "maturity": "2027-10-31",
+   "coupon_text": "5,00% anual sobre saldo, pagadero semestralmente (30/4 y 31/10); amortiza 50% el 30/4/2027 y 50% el 31/10/2027.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50.0
+    },
+    {
+     "date": "2027-10-31",
+     "interest": 1.25,
+     "amortization": 50.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BPOB7",
+    "usd_mep": "BPB7D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Cronograma de Serie 1 (5%, dos amortizaciones de 50%) confirmado por Schroders (https://www.schroders.com/es-ar/ar/inversores-profesionales/perspectivas/bopreal-2027-serie-1/) y Rava (BPOA7). Las cuatro clases (A a D) de la Serie 1 tienen el mismo cronograma; segun Schroders las clases A, B y C tienen rescate anticipado (30/4/2025, 30/4/2026 y 30/4/2027) que IOL no refleja. IOL informa emision 2024-10-31; se usa 2024-01-05 (Rava). El tablero rotula BPOB7/C7/D7 como Series 2/3: son clases de la Serie 1."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BPOC7",
+   "name": "BOPREAL Serie 1 (clase C)",
+   "issuer": "Banco Central de la República Argentina",
+   "family": "bopreal",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-01-05",
+   "maturity": "2027-10-31",
+   "coupon_text": "5,00% anual sobre saldo, pagadero semestralmente (30/4 y 31/10); amortiza 50% el 30/4/2027 y 50% el 31/10/2027.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50.0
+    },
+    {
+     "date": "2027-10-31",
+     "interest": 1.25,
+     "amortization": 50.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BPOC7",
+    "usd_mep": "BPC7D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Cronograma de Serie 1 (5%, dos amortizaciones de 50%) confirmado por Schroders (https://www.schroders.com/es-ar/ar/inversores-profesionales/perspectivas/bopreal-2027-serie-1/) y Rava (BPOA7). Las cuatro clases (A a D) de la Serie 1 tienen el mismo cronograma; segun Schroders las clases A, B y C tienen rescate anticipado (30/4/2025, 30/4/2026 y 30/4/2027) que IOL no refleja. IOL informa emision 2024-10-31; se usa 2024-01-05 (Rava). El tablero rotula BPOB7/C7/D7 como Series 2/3: son clases de la Serie 1."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BPOD7",
+   "name": "BOPREAL Serie 1 (clase D)",
+   "issuer": "Banco Central de la República Argentina",
+   "family": "bopreal",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2024-01-05",
+   "maturity": "2027-10-31",
+   "coupon_text": "5,00% anual sobre saldo, pagadero semestralmente (30/4 y 31/10); amortiza 50% el 30/4/2027 y 50% el 31/10/2027.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 2.5,
+     "amortization": 50.0
+    },
+    {
+     "date": "2027-10-31",
+     "interest": 1.25,
+     "amortization": 50.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BPOD7",
+    "usd_mep": "BPD7D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Cronograma de Serie 1 (5%, dos amortizaciones de 50%) confirmado por Schroders (https://www.schroders.com/es-ar/ar/inversores-profesionales/perspectivas/bopreal-2027-serie-1/) y Rava (BPOA7). Las cuatro clases (A a D) de la Serie 1 tienen el mismo cronograma; segun Schroders las clases A, B y C tienen rescate anticipado (30/4/2025, 30/4/2026 y 30/4/2027) que IOL no refleja. IOL informa emision 2024-10-31; se usa 2024-01-05 (Rava). El tablero rotula BPOB7/C7/D7 como Series 2/3: son clases de la Serie 1."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BPOA8",
+   "name": "BOPREAL Serie 4",
+   "issuer": "Banco Central de la República Argentina",
+   "family": "bopreal",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-10-31",
+   "maturity": "2028-10-31",
+   "coupon_text": "3,00% anual, pagadero semestralmente (30/4 y 31/10); amortizacion integra al vencimiento (31/10/2028).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 1.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-31",
+     "interest": 1.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-30",
+     "interest": 1.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-31",
+     "interest": 1.5,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BPOA8",
+    "usd_mep": "BPA8D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "BPOB8",
+   "name": "BOPREAL Serie 4 (B)",
+   "issuer": "Banco Central de la República Argentina",
+   "family": "bopreal",
+   "currency_pay": "USD",
+   "adjust": "none",
+   "issue_date": "2025-10-31",
+   "maturity": "2028-10-31",
+   "coupon_text": "3,00% anual, pagadero semestralmente (30/4 y 31/10); amortizacion integra al vencimiento (31/10/2028).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-04-30",
+     "interest": 1.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2027-10-31",
+     "interest": 1.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-04-30",
+     "interest": 1.5,
+     "amortization": 0.0
+    },
+    {
+     "date": "2028-10-31",
+     "interest": 1.5,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Flujos en USD por cada 100 VN originales; capital residual 100%.",
+   "quote": {
+    "pesos": "BPOB8",
+    "usd_mep": "BPB8D"
+   },
+   "source_note": "IOL analytics 25/11/2026. Suma de amortizaciones futuras 100 = residual 100%."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "S30N6",
+   "name": "Lecap vto. 30/11/26",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_lecap",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2025-12-15",
+   "maturity": "2026-11-30",
+   "coupon_text": "Letra capitalizable en pesos a tasa fija (TEM capitalizable mensualmente): no paga cupones; un unico pago al vencimiento por el valor final.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-11-30",
+     "interest": 29.888227,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN: valor final 129,888226717199 (interes = valor final menos 100).",
+   "quote": {
+    "pesos": "S30N6",
+    "usd_mep": "SN6D"
+   },
+   "source_note": "IOL analytics 25/11/2026 (final_amount 129,888); coincide con 129,89 del tablero (Rava)."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [],
+   "ticker": "S29E7",
+   "name": "Lecap vto. 29/01/27",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_lecap",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2026-08-31",
+   "maturity": "2027-01-29",
+   "coupon_text": "Letra capitalizable en pesos a tasa fija (TEM capitalizable mensualmente): no paga cupones; un unico pago al vencimiento por el valor final.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-29",
+     "interest": 11.684903,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN: valor final 111,684903382708 (interes = valor final menos 100).",
+   "quote": {
+    "pesos": "S29E7",
+    "usd_mep": null
+   },
+   "source_note": "IOL analytics 25/11/2026 (final_amount 111,685); coincide con 111,68 del tablero."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado"
+   ],
+   "ticker": "S26F7",
+   "name": "Lecap vto. 26/02/27",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_lecap",
+   "currency_pay": "ARS",
+   "adjust": "none",
+   "issue_date": "2026-10-30",
+   "maturity": "2027-02-26",
+   "coupon_text": "Letra capitalizable en pesos a tasa fija (TEM capitalizable mensualmente): no paga cupones; un unico pago al vencimiento por el valor final.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-02-26",
+     "interest": 8.47,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Sin ajuste. Pago unico al vencimiento por 100 VN: valor final 108,47 (interes = valor final menos 100).",
+   "quote": {
+    "pesos": "S26F7",
+    "usd_mep": null
+   },
+   "source_note": "Valor final 108,47 = estimacion propia del tablero (reproduce 28,32% TIREA de la licitacion del 28/10, Ambito). Referencia: IOL devuelve final_amount 108,3676 el 25/11/2026 (diferencia de 0,10); no se uso."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado"
+   ],
+   "ticker": "X30N6",
+   "name": "Lecer vto. 30/11/26",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_lecer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2025-12-14",
+   "maturity": "2026-11-30",
+   "coupon_text": "Letra cupon cero en pesos emitida a descuento y ajustada por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-11-30",
+     "interest": 0.0,
+     "amortization": 131.587368
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo es el valor tecnico (capital ajustado por CER) a la fecha del snapshot por 100 VN; el pago real sera mayor segun el CER hasta el vencimiento (CER de 10 dias habiles antes). Para proyectar, multiplicar por (CER futuro / CER actual).",
+   "quote": {
+    "pesos": "X30N6",
+    "usd_mep": "XN6D"
+   },
+   "source_note": "IOL analytics 25/11/2026 (valor tecnico 131,5874 al 25/11/2026; el tablero usaba 131,109 de una consulta anterior). Se usa como piso del pago final: el CER hasta el 30/11 aun no se conoce."
+  },
+  {
+   "fixed_flows": true,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado"
+   ],
+   "ticker": "X29E7",
+   "name": "Lecer vto. 29/01/27",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_lecer",
+   "currency_pay": "ARS",
+   "adjust": "CER",
+   "issue_date": "2026-08-14",
+   "maturity": "2027-01-29",
+   "coupon_text": "Letra cupon cero en pesos emitida a descuento y ajustada por CER: no paga cupones; un unico pago al vencimiento (capital ajustado por CER).",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-29",
+     "interest": 0.0,
+     "amortization": 106.4427
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "CER: el flujo es el valor tecnico (capital ajustado por CER) a la fecha del snapshot por 100 VN; el pago real sera mayor segun el CER hasta el vencimiento (CER de 10 dias habiles antes). Para proyectar, multiplicar por (CER futuro / CER actual).",
+   "quote": {
+    "pesos": "X29E7",
+    "usd_mep": null
+   },
+   "source_note": "IOL devuelve valor tecnico 100 (sin ajuste CER), inconsistente. Estimacion propia con el metodo del tablero: valor tecnico previo 105,991 escalado por la variacion del valor tecnico de X30N6 en IOL (131,5874 contra 131,029). Estimado."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "D30N6",
+   "name": "Lelink vto. 30/11/26",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_dlk",
+   "currency_pay": "ARS",
+   "adjust": "DL",
+   "issue_date": null,
+   "maturity": "2026-11-30",
+   "coupon_text": "Letra cupon cero vinculada al dolar oficial (A3500): no paga cupones; un unico pago al vencimiento en pesos por 100 USD de VN, al A3500.",
+   "flows_per_100_vn": [
+    {
+     "date": "2026-11-30",
+     "interest": 59.3,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Dolar-linked: el pago final (159,30 por 100 VN en la escala del tablero, donde la cotizacion de data912 se divide por 1.000) es una ESTIMACION que supone A3500 constante en $1.593 (mayorista del 24/11/2026, segun el tablero). El pago real depende del A3500 al vencimiento: escala linealmente, aprox. A3500 / 10 por 100 VN (interest = pago final menos 100).",
+   "quote": {
+    "pesos": "D30N6",
+    "usd_mep": null
+   },
+   "source_note": "IOL sin analitica de dolar-linked (error de IOL el 25/11/2026). Pago final supuesto 159,30 por 100 VN (A3500 constante en $1.593), tomado del tablero (Infobae y Ambito)."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "D31M7",
+   "name": "Lelink vto. 31/03/27",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_dlk",
+   "currency_pay": "ARS",
+   "adjust": "DL",
+   "issue_date": null,
+   "maturity": "2027-03-31",
+   "coupon_text": "Letra cupon cero vinculada al dolar oficial (A3500): no paga cupones; un unico pago al vencimiento en pesos por 100 USD de VN, al A3500.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-03-31",
+     "interest": 59.3,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Dolar-linked: el pago final (159,30 por 100 VN en la escala del tablero, donde la cotizacion de data912 se divide por 1.000) es una ESTIMACION que supone A3500 constante en $1.593 (mayorista del 24/11/2026, segun el tablero). El pago real depende del A3500 al vencimiento: escala linealmente, aprox. A3500 / 10 por 100 VN (interest = pago final menos 100).",
+   "quote": {
+    "pesos": "D31M7",
+    "usd_mep": null
+   },
+   "source_note": "IOL sin analitica de dolar-linked (error de IOL el 25/11/2026). Pago final supuesto 159,30 por 100 VN (A3500 constante en $1.593), tomado del tablero (Infobae y Ambito)."
+  },
+  {
+   "fixed_flows": false,
+   "price_unit": "per_100_vn",
+   "flags": [
+    "estimado",
+    "sin_analitica_iol"
+   ],
+   "ticker": "D15E7",
+   "name": "Lelink vto. 15/01/27",
+   "issuer": "Tesoro Nacional",
+   "family": "letra_dlk",
+   "currency_pay": "ARS",
+   "adjust": "DL",
+   "issue_date": null,
+   "maturity": "2027-01-15",
+   "coupon_text": "Letra cupon cero vinculada al dolar oficial (A3500): no paga cupones; un unico pago al vencimiento en pesos por 100 USD de VN, al A3500.",
+   "flows_per_100_vn": [
+    {
+     "date": "2027-01-15",
+     "interest": 59.3,
+     "amortization": 100.0
+    }
+   ],
+   "residual_pct": 100.0,
+   "adjust_note": "Dolar-linked: el pago final (159,30 por 100 VN en la escala del tablero, donde la cotizacion de data912 se divide por 1.000) es una ESTIMACION que supone A3500 constante en $1.593 (mayorista del 24/11/2026, segun el tablero). El pago real depende del A3500 al vencimiento: escala linealmente, aprox. A3500 / 10 por 100 VN (interest = pago final menos 100).",
+   "quote": {
+    "pesos": "D15E7",
+    "usd_mep": "DE7D"
+   },
+   "source_note": "IOL sin analitica de dolar-linked (error de IOL el 25/11/2026). Pago final supuesto 159,30 por 100 VN (A3500 constante en $1.593), tomado del tablero (Infobae y Ambito)."
+  }
+ ]
+}

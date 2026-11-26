@@ -1,0 +1,544 @@
+{
+  "_nota": "Configuración de update_data.py. Editable a mano. Las claves que empiezan con _ son comentarios.",
+  "version_config": 1,
+  "zona_horaria": "America/Argentina/Buenos_Aires",
+  "horario_rueda": {
+    "_nota": "Hora de Buenos Aires. Antes de 'apertura' los datos de data912 son del último cierre; entre 'apertura' y 'cierre' son intradiarios y NO se publican; desde 'cierre' (día hábil) la rueda es la de hoy.",
+    "apertura": "11:00",
+    "cierre": "17:00"
+  },
+  "http": {
+    "user_agent": "FariasFinanzas-Pizarra/1.0",
+    "timeout_s": 20,
+    "reintentos": 2,
+    "espera_entre_reintentos_s": 2,
+    "max_bytes": 12000000
+  },
+  "data912": {
+    "base": "https://data912.com/live/",
+    "endpoints": {
+      "bonos": "arg_bonds",
+      "notas": "arg_notes",
+      "acciones": "arg_stocks",
+      "cedears": "arg_cedears",
+      "corp": "arg_corp"
+    },
+    "huella_tickers": [
+      "AL30",
+      "GD30",
+      "AL35",
+      "GD35",
+      "AE38",
+      "TX28",
+      "TZX28",
+      "T15E7",
+      "S30N6",
+      "GGAL",
+      "YPFD",
+      "PAMP",
+      "BMA",
+      "CEPU",
+      "TGSU2",
+      "SPY",
+      "QQQ",
+      "AAPL",
+      "NVDA",
+      "MELI",
+      "MU",
+      "GOOGL"
+    ],
+    "min_fraccion_acciones_con_volumen": 0.4
+  },
+  "umbrales": {
+    "cedear_precio_minimo_lamina_usd": 100,
+    "cedear_ratio_par_lamina_usd": 0.2,
+    "pct_maximo_creible": 60,
+    "tir_abs_maxima": 150,
+    "dias_corto_plazo": 30,
+    "poco_operada_monto_ars": 100000000,
+    "cedears_excluir": [],
+    "_cedears_excluir_nota": "Lista manual de especies con datos inconsistentes (se excluyen del tablero de CEDEARs).",
+    "acciones_excluir": [
+      "RAGH",
+      "TGN4D"
+    ]
+  },
+  "tc_referencia": {
+    "mep_ticker_pesos": "AL30",
+    "mep_ticker_usd": "AL30D",
+    "ccl_ticker_usd": "AL30C",
+    "alternativa": "GD30"
+  },
+  "apis": {
+    "dolarapi": "https://dolarapi.com/v1/dolares",
+    "riesgo_pais": "https://api.argentinadatos.com/v1/finanzas/indices/riesgo-pais/ultimo",
+    "cer": "https://api.argentinadatos.com/v1/finanzas/indices/cer"
+  },
+  "noticias": {
+    "horas_maximas": 36,
+    "maximo_titulares": 20,
+    "maximo_por_medio": 6,
+    "similitud_duplicados": 0.6,
+    "feeds": [
+      {
+        "nombre": "Infobae",
+        "url": "https://www.infobae.com/arc/outboundfeeds/rss/category/economia/",
+        "region_default": "ar",
+        "estado_url": "verificada 25/11/2026 (respondió RSS válido desde el agente de desarrollo)"
+      },
+      {
+        "nombre": "Ámbito",
+        "url": "https://www.ambito.com/rss/pages/finanzas.xml",
+        "region_default": "ar",
+        "estado_url": "listada en directorios públicos de feeds; sin verificar"
+      },
+      {
+        "nombre": "Ámbito",
+        "url": "https://www.ambito.com/rss/pages/economia.xml",
+        "region_default": "ar",
+        "estado_url": "listada en directorios públicos de feeds; sin verificar"
+      },
+      {
+        "nombre": "El Cronista",
+        "url": "https://www.cronista.com/files/rss/news.xml",
+        "region_default": "ar",
+        "estado_url": "listada en directorios públicos de feeds; sin verificar"
+      },
+      {
+        "nombre": "iProfesional",
+        "url": "https://www.iprofesional.com/rss/finanzas",
+        "region_default": "ar",
+        "estado_url": "listada en directorios públicos de feeds; sin verificar"
+      },
+      {
+        "nombre": "iProfesional",
+        "url": "https://www.iprofesional.com/rss/economia",
+        "region_default": "ar",
+        "estado_url": "listada en directorios públicos de feeds; sin verificar"
+      },
+      {
+        "nombre": "La Nación",
+        "url": "https://www.lanacion.com.ar/arc/outboundfeeds/rss/category/economia/?outputType=xml",
+        "region_default": "ar",
+        "estado_url": "patrón estándar de Arc Publishing; sin verificar"
+      },
+      {
+        "nombre": "BAE Negocios",
+        "url": "https://www.baenegocios.com/rss/economia.xml",
+        "region_default": "ar",
+        "estado_url": "sin verificar"
+      }
+    ],
+    "palabras_clave": [
+      "mercado",
+      "mercados",
+      "bono",
+      "bonos",
+      "accion",
+      "acciones",
+      "dolar",
+      "dolares",
+      "riesgo pais",
+      "bcra",
+      "banco central",
+      "merval",
+      "inflacion",
+      "ipc",
+      "indec",
+      "emae",
+      "fed",
+      "reserva federal",
+      "wall street",
+      "nasdaq",
+      "s&p",
+      "dow jones",
+      "tasa",
+      "tasas",
+      "petroleo",
+      "brent",
+      "wti",
+      "licitacion",
+      "cnv",
+      "cedear",
+      "cedears",
+      "reservas",
+      "fmi",
+      "deuda",
+      "titulos publicos",
+      "letras",
+      "plazo fijo",
+      "caucion",
+      "superavit",
+      "deficit fiscal",
+      "tesoro",
+      "caputo",
+      "balanza comercial",
+      "exportaciones",
+      "bolsa",
+      "bitcoin",
+      "cripto",
+      "ypf",
+      "ons",
+      "obligaciones negociables",
+      "calificadora",
+      "moody",
+      "fitch",
+      "jp morgan",
+      "bonistas",
+      "cambiario",
+      "brecha",
+      "cepo",
+      "mep",
+      "contado con liqui",
+      "ccl",
+      "oro",
+      "soja"
+    ],
+    "excluir": [
+      "horoscopo",
+      "quiniela",
+      "loteria",
+      "quienes cobran",
+      "cronograma de pagos",
+      "futbol",
+      "receta"
+    ],
+    "region_us": [
+      "wall street",
+      "nasdaq",
+      "s&p",
+      "dow jones",
+      "estados unidos",
+      "eeuu",
+      "ee.uu",
+      "trump",
+      "reserva federal",
+      "powell",
+      "nvidia",
+      "casa blanca",
+      "treasury"
+    ],
+    "region_global": [
+      "china",
+      "europa",
+      "global",
+      "mundial",
+      "opep",
+      "brent",
+      "petroleo",
+      "japon",
+      "brasil",
+      "fmi",
+      "oro",
+      "bitcoin",
+      "ucrania",
+      "medio oriente"
+    ],
+    "temas": [
+      [
+        "riesgo-pais",
+        [
+          "riesgo pais",
+          "jp morgan",
+          "bonistas",
+          "calificadora",
+          "moody",
+          "fitch"
+        ]
+      ],
+      [
+        "fed",
+        [
+          "reserva federal",
+          "powell",
+          "fed",
+          "la fed",
+          "tasas de interes de eeuu"
+        ]
+      ],
+      [
+        "gob-eeuu",
+        [
+          "trump",
+          "casa blanca",
+          "aranceles",
+          "congreso de eeuu",
+          "departamento del tesoro"
+        ]
+      ],
+      [
+        "wall-street",
+        [
+          "wall street",
+          "nasdaq",
+          "s&p",
+          "dow jones",
+          "nvidia",
+          "bolsas de nueva york"
+        ]
+      ],
+      [
+        "merval",
+        [
+          "merval",
+          "acciones",
+          "adr",
+          "cedear",
+          "bolsa porteña",
+          "bolsa porteno",
+          "panel lider"
+        ]
+      ],
+      [
+        "dolar",
+        [
+          "dolar",
+          "mep",
+          "ccl",
+          "contado con liqui",
+          "brecha",
+          "cepo",
+          "tipo de cambio",
+          "cambiario",
+          "blue"
+        ]
+      ],
+      [
+        "petroleo",
+        [
+          "petroleo",
+          "brent",
+          "wti",
+          "crudo",
+          "vaca muerta",
+          "opep"
+        ]
+      ],
+      [
+        "bcra",
+        [
+          "bcra",
+          "banco central",
+          "licitacion",
+          "tesoro",
+          "caputo",
+          "tasas",
+          "plazo fijo",
+          "caucion",
+          "reservas",
+          "letras",
+          "bonos",
+          "bono"
+        ]
+      ],
+      [
+        "agro",
+        [
+          "soja",
+          "trigo",
+          "maiz",
+          "agro",
+          "cosecha",
+          "campo",
+          "retenciones",
+          "exportaciones agro"
+        ]
+      ],
+      [
+        "empleo",
+        [
+          "empleo",
+          "desempleo",
+          "salarios",
+          "paritarias",
+          "trabajo registrado",
+          "laboral"
+        ]
+      ],
+      [
+        "gob-ar",
+        [
+          "milei",
+          "gobierno",
+          "casa rosada",
+          "congreso",
+          "presupuesto",
+          "diputados",
+          "senado",
+          "fmi"
+        ]
+      ]
+    ]
+  },
+  "feriados": {
+    "_nota": "Días en que BYMA no opera: feriados nacionales y días no laborables con fines turísticos (puentes). estado = 'confirmado' (norma verificada) o 'a_confirmar'. Los 'a_confirmar' también se tratan como inhábiles. Actualizar cada año (ver README).",
+    "2026": [
+      {
+        "fecha": "2026-01-01",
+        "motivo": "Año Nuevo",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-02-16",
+        "motivo": "Carnaval",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-02-17",
+        "motivo": "Carnaval",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-03-23",
+        "motivo": "Día no laborable con fines turísticos (Res. JGM 164/2025)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-03-24",
+        "motivo": "Día Nacional de la Memoria por la Verdad y la Justicia",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-04-02",
+        "motivo": "Día del Veterano y de los Caídos en la Guerra de Malvinas (también Jueves Santo)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-04-03",
+        "motivo": "Viernes Santo",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-05-01",
+        "motivo": "Día del Trabajador",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-05-25",
+        "motivo": "Día de la Revolución de Mayo",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-06-15",
+        "motivo": "Paso a la Inmortalidad del Gral. Güemes (trasladado del 17/6)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-06-20",
+        "motivo": "Paso a la Inmortalidad del Gral. Belgrano (sábado)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-07-09",
+        "motivo": "Día de la Independencia",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-07-10",
+        "motivo": "Día no laborable con fines turísticos (Res. JGM 164/2025)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-08-17",
+        "motivo": "Paso a la Inmortalidad del Gral. San Martín",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-10-12",
+        "motivo": "Día del Respeto a la Diversidad Cultural",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-11-23",
+        "motivo": "Día de la Soberanía Nacional (trasladado del 20/11)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-12-07",
+        "motivo": "Día no laborable con fines turísticos (Res. JGM 164/2025)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-12-08",
+        "motivo": "Inmaculada Concepción de María",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2026-12-25",
+        "motivo": "Navidad",
+        "estado": "confirmado"
+      }
+    ],
+    "2027": [
+      {
+        "fecha": "2027-01-01",
+        "motivo": "Año Nuevo",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-02-08",
+        "motivo": "Carnaval",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-02-09",
+        "motivo": "Carnaval",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-03-24",
+        "motivo": "Día Nacional de la Memoria por la Verdad y la Justicia",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-03-25",
+        "motivo": "Jueves Santo (día no laborable; confirmar si el mercado opera)",
+        "estado": "a_confirmar"
+      },
+      {
+        "fecha": "2027-03-26",
+        "motivo": "Viernes Santo",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-04-02",
+        "motivo": "Día del Veterano y de los Caídos en la Guerra de Malvinas",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-05-25",
+        "motivo": "Día de la Revolución de Mayo",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-06-21",
+        "motivo": "Paso a la Inmortalidad del Gral. Güemes (trasladado del 17/6)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-07-09",
+        "motivo": "Día de la Independencia",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-08-16",
+        "motivo": "Paso a la Inmortalidad del Gral. San Martín (trasladado del 17/8)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-10-11",
+        "motivo": "Día del Respeto a la Diversidad Cultural (trasladado del 12/10)",
+        "estado": "confirmado"
+      },
+      {
+        "fecha": "2027-12-08",
+        "motivo": "Inmaculada Concepción de María",
+        "estado": "confirmado"
+      }
+    ],
+    "pendientes": [
+      "2027: días no laborables con fines turísticos (hasta 3, lunes o viernes): sin decreto/resolución publicado al 25/11/2026; agregar cuando se oficialicen.",
+      "2027: Día de la Soberanía Nacional cae sábado 20/11 (sin traslado esperado); 1/5, 20/6 y 25/12 caen en fin de semana."
+    ]
+  }
+}

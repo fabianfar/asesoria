@@ -1,0 +1,2048 @@
+<!doctype html>
+<html lang="es-AR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pizarra de Mercado AR — Farías Finanzas</title>
+<meta name="description" content="Pizarra de mercado argentino de Farías Finanzas: bonos, letras, CEDEARs y acciones con datos de la última rueda, titulares y calculadora de cupones. Solo informativo, no es una recomendación de inversión.">
+<meta name="robots" content="index,follow">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:title" content="Pizarra de Mercado AR — Farías Finanzas">
+<meta property="og:description" content="Bonos, letras, CEDEARs y acciones argentinas con datos de la última rueda, titulares y calculadora de cupones. Información con fines educativos.">
+<meta property="og:site_name" content="Farías Finanzas">
+<meta name="twitter:card" content="summary">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c4d73'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+
+  :root{
+    --bg:            #f6f4ee;
+    --bg-plane:      #f1efe7;
+    --surface:       #ffffff;
+    --surface-2:     #f4f2ec;
+    --border:        rgba(15,26,23,0.12);
+    --border-strong: rgba(15,26,23,0.22);
+    --ink:           #10201b;
+    --ink-2:         #45564f;
+    --ink-muted:     #838f89;
+    --accent:        #1c4d73;
+    --accent-ink:    #ffffff;
+    --good:          #006300;
+    --bad:           #b23a2e;
+    --warn-bg:       #fbeecb;
+    --warn-ink:      #7a5310;
+    --warn-border:   #e4c583;
+
+    --s-usd:   #2a78d6;
+    --s-fija:  #d1601f;
+    --s-cer:   #1baf7a;
+    --s-tamar: #c98500;
+    --s-prov:  #d5548a;
+    --s-bopreal: #1f8f1f;
+
+    --chart-surface: #fcfcfb;
+    --grid: #e1e0d9;
+    --axis: #b7bcb4;
+
+    --heat-neg: #b23a2e;
+    --heat-neg-mid: #dd9284;
+    --heat-neutral: #cfcdc2;
+    --heat-pos-mid: #8fc394;
+    --heat-pos: #157a33;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:            #12181a;
+      --bg-plane:      #0d1113;
+      --surface:       #1a2123;
+      --surface-2:     #202a2c;
+      --border:        rgba(255,255,255,0.10);
+      --border-strong: rgba(255,255,255,0.18);
+      --ink:           #edf2f0;
+      --ink-2:         #b7c3bd;
+      --ink-muted:     #8a938f;
+      --accent:        #7fb2dd;
+      --accent-ink:    #0c1416;
+      --good:          #3fbf3f;
+      --bad:           #e2776a;
+      --warn-bg:       #2c2412;
+      --warn-ink:      #e8c377;
+      --warn-border:   #4d3c17;
+
+      --s-usd:   #3987e5;
+      --s-fija:  #e07a3d;
+      --s-cer:   #199e70;
+      --s-tamar: #c98500;
+      --s-prov:  #d55181;
+      --s-bopreal: #3fbf3f;
+
+      --chart-surface: #171d1f;
+      --grid: #2a3234;
+      --axis: #46504e;
+    }
+  }
+  :root[data-theme="dark"]{
+      --bg:            #12181a;
+      --bg-plane:      #0d1113;
+      --surface:       #1a2123;
+      --surface-2:     #202a2c;
+      --border:        rgba(255,255,255,0.10);
+      --border-strong: rgba(255,255,255,0.18);
+      --ink:           #edf2f0;
+      --ink-2:         #b7c3bd;
+      --ink-muted:     #8a938f;
+      --accent:        #7fb2dd;
+      --accent-ink:    #0c1416;
+      --good:          #3fbf3f;
+      --bad:           #e2776a;
+      --warn-bg:       #2c2412;
+      --warn-ink:      #e8c377;
+      --warn-border:   #4d3c17;
+
+      --s-usd:   #3987e5;
+      --s-fija:  #e07a3d;
+      --s-cer:   #199e70;
+      --s-tamar: #c98500;
+      --s-prov:  #d55181;
+      --s-bopreal: #3fbf3f;
+
+      --chart-surface: #171d1f;
+      --grid: #2a3234;
+      --axis: #46504e;
+  }
+
+  *{ box-sizing:border-box; }
+  body{ background:var(--bg); }
+  main{
+    max-width:1180px;
+    margin:0 auto;
+    padding:28px 20px 80px;
+    color:var(--ink);
+    font-family:"IBM Plex Sans", system-ui, sans-serif;
+    background:var(--bg);
+  }
+  h1,h2,h3{ font-family:"Source Serif 4", Georgia, serif; text-wrap:balance; margin:0; }
+  .mono{ font-family:"IBM Plex Mono", ui-monospace, monospace; }
+  .tab-nums{ font-variant-numeric:tabular-nums; }
+
+  /* ---------- header ---------- */
+  header.top{
+    display:flex; flex-wrap:wrap; gap:18px 28px;
+    align-items:flex-end; justify-content:space-between;
+    padding-bottom:20px; margin-bottom:22px;
+    border-bottom:2px solid var(--border-strong);
+  }
+  .brand-eyebrow{
+    font-family:"IBM Plex Mono", monospace; font-size:11.5px; letter-spacing:.14em; text-transform:uppercase;
+    color:var(--accent); font-weight:600; margin:0 0 6px;
+  }
+  header.top h1{ font-size:clamp(26px,4vw,34px); font-weight:600; line-height:1.15; color:var(--ink); }
+  header.top .sub{ color:var(--ink-2); font-size:14.5px; margin-top:6px; max-width:56ch; line-height:1.5; }
+  .asof{
+    text-align:right; font-size:12.5px; color:var(--ink-muted);
+    display:flex; flex-direction:column; gap:4px; white-space:nowrap;
+  }
+  .asof strong{ color:var(--ink); font-family:"IBM Plex Mono",monospace; font-size:13px; font-weight:600; }
+  .merval-chip{
+    display:inline-flex; gap:6px; align-items:baseline; font-family:"IBM Plex Mono",monospace;
+    font-size:12px; color:var(--ink-2);
+  }
+  .merval-chip .up{ color:var(--good); font-weight:600; }
+
+  /* ---------- intro / nav ---------- */
+  .intro{
+    display:grid; grid-template-columns:1.3fr 1fr; gap:22px;
+    margin-bottom:30px;
+  }
+  @media (max-width:820px){ .intro{ grid-template-columns:1fr; } }
+  .intro p{ margin:0 0 10px; color:var(--ink-2); font-size:14.5px; line-height:1.65; }
+  .intro p:last-child{ margin-bottom:0; }
+  .glossary{
+    background:var(--surface-2); border:1px solid var(--border); border-radius:10px;
+    padding:14px 16px; font-size:12.8px; color:var(--ink-2); line-height:1.7;
+  }
+  .glossary dt{ font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink); display:inline; }
+  .glossary dd{ display:inline; margin:0 0 0 4px; }
+  .glossary .row{ margin-bottom:4px; }
+
+  nav.jump{
+    display:flex; flex-wrap:wrap; gap:8px; margin-bottom:38px;
+  }
+  nav.jump a{
+    display:flex; align-items:center; gap:7px;
+    text-decoration:none; font-size:12.5px; font-weight:500; color:var(--ink);
+    background:var(--surface); border:1px solid var(--border); border-radius:100px;
+    padding:7px 13px 7px 10px;
+  }
+  nav.jump a .dot{ width:8px; height:8px; border-radius:50%; flex:none; }
+  nav.jump a:hover{ border-color:var(--border-strong); }
+
+  /* ---------- section ---------- */
+  section.grp{
+    margin-bottom:44px; scroll-margin-top:18px;
+  }
+  .grp-head{
+    display:flex; align-items:baseline; gap:12px; margin-bottom:4px;
+  }
+  .grp-head .swatch{ width:11px; height:11px; border-radius:3px; flex:none; }
+  .grp-head h2{ font-size:20px; font-weight:600; }
+  .grp-head .count{ font-size:12px; color:var(--ink-muted); font-family:"IBM Plex Mono",monospace; }
+  .grp-desc{ font-size:13px; color:var(--ink-2); margin:4px 0 16px; max-width:78ch; line-height:1.55; }
+
+  .panel{
+    display:grid; grid-template-columns:1fr 1fr; gap:0;
+    background:var(--surface); border:1px solid var(--border); border-radius:12px;
+    overflow:hidden;
+  }
+  .panel.no-chart{ grid-template-columns:1fr; }
+  @media (max-width:900px){ .panel{ grid-template-columns:1fr; } }
+
+  .table-wrap{ overflow-x:auto; border-right:1px solid var(--border); }
+  @media (max-width:900px){ .table-wrap{ border-right:none; border-bottom:1px solid var(--border); } }
+  table{ width:100%; border-collapse:collapse; font-size:13px; min-width:420px; }
+  thead th{
+    text-align:right; font-weight:500; font-size:10.5px; letter-spacing:.06em; text-transform:uppercase;
+    color:var(--ink-muted); padding:10px 12px; border-bottom:1px solid var(--border); white-space:nowrap;
+  }
+  thead th:first-child, tbody td:first-child{ text-align:left; }
+  tbody td{ padding:8px 12px; border-bottom:1px solid var(--border); text-align:right; white-space:nowrap; }
+  tbody tr:last-child td{ border-bottom:none; }
+  tbody tr:hover{ background:var(--surface-2); }
+  .tk{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:12.8px; }
+  .tk-note{ display:block; font-family:"IBM Plex Sans",sans-serif; font-weight:400; font-size:10.8px; color:var(--ink-muted); margin-top:1px; }
+  .var-up{ color:var(--good); }
+  .var-dn{ color:var(--bad); }
+  .tir-flag{ color:var(--warn-ink); }
+  .sd{ color:var(--ink-muted); font-style:italic; font-size:12px; }
+  .flagmark{ cursor:help; border-bottom:1px dotted var(--ink-muted); }
+
+  .chart-wrap{ padding:14px 16px 6px; position:relative; }
+  .chart-wrap svg{ width:100%; height:auto; display:block; overflow:visible; }
+  .axis-label{ font-size:9.5px; fill:var(--ink-muted); font-family:"IBM Plex Sans",sans-serif; }
+  .tick-label{ font-size:9px; fill:var(--ink-muted); font-family:"IBM Plex Mono",monospace; }
+  .pt-label{ font-size:9.5px; font-family:"IBM Plex Mono",monospace; font-weight:600; fill:var(--ink-2); }
+  .grid-line{ stroke:var(--grid); stroke-width:1; }
+  .axis-line{ stroke:var(--axis); stroke-width:1; }
+  .curve-line{ fill:none; stroke-width:2; }
+  .pt-dot{ stroke:var(--chart-surface); stroke-width:2; cursor:pointer; }
+
+  .tooltip{
+    position:absolute; pointer-events:none; z-index:5;
+    background:var(--ink); color:var(--bg);
+    font-family:"IBM Plex Mono",monospace; font-size:11.5px; line-height:1.5;
+    padding:7px 10px; border-radius:7px; white-space:nowrap;
+    opacity:0; transform:translate(-50%,-100%) translateY(-8px); transition:opacity .1s;
+  }
+  :root:not([data-theme="light"]) .tooltip{ background:#eef1ee; color:#10201b; }
+  :root[data-theme="dark"] .tooltip{ background:#eef1ee; color:#10201b; }
+  .tooltip.show{ opacity:1; }
+  .tooltip b{ color:inherit; }
+
+  .no-chart-note{
+    padding:18px 20px; font-size:13px; color:var(--ink-2); line-height:1.6;
+    background:var(--surface-2); border-top:1px solid var(--border);
+  }
+  .panel.no-chart .no-chart-note{ border-top:none; }
+
+  footer{
+    margin-top:50px; padding-top:20px; border-top:1px solid var(--border);
+    font-size:12px; color:var(--ink-muted); line-height:1.7;
+  }
+  footer a{ color:var(--accent); }
+  .disclaimer{
+    margin-top:14px; padding:12px 14px; background:var(--warn-bg); border:1px solid var(--warn-border);
+    border-radius:8px; color:var(--warn-ink); font-size:12px; line-height:1.6;
+  }
+
+  /* ---------- tabs ---------- */
+  .tabs{ display:flex; gap:6px; margin-bottom:26px; border-bottom:1px solid var(--border); }
+  .tab-btn{
+    font-family:"IBM Plex Sans", sans-serif; font-size:14px; font-weight:600; color:var(--ink-muted);
+    background:none; border:none; padding:9px 4px 12px; margin-right:22px; cursor:pointer;
+    border-bottom:2.5px solid transparent; translate:0 1px;
+  }
+  .tab-btn:hover{ color:var(--ink-2); }
+  .tab-btn.active{ color:var(--ink); border-bottom-color:var(--accent); }
+  .tab-panel{ display:none; }
+  .tab-panel.active{ display:block; }
+
+  /* ---------- stat row (cedears) ---------- */
+  .stat-row{ display:grid; grid-template-columns:repeat(4,1fr); gap:12px; margin-bottom:28px; }
+  @media (max-width:760px){ .stat-row{ grid-template-columns:repeat(2,1fr); } }
+  .stat-card{
+    background:var(--surface); border:1px solid var(--border); border-radius:10px; padding:14px 16px;
+  }
+  .stat-card .label{ font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:8px; }
+  .stat-card .value{ font-family:"IBM Plex Mono",monospace; font-size:21px; font-weight:600; color:var(--ink); }
+  .stat-card .value.up{ color:var(--good); }
+  .stat-card .sub{ font-size:11.5px; color:var(--ink-2); margin-top:4px; }
+  .breadth-bar{ display:flex; height:8px; border-radius:5px; overflow:hidden; margin-top:9px; background:var(--surface-2); }
+  .breadth-bar .up{ background:var(--good); }
+  .breadth-bar .dn{ background:var(--bad); }
+  .breadth-bar .fl{ background:var(--ink-muted); opacity:.4; }
+
+  /* ---------- movers ---------- */
+  .movers{ display:grid; grid-template-columns:1fr 1fr; gap:16px; margin-bottom:32px; }
+  @media (max-width:760px){ .movers{ grid-template-columns:1fr; } }
+  .mover-card{ background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  .mover-card h3{
+    font-size:13px; font-weight:600; padding:12px 16px; border-bottom:1px solid var(--border);
+    font-family:"IBM Plex Sans",sans-serif; display:flex; align-items:center; gap:7px;
+  }
+  .mover-card.gain h3{ color:var(--good); }
+  .mover-card.loss h3{ color:var(--bad); }
+  .mover-row{
+    display:flex; align-items:center; gap:10px; padding:9px 16px; border-bottom:1px solid var(--border);
+  }
+  .mover-row:last-child{ border-bottom:none; }
+  .mover-row .tk{ width:62px; flex:none; }
+  .mover-row .nm{ flex:1; font-size:12px; color:var(--ink-2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+  .mover-row .px{ font-size:11.5px; color:var(--ink-muted); flex:none; width:76px; text-align:right; }
+  .mover-row .vv{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:13px; flex:none; width:64px; text-align:right; }
+
+  /* ---------- heatmap ---------- */
+  .heatmap-head{ display:flex; align-items:baseline; gap:12px; margin-bottom:4px; }
+  .heatmap-head h2{ font-size:20px; font-weight:600; }
+  .heatmap-desc{ font-size:13px; color:var(--ink-2); margin:4px 0 14px; max-width:78ch; line-height:1.55; }
+  .heatmap{
+    position:relative; width:100%; height:440px; border-radius:12px; overflow:hidden;
+    border:1px solid var(--border); background:var(--surface-2);
+  }
+  .hm-tile{
+    position:absolute; box-sizing:border-box; border:1.5px solid var(--bg-plane);
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    text-align:center; overflow:hidden; padding:2px; cursor:default;
+  }
+  .hm-tile .hm-tk{ font-family:"IBM Plex Mono",monospace; font-weight:700; line-height:1.15; }
+  .hm-tile .hm-vv{ font-family:"IBM Plex Mono",monospace; line-height:1.2; opacity:.92; }
+  .hm-legend{ display:flex; align-items:center; gap:8px; margin-top:10px; font-size:11px; color:var(--ink-muted); }
+  .hm-legend .ramp{ width:150px; height:8px; border-radius:4px; background:linear-gradient(90deg, var(--heat-neg), var(--heat-neg-mid), var(--heat-neutral), var(--heat-pos-mid), var(--heat-pos)); }
+
+  /* ---------- sector table ---------- */
+  .sector-panel{
+    background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:16px 18px; margin-top:30px;
+  }
+  .sector-panel h2{ font-size:18px; font-weight:600; margin-bottom:3px; }
+  .sector-panel .heatmap-desc{ margin-bottom:16px; }
+  .sector-row{ display:grid; grid-template-columns:150px 1fr 70px 90px; gap:12px; align-items:center; padding:7px 0; font-size:12.5px; }
+  .sector-row.head{ color:var(--ink-muted); font-size:10.5px; text-transform:uppercase; letter-spacing:.06em; padding-bottom:8px; border-bottom:1px solid var(--border); margin-bottom:4px; }
+  .sector-row .sname{ font-weight:500; color:var(--ink); }
+  .sector-row .sbar-wrap{ position:relative; height:16px; background:var(--surface-2); border-radius:4px; overflow:hidden; }
+  .sector-row .sbar{ position:absolute; top:0; bottom:0; }
+  .sector-row .sbar.pos{ background:var(--good); left:50%; }
+  .sector-row .sbar.neg{ background:var(--bad); right:50%; }
+  .sector-row .smid{ position:absolute; left:50%; top:0; bottom:0; width:1px; background:var(--border-strong); }
+  .sector-row .svar{ font-family:"IBM Plex Mono",monospace; font-weight:600; text-align:right; }
+  .sector-row .scount{ color:var(--ink-muted); text-align:right; font-family:"IBM Plex Mono",monospace; }
+
+  /* ---------- news list ---------- */
+  .news-list{ display:flex; flex-direction:column; gap:0; background:var(--surface); border:1px solid var(--border); border-radius:12px; overflow:hidden; }
+  .news-row{ display:flex; gap:16px; padding:16px 20px; border-bottom:1px solid var(--border); align-items:flex-start; }
+  .news-row:last-child{ border-bottom:none; }
+  .news-rank{ flex:none; width:22px; font-family:"IBM Plex Mono",monospace; font-size:13px; color:var(--ink-muted); padding-top:2px; }
+  .news-body{ flex:1; min-width:0; }
+  .news-thumb{
+    flex:none; width:60px; height:60px; border-radius:13px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .news-thumb svg{ width:34px; height:34px; display:block; }
+  @media (max-width:640px){ .news-thumb{ display:none; } }
+  .news-tags{ display:flex; gap:6px; align-items:center; margin-bottom:6px; flex-wrap:wrap; }
+  .news-tag{ font-family:"IBM Plex Mono",monospace; font-size:10px; letter-spacing:.05em; text-transform:uppercase; font-weight:600; padding:2px 7px; border-radius:100px; }
+  .news-tag.reg-ar{ background:rgba(28,77,115,0.12); color:var(--accent); }
+  :root:not([data-theme="light"]) .news-tag.reg-ar{ background:rgba(127,178,221,0.16); }
+  :root[data-theme="dark"] .news-tag.reg-ar{ background:rgba(127,178,221,0.16); }
+  .news-tag.reg-us{ background:rgba(178,58,46,0.10); color:var(--s-fija); }
+  .news-tag.reg-global{ background:rgba(27,175,122,0.12); color:var(--s-cer); }
+  .news-tag.when-hoy{ background:var(--good); color:var(--surface); }
+  .news-tag.when-ayer{ background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--border); }
+  .news-row h3{ font-size:15.5px; font-weight:600; margin-bottom:4px; line-height:1.35; }
+  .news-row p{ font-size:13px; color:var(--ink-2); line-height:1.55; margin:0 0 6px; max-width:74ch; }
+  .news-src{ font-size:11.5px; color:var(--ink-muted); }
+  .news-src a{ color:var(--accent); text-decoration:none; }
+  .news-src a:hover{ text-decoration:underline; }
+
+
+  /* =====================================================================
+     Adiciones de la versión pública (Farías Finanzas)
+     ===================================================================== */
+  :root{ --s-on:#7b5bd0; --focus:#1c4d73; color-scheme:light dark; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --s-on:#a58cf0; --focus:#7fb2dd; } }
+  :root[data-theme="dark"]{ --s-on:#a58cf0; --focus:#7fb2dd; }
+  :root[data-theme="light"]{ color-scheme:light; }
+  :root[data-theme="dark"]{ color-scheme:dark; }
+
+  html{ -webkit-text-size-adjust:100%; }
+  body{ margin:0; background:var(--bg); color:var(--ink); font-family:"IBM Plex Sans", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+  main{ padding-bottom:64px; }
+  a{ color:var(--accent); }
+  :focus-visible{ outline:2px solid var(--focus); outline-offset:2px; border-radius:3px; }
+  .sr-only{ position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; }
+  button{ font-family:inherit; }
+
+  /* banner de aviso */
+  .aviso-top{
+    background:var(--warn-bg); color:var(--warn-ink); border-bottom:1px solid var(--warn-border);
+    font-size:12px; line-height:1.55; padding:8px 20px; text-align:center;
+  }
+  .aviso-top .in{ max-width:1180px; margin:0 auto; }
+  .aviso-top a{ color:inherit; font-weight:600; }
+  .aviso-bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:30; background:var(--surface);
+    border-top:1px solid var(--border-strong); color:var(--ink-2); font-size:11px; line-height:1.3;
+    padding:7px 12px; text-align:center; box-shadow:0 -2px 8px rgba(0,0,0,.06);
+  }
+  .aviso-bar a{ color:var(--accent); font-weight:600; white-space:nowrap; }
+
+  /* encabezado */
+  header.top{ align-items:flex-start; }
+  .brand-line{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+  .brand-line .brand-eyebrow{ margin:0; }
+  .brand-link{ color:var(--accent); text-decoration:none; }
+  .theme-btn{
+    font-size:12px; font-weight:500; color:var(--ink-2); background:var(--surface); border:1px solid var(--border-strong);
+    border-radius:100px; padding:4px 11px; cursor:pointer; line-height:1.4;
+  }
+  .theme-btn:hover{ color:var(--ink); }
+  .asof{ white-space:normal; max-width:560px; }
+  .asof .line{ font-family:"IBM Plex Mono",monospace; font-size:12.5px; color:var(--ink-2); }
+  .asof .line strong{ color:var(--ink); }
+  .stale-note{ color:var(--warn-ink); background:var(--warn-bg); border:1px solid var(--warn-border); border-radius:6px; padding:4px 8px; font-size:12px; margin-top:6px; }
+  .chips{ display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+  .chip{
+    display:inline-flex; gap:6px; align-items:baseline; background:var(--surface); border:1px solid var(--border);
+    border-radius:100px; padding:4px 11px; font-size:12px; color:var(--ink-2);
+  }
+  .chip b{ font-family:"IBM Plex Mono",monospace; font-weight:600; color:var(--ink); }
+  .chip.stale{ border-style:dashed; }
+  .chip .up{ color:var(--good); font-weight:600; }
+  .chip .dn{ color:var(--bad); font-weight:600; }
+
+  /* pestañas */
+  .tabs{ flex-wrap:wrap; gap:0 4px; }
+  .tab-btn{ margin-right:14px; padding:9px 2px 11px; font-size:14px; }
+
+  /* tablas ordenables */
+  th.sortable{ cursor:pointer; user-select:none; }
+  th.sortable button{
+    all:unset; cursor:pointer; display:inline-flex; gap:3px; align-items:center; text-transform:inherit; letter-spacing:inherit;
+    font-size:inherit; font-weight:inherit; color:inherit; white-space:nowrap;
+  }
+  th.sortable button:focus-visible{ outline:2px solid var(--focus); outline-offset:2px; }
+  th.sortable button:hover{ color:var(--ink); }
+  th.sortable[aria-sort="ascending"], th.sortable[aria-sort="descending"]{ color:var(--ink); }
+  .sort-ind{ display:inline-block; width:1em; font-size:10px; opacity:.5; }
+  th[aria-sort="ascending"] .sort-ind, th[aria-sort="descending"] .sort-ind{ opacity:1; color:var(--accent); }
+  tbody tr.is-stale td{ opacity:.7; }
+  .px-sub{ display:block; font-size:10.8px; color:var(--ink-muted); }
+  .tk-wrap{ text-align:left; }
+  .tir-flag{ cursor:help; }
+  .notes-box{ margin:0; padding:8px 14px 12px; font-size:12px; color:var(--ink-2); border-top:1px solid var(--border); background:var(--surface-2); grid-column:1 / -1; }
+  .notes-box summary{ cursor:pointer; font-weight:600; color:var(--ink-2); }
+  .notes-box ul{ margin:6px 0 0; padding-left:18px; line-height:1.55; }
+  .legend-line{ font-size:12px; color:var(--ink-muted); margin:8px 2px 0; line-height:1.55; }
+  .empty-box{ padding:22px; background:var(--surface); border:1px solid var(--border); border-radius:12px; color:var(--ink-2); font-size:14px; }
+  .load-error{ padding:16px 18px; margin:18px 0; background:var(--warn-bg); color:var(--warn-ink); border:1px solid var(--warn-border); border-radius:10px; font-size:14px; }
+
+  /* heatmap */
+  .heatmap-wrap{ position:relative; }
+  .hm-tile{ cursor:default; }
+  .hm-tile:focus-visible{ outline:2px solid var(--focus); outline-offset:-3px; z-index:2; }
+
+  /* noticias */
+  .news-row h3{ font-size:15px; }
+  .news-row h3 a{ color:var(--ink); text-decoration:none; }
+  .news-row h3 a:hover{ text-decoration:underline; color:var(--accent); }
+  .news-note{ font-size:13px; color:var(--ink-2); margin:0 0 14px; line-height:1.6; }
+  .news-tag.when-otro{ background:var(--surface-2); color:var(--ink-muted); border:1px solid var(--border); }
+
+  /* ---------- Cupones ---------- */
+  .cp-grid{ display:grid; grid-template-columns:minmax(260px,340px) 1fr; gap:22px; align-items:start; }
+  @media (max-width:900px){ .cp-grid{ grid-template-columns:1fr; } }
+  .card{ background:var(--surface); border:1px solid var(--border); border-radius:12px; padding:14px 16px; min-width:0; }
+  .card h2, .card h3{ font-size:16px; font-weight:600; margin-bottom:10px; }
+  .field{ display:flex; flex-direction:column; gap:4px; margin-bottom:12px; min-width:0; }
+  .field label, .field .lbl{ font-size:12px; font-weight:600; color:var(--ink-2); }
+  .field .hint{ font-size:11.5px; color:var(--ink-muted); line-height:1.45; }
+  .inp{
+    width:100%; font:inherit; font-size:14px; color:var(--ink); background:var(--bg); border:1px solid var(--border-strong);
+    border-radius:8px; padding:8px 10px; min-width:0;
+  }
+  .inp:focus-visible{ outline:2px solid var(--focus); outline-offset:1px; }
+  select.inp{ appearance:auto; }
+  .fam-chips{ display:flex; flex-wrap:wrap; gap:6px; margin-bottom:10px; }
+  .fchip{
+    font-size:12px; font-weight:500; color:var(--ink-2); background:var(--surface-2); border:1px solid var(--border);
+    border-radius:100px; padding:4px 10px; cursor:pointer;
+  }
+  .fchip[aria-pressed="true"]{ background:var(--accent); color:var(--accent-ink); border-color:var(--accent); }
+  .pick-list{ max-height:230px; overflow-y:auto; border:1px solid var(--border); border-radius:8px; background:var(--bg); }
+  .pick{
+    display:flex; align-items:baseline; gap:8px; width:100%; text-align:left; background:none; border:none; border-bottom:1px solid var(--border);
+    padding:7px 10px; cursor:pointer; color:var(--ink); font-size:12.5px;
+  }
+  .pick:last-child{ border-bottom:none; }
+  .pick:hover{ background:var(--surface-2); }
+  .pick[aria-pressed="true"]{ background:var(--surface-2); box-shadow:inset 3px 0 0 var(--accent); }
+  .pick .tk{ flex:none; min-width:58px; }
+  .pick .pn{ flex:1; color:var(--ink-2); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; min-width:0; }
+  .pick .pf{ flex:none; font-size:10.5px; color:var(--ink-muted); }
+  .radio-row{ display:flex; gap:16px; flex-wrap:wrap; margin-bottom:10px; }
+  .radio-row label{ font-size:13px; font-weight:500; display:inline-flex; gap:6px; align-items:center; color:var(--ink); }
+  .ficha{ display:grid; grid-template-columns:repeat(auto-fit,minmax(170px,1fr)); gap:10px 18px; margin-bottom:12px; }
+  .ficha dt{ font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); }
+  .ficha dd{ margin:2px 0 0; font-size:13.5px; color:var(--ink); }
+  .ficha .wide{ grid-column:1 / -1; }
+  .alert{ background:var(--warn-bg); color:var(--warn-ink); border:1px solid var(--warn-border); border-radius:8px; padding:8px 11px; font-size:12.5px; line-height:1.5; margin:8px 0; }
+  .info{ background:var(--surface-2); color:var(--ink-2); border:1px solid var(--border); border-radius:8px; padding:8px 11px; font-size:12.5px; line-height:1.5; margin:8px 0; }
+  .btn{
+    font:inherit; font-size:13px; font-weight:600; border-radius:8px; padding:8px 14px; cursor:pointer;
+    border:1px solid var(--accent); background:var(--accent); color:var(--accent-ink);
+  }
+  .btn.sec{ background:var(--surface); color:var(--accent); }
+  .btn:disabled{ opacity:.5; cursor:not-allowed; }
+  .btn-row{ display:flex; gap:8px; flex-wrap:wrap; margin-top:6px; }
+  .assump{ display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:0 16px; }
+  .totals{ display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:10px; margin:12px 0; }
+  .tot{ background:var(--surface-2); border:1px solid var(--border); border-radius:10px; padding:10px 12px; }
+  .tot .l{ font-size:10.5px; letter-spacing:.06em; text-transform:uppercase; color:var(--ink-muted); margin-bottom:4px; }
+  .tot .v{ font-family:"IBM Plex Mono",monospace; font-weight:600; font-size:16px; color:var(--ink); }
+  .tbl-scroll{ overflow-x:auto; border:1px solid var(--border); border-radius:10px; background:var(--surface); margin:8px 0; }
+  .tbl-scroll table{ min-width:480px; }
+  .tbl-scroll tfoot td{ font-weight:600; border-top:2px solid var(--border-strong); }
+  td.l, th.l{ text-align:left; }
+  .bars-svg{ width:100%; height:auto; display:block; overflow:visible; }
+  .bar-int{ fill:var(--s-tamar); }
+  .bar-amo{ fill:var(--accent); }
+  .bars-legend{ display:flex; gap:16px; font-size:12px; color:var(--ink-2); margin:4px 2px 8px; flex-wrap:wrap; }
+  .bars-legend i{ display:inline-block; width:10px; height:10px; border-radius:2px; margin-right:5px; vertical-align:middle; }
+  .how{ margin-top:16px; }
+  .how summary{ cursor:pointer; font-weight:600; font-size:13.5px; color:var(--ink); }
+  .how div{ font-size:12.8px; color:var(--ink-2); line-height:1.65; margin-top:8px; }
+  .how code{ font-family:"IBM Plex Mono",monospace; font-size:12px; background:var(--surface-2); padding:1px 5px; border-radius:4px; }
+  .pos-list{ list-style:none; margin:0 0 10px; padding:0; }
+  .pos-list li{ display:flex; justify-content:space-between; gap:8px; align-items:center; padding:6px 0; border-bottom:1px solid var(--border); font-size:13px; }
+  .pos-list .x{ font:inherit; font-size:12px; background:none; border:1px solid var(--border-strong); border-radius:6px; color:var(--ink-2); cursor:pointer; padding:2px 8px; }
+  .cur-title{ font-size:14px; font-weight:600; margin:14px 0 4px; }
+  .cp-disclaimer{ font-size:12px; color:var(--warn-ink); background:var(--warn-bg); border:1px solid var(--warn-border); border-radius:8px; padding:8px 12px; margin:0 0 18px; line-height:1.55; }
+  .mini-filters{ display:flex; gap:12px; flex-wrap:wrap; align-items:flex-end; margin-bottom:10px; }
+  .mini-filters .field{ margin-bottom:0; min-width:150px; }
+  .nonbiz{ color:var(--ink-muted); font-size:11px; }
+  h2.sec-title{ font-size:20px; font-weight:600; margin:34px 0 4px; }
+
+  /* footer */
+  footer .src{ margin:0 0 8px; }
+  footer .legal{ margin-top:12px; padding:10px 14px; border:1px solid var(--border); border-radius:8px; background:var(--surface); color:var(--ink-2); font-size:12px; line-height:1.6; }
+
+  @media (max-width:560px){
+    main{ padding-left:16px; padding-right:16px; }
+    .aviso-top{ padding:8px 16px; text-align:left; }
+    .sector-row{ grid-template-columns:96px 1fr 58px 54px; gap:8px; font-size:11.5px; }
+    .mover-row{ gap:6px; padding:9px 12px; }
+    .mover-row .px{ display:none; }
+    .mover-row .tk{ width:54px; }
+    .stat-card .value{ font-size:18px; }
+    .heatmap{ height:420px; }
+    .asof{ text-align:left; }
+    header.top{ gap:12px; }
+    .news-row{ padding:14px 14px; gap:10px; }
+    .news-rank{ width:16px; }
+    .grp-head{ flex-wrap:wrap; gap:4px 10px; }
+    .card{ padding:12px; }
+    .aviso-bar{ font-size:10.5px; padding:6px 10px; }
+  }
+
+  .tk-note{ white-space:normal; max-width:230px; min-width:120px; }
+
+  .bars-svg{ max-width:760px; }
+  .tbl-scroll tfoot td{ text-align:right; }
+  .tbl-scroll tfoot td:first-child{ text-align:left; }
+  .tbl-scroll thead th{ text-align:right; }
+  .tbl-scroll thead th.l, .tbl-scroll thead th:first-child{ text-align:left; }
+  .pt-label{ pointer-events:none; }
+
+</style>
+</head>
+<body>
+<div class="aviso-top" role="note"><div class="in">Información con fines educativos e informativos. No constituye asesoramiento ni recomendación de inversión, ni una oferta de compra o venta de valores. El titular es idóneo CNV con matriculación en trámite y no está inscripto como asesor. Datos de terceros con posibles demoras y errores. <a href="aviso-legal.html">Aviso legal completo</a></div></div>
+
+<main id="main">
+  <header class="top">
+    <div>
+      <div class="brand-line">
+        <p class="brand-eyebrow"><a class="brand-link" href="https://fariasfinanzas.com.ar/">Farías Finanzas</a></p>
+        <button type="button" class="theme-btn" id="theme-btn" aria-label="Cambiar tema de color">Tema: automático</button>
+      </div>
+      <h1>Pizarra de Mercado AR</h1>
+      <p class="sub" id="sub">Noticias, renta fija argentina, CEDEARs, acciones y letras, más una calculadora de cupones. Información con fines educativos.</p>
+      <div class="chips" id="chips" aria-label="Indicadores"></div>
+    </div>
+    <div class="asof" id="asof"><div class="line">Cargando datos…</div></div>
+  </header>
+
+  <div id="load-error"></div>
+
+  <div class="tabs" role="tablist" aria-label="Secciones de la pizarra">
+    <button type="button" class="tab-btn active" id="tab-noticias" data-tab="noticias" role="tab" aria-selected="true" aria-controls="panel-noticias">Noticias</button>
+    <button type="button" class="tab-btn" id="tab-bonos" data-tab="bonos" role="tab" aria-selected="false" aria-controls="panel-bonos" tabindex="-1">Bonos</button>
+    <button type="button" class="tab-btn" id="tab-cedears" data-tab="cedears" role="tab" aria-selected="false" aria-controls="panel-cedears" tabindex="-1">CEDEARs</button>
+    <button type="button" class="tab-btn" id="tab-acciones" data-tab="acciones" role="tab" aria-selected="false" aria-controls="panel-acciones" tabindex="-1">Acciones AR</button>
+    <button type="button" class="tab-btn" id="tab-letras" data-tab="letras" role="tab" aria-selected="false" aria-controls="panel-letras" tabindex="-1">Letras</button>
+    <button type="button" class="tab-btn" id="tab-cupones" data-tab="cupones" role="tab" aria-selected="false" aria-controls="panel-cupones" tabindex="-1">Cupones</button>
+  </div>
+
+  <!-- ===================== NOTICIAS ===================== -->
+  <div id="panel-noticias" class="tab-panel active" role="tabpanel" aria-labelledby="tab-noticias">
+    <div class="intro">
+      <div>
+        <p class="news-note"><strong>Titulares con enlace a la fuente original. Farías Finanzas no redacta ni edita estas notas.</strong> Se muestran únicamente el título, el medio y la hora de publicación, de las últimas 36 horas, filtrados por temas de mercado, economía y finanzas. Al tocar un titular se abre la nota en el sitio del medio.</p>
+        <p class="news-note" id="news-meta"></p>
+      </div>
+      <dl class="glossary">
+        <div class="row"><dt>ARG</dt><dd>Temas de Argentina: mercado local, BCRA, dólar, bonos.</dd></div>
+        <div class="row"><dt>EEUU / GLOBAL</dt><dd>Wall Street, Reserva Federal y mercados internacionales.</dd></div>
+      </dl>
+    </div>
+    <div id="news-list"></div>
+  </div>
+
+  <!-- ===================== BONOS ===================== -->
+  <div id="panel-bonos" class="tab-panel" role="tabpanel" aria-labelledby="tab-bonos">
+    <div class="intro">
+      <div><p id="bonos-intro"></p>
+        <p>Las curvas de TIR ordenan cada especie por Duración Modificada y permiten ver cómo se relacionan tasa y plazo dentro de cada familia. Es información descriptiva de la rueda, no una sugerencia.</p></div>
+      <dl class="glossary">
+        <div class="row"><dt>TIR</dt><dd>Tasa Interna de Retorno anualizada (efectiva, Actual/365), implícita en el precio de la rueda. Cálculo propio.</dd></div>
+        <div class="row"><dt>MD</dt><dd>Duración Modificada: sensibilidad del precio a cambios de tasa, en años.</dd></div>
+        <div class="row"><dt>s/d</dt><dd>Sin dato: tasa variable o cronograma no disponible.</dd></div>
+        <div class="row"><dt>⚠</dt><dd>Estimación o dato con salvedades (ver detalle en cada familia).</dd></div>
+      </dl>
+    </div>
+    <nav class="jump" id="bonos-nav" aria-label="Familias de bonos"></nav>
+    <div id="sections"></div>
+  </div>
+
+  <!-- ===================== CEDEARS ===================== -->
+  <div id="panel-cedears" class="tab-panel" role="tabpanel" aria-labelledby="tab-cedears">
+    <div class="intro">
+      <div><p id="cedears-intro-1"></p><p id="cedears-intro-2"></p></div>
+      <dl class="glossary">
+        <div class="row"><dt>Monto operado</dt><dd>Pesos negociados en la especie durante la rueda (precio × volumen): define el tamaño de cada celda del mapa de calor.</dd></div>
+        <div class="row"><dt>Amplitud</dt><dd>Cantidad de especies que suben contra las que bajan: indica qué tan generalizado fue el movimiento.</dd></div>
+      </dl>
+    </div>
+    <div class="stat-row" id="cedears-stats"></div>
+    <div class="movers">
+      <div class="mover-card gain"><h3>▲ Top 5 mayores subas</h3><div id="mover-gain"></div></div>
+      <div class="mover-card loss"><h3>▼ Top 5 mayores bajas</h3><div id="mover-loss"></div></div>
+    </div>
+    <div class="heatmap-head"><h2>Mapa de calor de la rueda</h2><span class="count" id="heat-count"></span></div>
+    <p class="heatmap-desc">Cada celda es un CEDEAR; el tamaño representa cuánto se operó y el color, la variación diaria. Pasá el mouse o enfocá una celda para ver el detalle.</p>
+    <div class="heatmap-wrap"><div class="heatmap" id="heatmap"></div></div>
+    <div class="hm-legend"><span>Baja</span><span class="ramp"></span><span>Sube</span><span style="margin-left:14px;">Escala de color saturada a partir de ±8%</span></div>
+    <div class="sector-panel">
+      <h2>Desempeño por sector</h2>
+      <p class="heatmap-desc" id="sector-desc"></p>
+      <div class="sector-row head"><span>Sector</span><span>Variación promedio</span><span>Prom.</span><span>Especies</span></div>
+      <div id="sector-table"></div>
+    </div>
+  </div>
+
+  <!-- ===================== ACCIONES ===================== -->
+  <div id="panel-acciones" class="tab-panel" role="tabpanel" aria-labelledby="tab-acciones">
+    <div class="intro">
+      <div><p id="acciones-intro-1"></p><p id="acciones-intro-2"></p></div>
+      <dl class="glossary">
+        <div class="row"><dt>Monto operado</dt><dd>Pesos negociados en la especie durante la rueda (precio × volumen).</dd></div>
+        <div class="row"><dt>Amplitud</dt><dd>Cantidad de especies que suben contra las que bajan.</dd></div>
+      </dl>
+    </div>
+    <div class="stat-row" id="acciones-stats"></div>
+    <div class="movers">
+      <div class="mover-card gain"><h3>▲ Top 5 mayores subas</h3><div id="mover-gain-ar"></div></div>
+      <div class="mover-card loss"><h3>▼ Top 5 mayores bajas</h3><div id="mover-loss-ar"></div></div>
+    </div>
+    <div class="heatmap-head"><h2>Mapa de calor de la rueda</h2><span class="count" id="heat-count-ar"></span></div>
+    <p class="heatmap-desc">Cada celda es una acción argentina; el tamaño representa cuánto se operó y el color, la variación diaria. Pasá el mouse o enfocá una celda para ver el detalle.</p>
+    <div class="heatmap-wrap"><div class="heatmap" id="heatmap-ar"></div></div>
+    <div class="hm-legend"><span>Baja</span><span class="ramp"></span><span>Sube</span><span style="margin-left:14px;">Escala de color saturada a partir de ±8%</span></div>
+    <div class="sector-panel">
+      <h2>Desempeño por sector</h2>
+      <p class="heatmap-desc" id="sector-desc-ar"></p>
+      <div class="sector-row head"><span>Sector</span><span>Variación promedio</span><span>Prom.</span><span>Especies</span></div>
+      <div id="sector-table-ar"></div>
+    </div>
+  </div>
+
+  <!-- ===================== LETRAS ===================== -->
+  <div id="panel-letras" class="tab-panel" role="tabpanel" aria-labelledby="tab-letras">
+    <div class="intro">
+      <div><p id="letras-intro"></p>
+        <p>Los valores finales de las letras provienen de los cronogramas cargados y, en algunos casos, son estimaciones (marcadas con ⚠). En las letras dólar-linked el pago depende del tipo de cambio oficial futuro, por lo que la tasa mostrada supone un A3500 constante.</p></div>
+      <dl class="glossary">
+        <div class="row"><dt>TNA</dt><dd>Tasa nominal anual lineal: (valor final / precio − 1) × 365 / días.</dd></div>
+        <div class="row"><dt>TEA</dt><dd>Tasa efectiva anual: (valor final / precio)^(365/días) − 1. En Lecer es real; en dólar-linked, implícita en USD.</dd></div>
+        <div class="row"><dt>Días</dt><dd>Días corridos al vencimiento desde la liquidación T+1 hábil.</dd></div>
+      </dl>
+    </div>
+    <nav class="jump" id="letras-nav" aria-label="Familias de letras"></nav>
+    <div id="letras-sections"></div>
+  </div>
+
+  <!-- ===================== CUPONES ===================== -->
+  <div id="panel-cupones" class="tab-panel" role="tabpanel" aria-labelledby="tab-cupones">
+    <div id="cupones-root"><div class="empty-box">Cargando calculadora…</div></div>
+  </div>
+
+  <footer>
+    <div id="footer-src"></div>
+    <div class="legal" id="footer-legal">Información con fines educativos e informativos. No constituye asesoramiento ni recomendación de inversión, ni una oferta de compra o venta de valores. El titular es idóneo CNV con matriculación en trámite y no está inscripto como asesor. Datos de terceros con posibles demoras y errores. <a href="aviso-legal.html">Aviso legal completo</a></div>
+  </footer>
+</main>
+
+<div class="aviso-bar" role="note">Solo informativo · no es una recomendación de inversión · <a href="aviso-legal.html">Aviso legal</a></div>
+
+<!--EMBED-->
+<script>
+(function(){
+  "use strict";
+
+  // =====================================================================
+  // Utilidades
+  // =====================================================================
+  function $(id){ return document.getElementById(id); }
+  function add(e, kids){
+    if (kids == null || kids === false) return;
+    if (!Array.isArray(kids)) kids = [kids];
+    kids.forEach(function(c){
+      if (c == null || c === false) return;
+      if (Array.isArray(c)) { add(e, c); return; }
+      e.appendChild(typeof c === 'object' ? c : document.createTextNode(String(c)));
+    });
+  }
+  // Crea elementos del DOM. Todo texto se inserta con nodos de texto (nunca como HTML).
+  function h(tag, attrs, kids){
+    var e = document.createElement(tag);
+    if (attrs) for (var k in attrs){
+      var v = attrs[k];
+      if (v == null || v === false) continue;
+      if (k === 'class') e.className = v;
+      else if (k === 'text') e.textContent = v;
+      else if (k.slice(0,2) === 'on' && typeof v === 'function') e.addEventListener(k.slice(2), v);
+      else e.setAttribute(k, v === true ? '' : String(v));
+    }
+    add(e, kids);
+    return e;
+  }
+  var SVGNS = 'http://www.w3.org/2000/svg';
+  function s(tag, attrs, parent){
+    var e = document.createElementNS(SVGNS, tag);
+    for (var k in attrs) e.setAttribute(k, attrs[k]);
+    if (parent) parent.appendChild(e);
+    return e;
+  }
+  function clear(e){ while (e.firstChild) e.removeChild(e.firstChild); return e; }
+
+  function fmtN(v, d){
+    if (v == null || isNaN(v)) return '—';
+    var str = Math.abs(v).toFixed(d);
+    var neg = v < 0 && parseFloat(str) !== 0;
+    var p = str.split('.');
+    p[0] = p[0].replace(/\B(?=(\d{3})+(?!\d))/g, '.');
+    return (neg ? '-' : '') + p[0] + (p[1] ? ',' + p[1] : '');
+  }
+  function fmtPrice(v){ return fmtN(v, 2); }
+  function fmtPct(v, d){ d = d === undefined ? 2 : d; if (v == null) return '—'; var t = fmtN(v, d); return (v > 0 && parseFloat(Math.abs(v).toFixed(d)) !== 0 ? '+' : '') + t + '%'; }
+  function fmtTir(v){ return fmtN(v, 2) + '%'; }
+  function fmtMoney(v, cur){ return (cur === 'USD' ? 'USD ' : '$ ') + fmtN(v, 2); }
+  function fmtDate(iso){ return iso ? iso.slice(8,10) + '/' + iso.slice(5,7) + '/' + iso.slice(0,4) : '—'; }
+  function fmtDT(iso){ return iso ? iso.slice(8,10) + '/' + iso.slice(5,7) + ' ' + iso.slice(11,16) : '—'; }
+  function dayNum(iso){ return Math.floor(Date.UTC(+iso.slice(0,4), +iso.slice(5,7)-1, +iso.slice(8,10)) / 86400000); }
+  function isoOfDay(n){ var d = new Date(n * 86400000); return d.toISOString().slice(0,10); }
+  function weekdayOf(iso){ return new Date(dayNum(iso) * 86400000).getUTCDay(); }
+  function todayISO(){ var d = new Date(); return d.getFullYear() + '-' + ('0' + (d.getMonth()+1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2); }
+  function safeUrl(u){ return typeof u === 'string' && /^https?:\/\//i.test(u) ? u : null; }
+  // Número escrito por la persona: acepta coma decimal y puntos de miles.
+  function parseNum(str){
+    if (str == null) return NaN;
+    var t = String(str).trim().replace(/\s/g, '').replace(/[$]|USD/gi, '');
+    if (!t) return NaN;
+    if (t.indexOf(',') >= 0) t = t.replace(/\./g, '').replace(',', '.');
+    else if (/^\d{1,3}(\.\d{3})+$/.test(t)) t = t.replace(/\./g, '');
+    var v = Number(t);
+    return isFinite(v) ? v : NaN;
+  }
+
+  var AVISO_CORTO_URL = 'aviso-legal.html';
+
+  var FLAG_MSG = {
+    estimado: 'Cronograma o valor final estimado: no es una cifra oficial.',
+    sin_analitica_iol: 'Cronograma no verificado con la analítica de renta fija de IOL (se usan fuentes públicas).',
+    cer_snapshot: 'TIR real aproximada con CER de la fecha del cronograma (no se pudo actualizar el índice).',
+    corto_plazo: 'A pocos días del vencimiento: la TIR anualizada es muy sensible al precio.',
+    sin_operaciones: 'Sin operaciones en la rueda: se muestra el último precio informado.',
+    sin_operaciones_usd: 'La lámina en dólares no operó en la rueda.',
+    poco_operada: 'Poco operada: el precio puede no ser representativo.',
+    usd_implicito: 'Precio en dólares implícito (precio en pesos / MEP).',
+    tasa_variable: 'Tasa variable: los cupones futuros no se conocen; no se calcula TIR.',
+    sin_cronograma: 'Cronograma no disponible: no se calcula TIR ni flujos.',
+    sin_cotizacion: 'Sin cotización en la fuente.',
+    sin_cotizacion_pesos: 'Sin lámina en pesos en la fuente.',
+    tir_no_confiable: 'La TIR calculada no es confiable (valor extremo).',
+    stale: 'Dato no actualizado: se conserva el último valor conocido.'
+  };
+  var WARN_FLAGS = ['estimado','sin_analitica_iol','cer_snapshot','corto_plazo','sin_operaciones','poco_operada','usd_implicito','tir_no_confiable','stale','sin_operaciones_usd'];
+  function flagMsgs(r){
+    var out = [];
+    (r.flags || []).concat(r.stale ? ['stale'] : []).forEach(function(f){
+      var m = FLAG_MSG[f];
+      if (f === 'cer_snapshot' && M && M.snapshot_cronogramas) m = 'TIR real aproximada con CER al ' + fmtDate(M.snapshot_cronogramas) + ' (no se pudo actualizar el índice).';
+      if (m && out.indexOf(m) < 0) out.push(m);
+    });
+    return out;
+  }
+  function hasWarn(r){ return (r.flags || []).some(function(f){ return WARN_FLAGS.indexOf(f) >= 0; }) || !!r.stale; }
+
+  // Estado global de datos
+  var M = null, N = null, ST = null, INS = [], QUOTE = {};
+  var loadErrors = [];
+
+  function loadJSON(name){
+    if (window.__EMBED && window.__EMBED[name]) return Promise.resolve(window.__EMBED[name]);
+    return fetch('data/' + name + '.json', {cache:'no-cache'}).then(function(r){
+      if (!r.ok) throw new Error(name + ' (HTTP ' + r.status + ')');
+      return r.json();
+    }).catch(function(e){ loadErrors.push(name); return null; });
+  }
+
+  // =====================================================================
+  // Tema claro / oscuro
+  // =====================================================================
+  (function themeInit(){
+    var btn = $('theme-btn');
+    var modes = ['auto','light','dark'];
+    var labels = {auto:'Tema: automático', light:'Tema: claro', dark:'Tema: oscuro'};
+    var cur = 'auto';
+    try { var sv = localStorage.getItem('pizarra-tema'); if (modes.indexOf(sv) >= 0) cur = sv; } catch(e){}
+    function apply(){
+      var de = document.documentElement;
+      if (cur === 'auto') de.removeAttribute('data-theme'); else de.setAttribute('data-theme', cur);
+      btn.textContent = labels[cur];
+    }
+    btn.addEventListener('click', function(){
+      cur = modes[(modes.indexOf(cur) + 1) % 3];
+      try { localStorage.setItem('pizarra-tema', cur); } catch(e){}
+      apply();
+    });
+    apply();
+  })();
+
+  // =====================================================================
+  // Pestañas
+  // =====================================================================
+  (function tabsInit(){
+    var btns = Array.prototype.slice.call(document.querySelectorAll('.tab-btn'));
+    function activate(name, focus){
+      var found = false;
+      btns.forEach(function(b){
+        var on = b.getAttribute('data-tab') === name;
+        if (on) found = true;
+        b.classList.toggle('active', on);
+        b.setAttribute('aria-selected', on ? 'true' : 'false');
+        b.setAttribute('tabindex', on ? '0' : '-1');
+        if (on && focus) b.focus();
+      });
+      if (!found) return false;
+      document.querySelectorAll('.tab-panel').forEach(function(p){ p.classList.toggle('active', p.id === 'panel-' + name); });
+      return true;
+    }
+    btns.forEach(function(b, i){
+      b.addEventListener('click', function(){
+        activate(b.getAttribute('data-tab'));
+        try { history.replaceState(null, '', '#' + b.getAttribute('data-tab')); } catch(e){}
+      });
+      b.addEventListener('keydown', function(ev){
+        var d = ev.key === 'ArrowRight' ? 1 : ev.key === 'ArrowLeft' ? -1 : 0;
+        if (!d) return;
+        ev.preventDefault();
+        var nb = btns[(i + d + btns.length) % btns.length];
+        activate(nb.getAttribute('data-tab'), true);
+      });
+    });
+    var hsh = (location.hash || '').replace('#','');
+    if (hsh) activate(hsh);
+    else activate('noticias');
+  })();
+
+  // =====================================================================
+  // Tabla ordenable genérica
+  // cols: [{key, label, cls, val(r) -> valor ordenable|null, cell(r) -> Node|string}]
+  // =====================================================================
+  function sortableTable(cols, rows, def, opts){
+    opts = opts || {};
+    var state = {key: def.key, dir: def.dir || 1};
+    var table = h('table', {class: opts.cls || ''});
+    var thead = h('thead'); var trh = h('tr'); thead.appendChild(trh);
+    var tbody = h('tbody');
+    table.appendChild(thead); table.appendChild(tbody);
+    var ths = {};
+    cols.forEach(function(c, idx){
+      var th = h('th', {scope:'col', class: c.sortable === false ? '' : 'sortable'});
+      if (idx === 0 || c.left) th.style.textAlign = 'left';
+      if (c.sortable === false){ th.textContent = c.label; }
+      else {
+        var b = h('button', {type:'button', title:'Ordenar por ' + c.label}, [c.label, h('span', {class:'sort-ind', 'aria-hidden':'true'})]);
+        b.addEventListener('click', function(){
+          if (state.key === c.key) state.dir = -state.dir; else { state.key = c.key; state.dir = c.firstDir || 1; }
+          render();
+        });
+        th.appendChild(b);
+        th.setAttribute('aria-sort', 'none');
+      }
+      ths[c.key] = th;
+      trh.appendChild(th);
+    });
+    function render(){
+      var col = cols.filter(function(c){ return c.key === state.key; })[0];
+      var arr = rows.slice();
+      if (col && col.val){
+        arr.sort(function(a, b){
+          var va = col.val(a), vb = col.val(b);
+          var na = va == null || (typeof va === 'number' && isNaN(va)), nb = vb == null || (typeof vb === 'number' && isNaN(vb));
+          if (na && nb) return 0;
+          if (na) return 1;
+          if (nb) return -1;
+          var c = typeof va === 'string' ? va.localeCompare(vb, 'es') : va - vb;
+          return c * state.dir;
+        });
+      }
+      cols.forEach(function(c){
+        var th = ths[c.key];
+        if (c.sortable === false) return;
+        var on = c.key === state.key;
+        th.setAttribute('aria-sort', on ? (state.dir > 0 ? 'ascending' : 'descending') : 'none');
+        th.querySelector('.sort-ind').textContent = on ? (state.dir > 0 ? '▲' : '▼') : '↕';
+      });
+      clear(tbody);
+      arr.forEach(function(r){
+        var tr = h('tr', {class: r.stale ? 'is-stale' : ''});
+        if (opts.rowAttrs) { var at = opts.rowAttrs(r); for (var k in at) tr.setAttribute(k, at[k]); }
+        cols.forEach(function(c, idx){
+          var td = h('td', {class: c.cls || ''});
+          if (idx === 0 || c.left) td.style.textAlign = 'left';
+          add(td, c.cell(r));
+          tr.appendChild(td);
+        });
+        tbody.appendChild(tr);
+      });
+    }
+    render();
+    return table;
+  }
+
+  // =====================================================================
+  // Noticias
+  // =====================================================================
+  var ICONS = {
+    'gob-ar': { color:'#b5566f',
+      svg:'<path d="M4 19.5h16" stroke-linecap="round"/><rect x="5.2" y="12" width="13.6" height="7.2" rx=".4"/><circle cx="12" cy="8.6" r="2.9"/><line x1="12" y1="5.7" x2="12" y2="2.6" stroke-linecap="round"/><path d="M12 2.9 L15 3.7 L12 4.5 Z" fill="currentColor" stroke="none"/><line x1="8.6" y1="14" x2="8.6" y2="19" stroke-width="1.3"/><line x1="12" y1="14" x2="12" y2="19" stroke-width="1.3"/><line x1="15.4" y1="14" x2="15.4" y2="19" stroke-width="1.3"/>' },
+    'gob-eeuu': { color:'#3a5f8a',
+      svg:'<path d="M4.5 17.3 C4.5 16.3 7.9 15.6 12 15.6 C16.1 15.6 19.5 16.3 19.5 17.3 C19.5 18.3 16.1 19 12 19 C7.9 19 4.5 18.3 4.5 17.3 Z"/><path d="M8 15.8 L8.3 6.4 C8.3 5.3 9.9 4.4 12 4.4 C14.1 4.4 15.7 5.3 15.7 6.4 L16 15.8 Z"/><rect x="7.9" y="10.6" width="8.2" height="2.4" fill="currentColor" stroke="none" opacity=".9"/><path d="M11.05 8.6 L11.35 7.75 L11.65 8.6 L12.5 8.6 L11.8 9.1 L12.05 9.95 L11.35 9.4 L10.65 9.95 L10.9 9.1 L10.2 8.6 Z" fill="currentColor" stroke="none"/>' },
+    'bcra': { color:'#3f7fc0',
+      svg:'<path d="M3 10.2 L12 4.2 L21 10.2" stroke-linejoin="round"/><line x1="3" y1="19" x2="21" y2="19" stroke-linecap="round"/><rect x="3" y="17.6" width="18" height="1.6"/><line x1="6.2" y1="10.6" x2="6.2" y2="17.4" stroke-width="1.3"/><line x1="10" y1="10.6" x2="10" y2="17.4" stroke-width="1.3"/><line x1="14" y1="10.6" x2="14" y2="17.4" stroke-width="1.3"/><line x1="17.8" y1="10.6" x2="17.8" y2="17.4" stroke-width="1.3"/>' },
+    'fed': { color:'#2f7d5c',
+      svg:'<rect x="3" y="7.4" width="18" height="2" /><line x1="3" y1="19" x2="21" y2="19" stroke-linecap="round"/><rect x="3" y="17.6" width="18" height="1.6"/><line x1="6.2" y1="9.9" x2="6.2" y2="17.4" stroke-width="1.3"/><line x1="10" y1="9.9" x2="10" y2="17.4" stroke-width="1.3"/><line x1="14" y1="9.9" x2="14" y2="17.4" stroke-width="1.3"/><line x1="17.8" y1="9.9" x2="17.8" y2="17.4" stroke-width="1.3"/><path d="M12 2.4 L12.7 4.1 L14.5 4.2 L13.1 5.3 L13.6 7 L12 6 L10.4 7 L10.9 5.3 L9.5 4.2 L11.3 4.1 Z" fill="currentColor" stroke="none"/>' },
+    'dolar': { color:'#2f8f5b',
+      svg:'<rect x="2.6" y="7" width="18.8" height="11" rx="1.4"/><circle cx="12" cy="12.5" r="3.6"/><circle cx="5.4" cy="9.4" r=".55" fill="currentColor" stroke="none"/><circle cx="18.6" cy="9.4" r=".55" fill="currentColor" stroke="none"/><circle cx="5.4" cy="15.6" r=".55" fill="currentColor" stroke="none"/><circle cx="18.6" cy="15.6" r=".55" fill="currentColor" stroke="none"/><text x="12" y="14.4" text-anchor="middle" font-size="4.6" font-family="IBM Plex Mono, monospace" font-weight="700" fill="currentColor" stroke="none">$</text>' },
+    'petroleo': { color:'#8a5a20',
+      svg:'<path d="M12 2.8 C12 2.8 6.2 11 6.2 15 C6.2 18.4 8.8 20.6 12 20.6 C15.2 20.6 17.8 18.4 17.8 15 C17.8 11 12 2.8 12 2.8 Z" fill="currentColor" stroke="none"/><path d="M9.4 15.6 C9.4 17.1 10.6 18 12 18" stroke="var(--chip-bg)" stroke-linecap="round" stroke-width="1.3"/>' },
+    'wall-street': { color:'#2a5583',
+      svg:'<rect x="4.6" y="13.6" width="3.1" height="6.4" fill="currentColor" stroke="none"/><rect x="10.4" y="9.6" width="3.1" height="10.4" fill="currentColor" stroke="none"/><rect x="16.2" y="5" width="3.1" height="15" fill="currentColor" stroke="none"/><path d="M4.6 9.4 L9.6 5.6 L13.2 8 L19.4 3" stroke-linecap="round" stroke-linejoin="round" fill="none"/><path d="M15.6 3 L19.4 3 L19.4 6.6" stroke-linecap="round" stroke-linejoin="round" fill="none"/>' },
+    'merval': { color:'#4f9bd6',
+      svg:'<polygon points="12,2.2 13.6,6.2 10.4,6.2" fill="currentColor" stroke="none"/><rect x="10.6" y="6.2" width="2.8" height="11" fill="currentColor" stroke="none"/><polygon points="10.1,17.2 13.9,17.2 14.9,20.2 9.1,20.2" fill="currentColor" stroke="none"/>' },
+    'riesgo-pais': { color:'#b5482f',
+      svg:'<path d="M12 3.6 L21 19.4 L3 19.4 Z" stroke-linejoin="round"/><line x1="12" y1="9.2" x2="12" y2="14.4" stroke-width="1.8" stroke-linecap="round"/><circle cx="12" cy="17" r="1" fill="currentColor" stroke="none"/>' },
+    'agro': { color:'#5c8a2e',
+      svg:'<line x1="12" y1="20.4" x2="12" y2="9.6" stroke-linecap="round" stroke-width="1.6"/><path d="M12 15 C12 15 8.4 14.6 7.4 11.4 C10.8 11 12 15 12 15 Z" fill="currentColor" stroke="none"/><path d="M12 12 C12 12 15.6 11.6 16.6 8.4 C13.2 8 12 12 12 12 Z" fill="currentColor" stroke="none"/><circle cx="12" cy="7.6" r="2" fill="currentColor" stroke="none"/>' },
+    'empleo': { color:'#5b6570',
+      svg:'<path d="M9.4 9 V7.4 A2.6 2.6 0 0 1 14.6 7.4 V9" fill="none" stroke-linecap="round"/><rect x="4" y="9" width="16" height="10.4" rx="1.5"/><line x1="4" y1="14.2" x2="20" y2="14.2"/><rect x="10.6" y="13" width="2.8" height="2.4" fill="currentColor" stroke="none"/>' },
+    'general': { color:'#6b7278',
+      svg:'<rect x="4" y="4.6" width="16" height="14.8" rx="1.2"/><line x1="6.6" y1="8.2" x2="17.4" y2="8.2"/><line x1="6.6" y1="11.2" x2="17.4" y2="11.2"/><line x1="6.6" y1="14.2" x2="13.6" y2="14.2"/>' }
+  };
+
+  function iconChip(topic){
+    var ic = ICONS[topic] || ICONS.general;
+    var d = h('div', {class:'news-thumb', 'aria-hidden':'true'});
+    d.style.background = 'color-mix(in srgb, ' + ic.color + ' 20%, var(--surface-2))';
+    d.style.color = ic.color;
+    d.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round">' + ic.svg + '</svg>';   // SVG estático propio, sin datos externos
+    return d;
+  }
+  var REGION_LABEL = { ar:'Argentina', us:'EEUU', global:'Global' };
+
+  function renderNews(){
+    var box = $('news-list');
+    clear(box);
+    var items = (N && N.items) ? N.items : [];
+    var meta = $('news-meta');
+    clear(meta);
+    if (N && N.asof) add(meta, 'Titulares actualizados el ' + fmtDT(N.asof) + ' (hora de Buenos Aires)' + (N.stale ? ' · no se pudo actualizar: se muestran los últimos disponibles' : '') + '.');
+    if (!items.length){
+      box.className = '';
+      box.appendChild(h('div', {class:'empty-box'}, 'Sin titulares disponibles por el momento.'));
+      return;
+    }
+    box.className = 'news-list';
+    var ref = N.asof ? N.asof.slice(0,10) : todayISO();
+    items.forEach(function(n, i){
+      var d0 = n.published ? n.published.slice(0,10) : '';
+      var cuando = d0 === ref ? ['hoy','Hoy'] : (d0 && dayNum(ref) - dayNum(d0) === 1 ? ['ayer','Ayer'] : ['otro', fmtDate(d0).slice(0,5)]);
+      var url = safeUrl(n.link);
+      var title = url ? h('a', {href:url, target:'_blank', rel:'noopener noreferrer'}, n.title) : h('span', null, n.title);
+      var row = h('div', {class:'news-row'}, [
+        h('span', {class:'news-rank tab-nums'}, String(i + 1)),
+        h('div', {class:'news-body'}, [
+          h('div', {class:'news-tags'}, [
+            h('span', {class:'news-tag reg-' + (REGION_LABEL[n.region] ? n.region : 'ar')}, REGION_LABEL[n.region] || 'Argentina'),
+            h('span', {class:'news-tag when-' + cuando[0]}, cuando[1])
+          ]),
+          h('h3', null, title),
+          h('div', {class:'news-src'}, 'Fuente: ' + n.source + ' · ' + fmtDT(n.published) + ' (hora de Buenos Aires)')
+        ]),
+        iconChip(n.topic)
+      ]);
+      box.appendChild(row);
+    });
+  }
+
+  // =====================================================================
+  // Encabezado
+  // =====================================================================
+  function chip(label, value, title, stale){
+    var c = h('span', {class:'chip' + (stale ? ' stale' : ''), title: title || ''}, [label + ' ', h('b', {class:'tab-nums'}, value)]);
+    return c;
+  }
+  function renderHeader(){
+    var asof = $('asof'); clear(asof);
+    var chips = $('chips'); clear(chips);
+    if (!M){
+      asof.appendChild(h('div', {class:'line'}, 'Sin datos de mercado disponibles.'));
+      return;
+    }
+    asof.appendChild(h('div', {class:'line'}, ['Rueda del ', h('strong', null, fmtDate(M.rueda)), ' · actualizado ', h('strong', null, fmtDT(M.asof)), ' (hora de Buenos Aires)']));
+    asof.appendChild(h('div', {class:'line'}, 'Liquidación de referencia (T+1 hábil): ' + fmtDate(M.liquidacion) + ' · variaciones contra la rueda del ' + fmtDate(M.rueda_prev)));
+    var stales = M.stale ? Object.keys(M.stale).filter(function(k){ return M.stale[k]; }) : [];
+    if (stales.length) asof.appendChild(h('div', {class:'stale-note'}, 'Algunas secciones no pudieron actualizarse y muestran el último dato conocido (' + stales.join(', ') + ').'));
+    var age = dayNum(todayISO()) - dayNum(M.rueda);
+    if (age > 4) asof.appendChild(h('div', {class:'stale-note'}, 'Atención: la última rueda publicada es de hace ' + age + ' días. Puede haberse interrumpido la actualización automática.'));
+    var ind = M.indicadores || {};
+    function ic(key, label, getter, fmt){
+      var o = ind[key]; if (!o) return;
+      var v = getter(o); if (v == null) return;
+      chips.appendChild(chip(label, fmt(v), (o.fuente || '') + (o.fecha ? ' · ' + (o.fecha.length > 10 ? fmtDT(o.fecha) : fmtDate(o.fecha)) : '') + (o.stale ? ' · dato previo' : ''), o.stale));
+    }
+    ic('mep', 'MEP', function(o){ return o.valor; }, function(v){ return '$ ' + fmtN(v, 2); });
+    ic('ccl', 'CCL', function(o){ return o.valor; }, function(v){ return '$ ' + fmtN(v, 2); });
+    ic('riesgo_pais', 'Riesgo país', function(o){ return o.valor; }, function(v){ return fmtN(v, 0) + ' pb'; });
+    ic('mayorista', 'Mayorista', function(o){ return o.venta; }, function(v){ return '$ ' + fmtN(v, 2); });
+    ic('oficial', 'Oficial', function(o){ return o.venta; }, function(v){ return '$ ' + fmtN(v, 2); });
+    ic('blue', 'Blue', function(o){ return o.venta; }, function(v){ return '$ ' + fmtN(v, 2); });
+    var lead = leadersAvg();
+    if (lead != null){
+      chips.appendChild(h('span', {class:'chip', title:'Cálculo propio: promedio simple de la variación de las 10 acciones argentinas más operadas por monto. No es el índice Merval.'},
+        ['Acciones líderes (prom. simple) ', h('b', {class:'tab-nums ' + (lead >= 0 ? 'up' : 'dn')}, fmtPct(lead))]));
+    }
+    $('sub').textContent = 'Noticias, renta fija argentina, CEDEARs, acciones y letras con datos de cierre de la rueda del ' + fmtDate(M.rueda) + ', más una calculadora de cupones. Información con fines educativos.';
+  }
+  function leadersAvg(){
+    if (!M || !M.acciones || !M.acciones.length) return null;
+    var top = M.acciones.filter(function(a){ return a.monto > 0; }).sort(function(a,b){ return b.monto - a.monto; }).slice(0, 10);
+    if (!top.length) return null;
+    return top.reduce(function(t, a){ return t + a.pct; }, 0) / top.length;
+  }
+
+  // =====================================================================
+  // Curvas TIR vs duración (SVG)
+  // =====================================================================
+  function niceStep(range){
+    if (range <= 0) return 1;
+    var rough = range / 5;
+    var mag = Math.pow(10, Math.floor(Math.log10(rough)));
+    var norm = rough / mag;
+    var step = norm < 1.5 ? 1 : norm < 3 ? 2 : norm < 7 ? 5 : 10;
+    return step * mag;
+  }
+  function renderChart(container, points, color, opts){
+    opts = opts || {};
+    var xField = opts.xField || 'md';
+    var yField = opts.yField || 'tir';
+    var W = 520, H = 260, padL = 40, padR = 18, padT = 16, padB = 30;
+    var plotW = W - padL - padR, plotH = H - padT - padB;
+    var sorted = points.slice().sort(function(a,b){ return a[xField] - b[xField]; });
+    var xs = sorted.map(function(p){ return p[xField]; }), ys = sorted.map(function(p){ return p[yField]; });
+    var xMin = Math.min(0, Math.min.apply(null, xs)), xMax = Math.max.apply(null, xs) * 1.08 || 1;
+    var yMin = Math.min.apply(null, ys), yMax = Math.max.apply(null, ys);
+    var yPad = Math.max((yMax - yMin) * 0.18, 0.6);
+    yMin -= yPad; yMax += yPad;
+    function x(v){ return padL + (v - xMin) / (xMax - xMin || 1) * plotW; }
+    function y(v){ return padT + plotH - (v - yMin) / (yMax - yMin || 1) * plotH; }
+    var svg = s('svg', {viewBox:'0 0 ' + W + ' ' + H, preserveAspectRatio:'xMidYMid meet', role:'img',
+      'aria-label': 'Curva de ' + (opts.yLabel || 'TIR') + ' contra ' + (opts.xAxisLabel || 'duración') + ': ' + sorted.map(function(p){ return p.ticker + ' ' + fmtN(p[yField], 2) + '%'; }).join(', ')});
+    container.appendChild(svg);
+    var yStep = niceStep(yMax - yMin);
+    for (var t = Math.ceil(yMin / yStep) * yStep; t <= yMax; t += yStep){
+      var gy = y(t);
+      s('line', {'class':'grid-line', x1:padL, x2:W-padR, y1:gy, y2:gy}, svg);
+      s('text', {'class':'tick-label', x:padL-6, y:gy+3, 'text-anchor':'end'}, svg).textContent = fmtN(t, t % 1 === 0 ? 0 : 1) + '%';
+    }
+    var xStep = niceStep(xMax - xMin);
+    for (var m = 0; m <= xMax; m += xStep){
+      s('text', {'class':'tick-label', x:x(m), y:H-padB+14, 'text-anchor':'middle'}, svg).textContent = (opts.xTickFmt || function(v){ return fmtN(v, v % 1 === 0 ? 0 : 1); })(m);
+    }
+    s('line', {'class':'axis-line', x1:padL, x2:W-padR, y1:H-padB, y2:H-padB}, svg);
+    s('text', {'class':'axis-label', x:W-padR, y:H-6, 'text-anchor':'end'}, svg).textContent = opts.xAxisLabel || 'Duración Modificada (años) →';
+    s('text', {'class':'axis-label', x:padL, y:10, 'text-anchor':'start'}, svg).textContent = '↑ ' + (opts.yLabel || 'TIR');
+    var d = sorted.map(function(p, i){ return (i === 0 ? 'M' : 'L') + x(p[xField]).toFixed(1) + ' ' + y(p[yField]).toFixed(1); }).join(' ');
+    s('path', {'class':'curve-line', d:d, stroke:color}, svg);
+    var tip = h('div', {class:'tooltip', role:'status'});
+    container.appendChild(tip);
+    sorted.forEach(function(p){
+      var cx = x(p[xField]), cy = y(p[yField]);
+      var dot = s('circle', {'class':'pt-dot', cx:cx, cy:cy, r:5, fill:color, tabindex:0, 'aria-label': p.ticker + ': ' + (opts.yLabel || 'TIR') + ' ' + fmtN(p[yField], 2) + '%'}, svg);
+      s('text', {'class':'pt-label', x:cx, y: cy > 30 ? cy - 9 : cy + 16, 'text-anchor':'middle'}, svg).textContent = p.ticker;
+      function showTip(){
+        clear(tip);
+        tip.appendChild(h('b', null, p.ticker));
+        add(tip, ' — ' + p.name);
+        tip.appendChild(h('br'));
+        add(tip, (opts.yLabel || 'TIR') + ' ' + fmtTir(p[yField]) + ' · ' + (opts.xTooltipLabel || 'MD') + ' ' + (opts.xValueFmt ? opts.xValueFmt(p[xField]) : fmtN(p[xField], 2)) + (opts.xTooltipSuffix || ' años'));
+        tip.appendChild(h('br'));
+        add(tip, 'precio ' + (p.price != null ? fmtPrice(p.price) : '—'));
+        var rect = container.getBoundingClientRect(), sr = svg.getBoundingClientRect();
+        tip.style.left = (sr.left - rect.left + (cx / W) * sr.width) + 'px';
+        tip.style.top = (sr.top - rect.top + (cy / H) * sr.height) + 'px';
+        tip.classList.add('show');
+      }
+      function hideTip(){ tip.classList.remove('show'); }
+      dot.addEventListener('mouseenter', showTip);
+      dot.addEventListener('focus', showTip);
+      dot.addEventListener('mouseleave', hideTip);
+      dot.addEventListener('blur', hideTip);
+    });
+  }
+
+  // =====================================================================
+  // Bonos y Letras
+  // =====================================================================
+  var BOND_FAMS = [
+    {id:'soberano_usd', gid:'g-usd', color:'var(--s-usd)', title:'Soberanos en dólares', tag:'Bonares (Ley Arg.) y Globales (Ley NY)', usd:true,
+     desc:'Títulos públicos en dólares con lámina en pesos (especie sin sufijo); la mayoría también opera en versión MEP (D) y cable (C). La tabla muestra el precio en pesos y, debajo, el de la lámina D en dólares; la TIR se calcula sobre el precio en dólares.'},
+    {id:'soberano_fija', gid:'g-fija', color:'var(--s-fija)', title:'Soberanos en pesos a tasa fija', tag:'Boncap capitalizables', usd:false,
+     desc:'Títulos del Tesoro en pesos que capitalizan una tasa fija y pagan un único flujo al vencimiento.'},
+    {id:'cer', gid:'g-cer', color:'var(--s-cer)', title:'Bonos CER', tag:'Boncer, Par, Discount y Cuasipar en pesos', usd:false,
+     desc:'Títulos en pesos cuyo capital se ajusta por CER (inflación). La TIR mostrada es una tasa real aproximada, calculada con los flujos ajustados por el CER vigente, sin proyectar inflación futura.'},
+    {id:'tamar', gid:'g-tamar', color:'var(--s-tamar)', title:'Bonos a tasa TAMAR / Duales', tag:'Bonte TAMAR y bonos duales', usd:false,
+     desc:'Pagan una tasa variable (TAMAR) o el máximo entre dos referencias (duales). Como los cupones futuros no se conocen, no se calcula TIR (s/d).'},
+    {id:'provincial', gid:'g-prov', color:'var(--s-prov)', title:'Provinciales', tag:'Títulos de provincias y CABA', usd:true,
+     desc:'Deuda subsoberana, en su mayoría en dólares (lámina en pesos). Conviven especies muy operadas con otras de baja liquidez, cuyo precio puede no ser representativo.'},
+    {id:'bopreal', gid:'g-bopreal', color:'var(--s-bopreal)', title:'BOPREAL', tag:'Bonos del BCRA en dólares', usd:true,
+     desc:'Bonos para la Reconstrucción de una Nación Argentina emitidos por el BCRA, en dólares, con distintas series y vencimientos.'},
+    {id:'on', gid:'g-on', color:'var(--s-on)', title:'Obligaciones negociables', tag:'ONs en dólares', usd:true, on:true,
+     desc:'Deuda corporativa en dólares. Se muestra el precio de la lámina D (MEP, en dólares) y, debajo, el de la lámina en pesos (O). La TIR se calcula con los cronogramas de pago disponibles.'}
+  ];
+  var LETRA_FAMS = [
+    {id:'letra_lecap', gid:'g-lecap', color:'var(--s-fija)', title:'LECAPs', tag:'Letras capitalizables, tasa fija en pesos',
+     desc:'Devengan una tasa fija que capitaliza hasta el vencimiento. TNA = (valor final / precio − 1) × 365 / días; TEA = (valor final / precio)^(365/días) − 1.'},
+    {id:'letra_lecer', gid:'g-lecer', color:'var(--s-cer)', title:'Lecer', tag:'Letras a descuento ajustables por CER',
+     desc:'Cupón cero emitido a descuento y ajustado por CER hasta el vencimiento. La tasa mostrada es real (neta del ajuste CER vigente, sin proyectar inflación futura).'},
+    {id:'letra_dlk', gid:'g-dlk', color:'var(--s-usd)', title:'Dólar-linked', tag:'Letras vinculadas al dólar oficial (A3500)',
+     desc:'Cupón cero que ajusta el capital por el tipo de cambio oficial (A3500) al vencimiento. La tasa mostrada es implícita en dólares, suponiendo un A3500 constante: es una estimación.'}
+  ];
+
+  function priceCell(r, fam){
+    if (r.price == null && r.price_usd == null) return h('span', {class:'sd'}, 's/d');
+    if (fam.on){
+      return [h('span', {class:'tab-nums'}, r.price_usd != null ? 'USD ' + fmtN(r.price_usd, 2) : '—'),
+        r.price != null ? h('span', {class:'px-sub tab-nums'}, '$ ' + fmtPrice(r.price)) : null];
+    }
+    var out = [h('span', {class:'tab-nums'}, r.price != null ? fmtPrice(r.price) : '—')];
+    if (fam.usd && r.price_usd != null) out.push(h('span', {class:'px-sub tab-nums'}, 'USD ' + fmtN(r.price_usd, 2) + ' (D)'));
+    return out;
+  }
+  function pctOf(r, fam){ return fam.on && r.pct_usd != null ? r.pct_usd : r.pct; }
+  function pctCell(v){
+    if (v == null) return h('span', {class:'sd'}, '—');
+    var cls = v > 0 ? 'var-up' : (v < 0 ? 'var-dn' : '');
+    return h('span', {class:'tab-nums ' + cls}, (v > 0 ? '▲ ' : v < 0 ? '▼ ' : '· ') + fmtPct(v));
+  }
+  function tkCell(r){
+    return h('span', {class:'tk-wrap'}, [h('span', {class:'tk'}, r.ticker), h('span', {class:'tk-note'}, r.name)]);
+  }
+  function warnWrap(node, r){
+    var msgs = flagMsgs(r);
+    if (!msgs.length) return node;
+    return h('span', {class:'flagmark', title: msgs.join(' ')}, node);
+  }
+  function tirCell(r, field, label){
+    var v = r[field];
+    if (v == null){
+      var msgs = flagMsgs(r);
+      return msgs.length ? h('span', {class:'flagmark', title:msgs.join(' ')}, h('span', {class:'sd'}, 's/d ⚠')) : h('span', {class:'sd'}, 's/d');
+    }
+    var w = hasWarn(r);
+    return warnWrap(h('span', {class:'tab-nums' + (w ? ' tir-flag' : '')}, (w ? '⚠ ' : '') + fmtTir(v)), r);
+  }
+
+  function renderFamilyGroup(root, fam, rows, kind){
+    var sec = h('section', {class:'grp', id:fam.gid});
+    sec.appendChild(h('div', {class:'grp-head'}, [
+      h('span', {class:'swatch', style:'background:' + fam.color}),
+      h('h2', null, fam.title),
+      h('span', {class:'count'}, rows.length + ' especies · ' + fam.tag)
+    ]));
+    sec.appendChild(h('p', {class:'grp-desc'}, fam.desc));
+    var yField = kind === 'letras' ? 'tea' : 'tir';
+    var xField = kind === 'letras' ? 'dias' : 'md';
+    var chartable = rows.filter(function(r){ return r[yField] != null && r[xField] != null; });
+    var outliers = [];
+    var cortos = chartable.filter(function(r){ return (r.flags || []).indexOf('corto_plazo') >= 0; });
+    if (chartable.length - cortos.length >= 2) chartable = chartable.filter(function(r){ return cortos.indexOf(r) < 0; }); else cortos = [];
+    outliers = cortos.slice();
+    if (chartable.length >= 6){
+      // quita de la curva los valores extremos (fuera de escala) para que no aplasten el gráfico; siguen en la tabla
+      var sv = chartable.map(function(r){ return r[yField]; }).sort(function(p, q){ return p - q; });
+      var q1 = sv[Math.floor(sv.length * 0.25)], q3 = sv[Math.floor(sv.length * 0.75)], iqr = Math.max(q3 - q1, 1);
+      var keep = [];
+      chartable.forEach(function(r){ (r[yField] < q1 - 3 * iqr || r[yField] > q3 + 3 * iqr ? outliers : keep).push(r); });
+      chartable = keep;
+    }
+    var hasChart = chartable.length >= 2;
+    var panel = h('div', {class:'panel' + (hasChart ? '' : ' no-chart')});
+    var cols;
+    if (kind === 'letras'){
+      cols = [
+        {key:'tk', label:'Especie', val:function(r){ return r.ticker; }, cell:tkCell},
+        {key:'price', label:'Precio', val:function(r){ return r.price; }, cell:function(r){ return priceCell(r, fam); }, firstDir:-1},
+        {key:'pct', label:'Var.', val:function(r){ return r.pct; }, cell:function(r){ return pctCell(r.pct); }, firstDir:-1},
+        {key:'tna', label:'TNA', val:function(r){ return r.tna; }, cell:function(r){ return tirCell(r, 'tna'); }, firstDir:-1},
+        {key:'tea', label:'TEA', val:function(r){ return r.tea; }, cell:function(r){ return tirCell(r, 'tea'); }, firstDir:-1},
+        {key:'dias', label:'Días', val:function(r){ return r.dias; }, cell:function(r){ return h('span', {class:'tab-nums'}, r.dias != null ? fmtN(r.dias, 0) + ' d' : '—'); }}
+      ];
+    } else {
+      cols = [
+        {key:'tk', label:'Especie', val:function(r){ return r.ticker; }, cell:tkCell},
+        {key:'price', label:'Precio', val:function(r){ return fam.on ? r.price_usd : r.price; }, cell:function(r){ return priceCell(r, fam); }, firstDir:-1},
+        {key:'pct', label:'Var.', val:function(r){ return pctOf(r, fam); }, cell:function(r){ return pctCell(pctOf(r, fam)); }, firstDir:-1},
+        {key:'tir', label:'TIR', val:function(r){ return r.tir; }, cell:function(r){ return tirCell(r, 'tir'); }, firstDir:-1},
+        {key:'md', label:'MD', val:function(r){ return r.md; }, cell:function(r){ return r.md != null ? h('span', {class:'tab-nums'}, fmtN(r.md, 2)) : h('span', {class:'sd'}, '—'); }}
+      ];
+    }
+    var tw = h('div', {class:'table-wrap'});
+    tw.appendChild(sortableTable(cols, rows, {key:'tk', dir:1}, {cls:'sortable-table', rowAttrs:function(r){ return {'data-ticker': r.ticker}; }}));
+    panel.appendChild(tw);
+    if (hasChart){
+      var cw = h('div', {class:'chart-wrap'});
+      panel.appendChild(cw);
+      var pts = chartable.map(function(r){ return {ticker:r.ticker, name:r.name, price:fam.on ? r.price_usd : r.price, tir:r[yField], md:r.md, dias:r.dias}; });
+      if (kind === 'letras') renderChart(cw, pts, fam.color, {xField:'dias', yField:'tir', yLabel:'TEA', xAxisLabel:'Días al vencimiento →', xTooltipLabel:'Plazo', xTooltipSuffix:' días', xValueFmt:function(v){ return fmtN(v, 0); }, xTickFmt:function(v){ return fmtN(v, 0); }});
+      else renderChart(cw, pts, fam.color, {});
+      if (outliers.length) cw.appendChild(h('p', {class:'legend-line'}, 'No se grafican (a menos de 30 días del vencimiento o fuera de escala; siguen en la tabla): ' + outliers.map(function(r){ return r.ticker; }).join(', ') + '.'));
+    } else {
+      panel.appendChild(h('div', {class:'no-chart-note'}, 'No hay suficientes especies con TIR calculada en esta familia para trazar una curva; ver precios y variación en la tabla.'));
+    }
+    // salvedades
+    var flagged = rows.filter(function(r){ return flagMsgs(r).length; });
+    if (flagged.length){
+      var det = h('details', {class:'notes-box'}, [
+        h('summary', null, 'Salvedades por especie (' + flagged.length + ')'),
+        h('ul', null, flagged.map(function(r){ return h('li', null, [h('b', null, r.ticker), ': ' + flagMsgs(r).join(' ')]); }))
+      ]);
+      panel.appendChild(det);
+    }
+    sec.appendChild(panel);
+    root.appendChild(sec);
+  }
+
+  function renderBonos(){
+    var root = $('sections'); clear(root);
+    var nav = $('bonos-nav'); clear(nav);
+    if (!M){ root.appendChild(h('div', {class:'empty-box'}, 'Sin datos de mercado por el momento.')); return; }
+    BOND_FAMS.forEach(function(fam){
+      var rows = M.bonos.filter(function(r){ return r.family === fam.id; });
+      if (!rows.length) return;
+      nav.appendChild(h('a', {href:'#' + fam.gid, onclick:function(e){ e.preventDefault(); var t = document.getElementById(fam.gid); if (t) t.scrollIntoView(); }}, [h('span', {class:'dot', style:'background:' + fam.color}), fam.title]));
+      renderFamilyGroup(root, fam, rows, 'bonos');
+    });
+    var cerNote = M.cer
+      ? 'Bonos CER: flujos del cronograma ajustados por CER al ' + fmtDate(M.cer.fecha_hoy) + ' (factor ' + fmtN(M.cer.factor, 5) + ' respecto del ' + fmtDate(M.cer.fecha_snapshot) + (M.cer.stale ? '; dato previo' : '') + ').'
+      : 'Bonos CER: TIR real aproximada con CER al ' + fmtDate(M.snapshot_cronogramas) + ' (no se pudo actualizar el índice).';
+    $('bonos-intro').textContent = 'Precios de cierre de la rueda del ' + fmtDate(M.rueda) + ' (' + M.bonos.length + ' instrumentos en ' + BOND_FAMS.filter(function(f){ return M.bonos.some(function(r){ return r.family === f.id; }); }).length + ' familias), variación diaria y, cuando el cronograma lo permite, TIR y Duración Modificada (MD) de cálculo propio con liquidación T+1 hábil (' + fmtDate(M.liquidacion) + '). ' + cerNote;
+  }
+
+  function renderLetras(){
+    var root = $('letras-sections'); clear(root);
+    var nav = $('letras-nav'); clear(nav);
+    if (!M){ root.appendChild(h('div', {class:'empty-box'}, 'Sin datos de mercado por el momento.')); return; }
+    LETRA_FAMS.forEach(function(fam){
+      var rows = M.letras.filter(function(r){ return r.family === fam.id; });
+      if (!rows.length) return;
+      nav.appendChild(h('a', {href:'#' + fam.gid, onclick:function(e){ e.preventDefault(); var t = document.getElementById(fam.gid); if (t) t.scrollIntoView(); }}, [h('span', {class:'dot', style:'background:' + fam.color}), fam.title]));
+      renderFamilyGroup(root, fam, rows, 'letras');
+    });
+    $('letras-intro').textContent = 'Letras del Tesoro Nacional agrupadas en LECAPs, Lecer y dólar-linked. Precios de cierre de la rueda del ' + fmtDate(M.rueda) + '; los días corridos al vencimiento se cuentan desde la liquidación T+1 hábil (' + fmtDate(M.liquidacion) + ').';
+  }
+
+  // =====================================================================
+  // CEDEARs y Acciones: amplitud, movers, mapa de calor, sectores
+  // =====================================================================
+  function layoutTreemap(items, x0, y0, w0, h0, rows){
+    var total = items.reduce(function(t, d){ return t + d.value; }, 0);
+    if (!total) return items;
+    var target = total / rows, chunks = [], cur = [], curSum = 0;
+    items.forEach(function(it, idx){
+      cur.push(it); curSum += it.value;
+      var remaining = rows - chunks.length - 1;
+      var isLast = idx === items.length - 1;
+      if (!isLast && curSum >= target && remaining > 0){ chunks.push({items:cur, sum:curSum}); cur = []; curSum = 0; }
+    });
+    if (cur.length) chunks.push({items:cur, sum:curSum});
+    var y = y0;
+    chunks.forEach(function(ch){
+      var rowH = h0 * (ch.sum / total), x = x0;
+      ch.items.forEach(function(it){ var w = w0 * (it.value / ch.sum); it.rect = {x:x, y:y, w:w, h:rowH}; x += w; });
+      y += rowH;
+    });
+    return items;
+  }
+  var HEAT_STOPS = ['#b23a2e','#dd9284','#cfcdc2','#8fc394','#157a33'];
+  function hexToRgb(hex){ hex = hex.replace('#',''); return {r:parseInt(hex.substr(0,2),16), g:parseInt(hex.substr(2,2),16), b:parseInt(hex.substr(4,2),16)}; }
+  function lerpColor(a, b, f){
+    var ca = hexToRgb(a), cb = hexToRgb(b);
+    return {r:Math.round(ca.r + (cb.r-ca.r)*f), g:Math.round(ca.g + (cb.g-ca.g)*f), b:Math.round(ca.b + (cb.b-ca.b)*f)};
+  }
+  function heatColor(v){
+    var t = Math.max(-1, Math.min(1, v / 8));
+    var pos = (t + 1) / 2 * (HEAT_STOPS.length - 1), i = Math.floor(pos);
+    if (i >= HEAT_STOPS.length - 1) i = HEAT_STOPS.length - 2;
+    return lerpColor(HEAT_STOPS[i], HEAT_STOPS[i+1], pos - i);
+  }
+  function textColorFor(rgb){ return (0.299*rgb.r + 0.587*rgb.g + 0.114*rgb.b) / 255 > 0.62 ? '#17211d' : '#ffffff'; }
+
+  function renderHeatmap(containerId, dataArr, rows){
+    var container = $(containerId); clear(container);
+    var wrap = container.parentNode;
+    var oldTip = wrap.querySelector('.tooltip'); if (oldTip) wrap.removeChild(oldTip);
+    var tip = h('div', {class:'tooltip', role:'status'}); wrap.appendChild(tip);
+    var items = dataArr.filter(function(d){ return d.monto > 0; }).map(function(d){ var o = {value:d.monto}; for (var k in d) o[k] = d[k]; return o; });
+    layoutTreemap(items, 0, 0, 100, 100, rows);
+    items.forEach(function(it){
+      var r = it.rect, rgb = heatColor(it.pct);
+      var areaFrac = (r.w * r.h) / 10000, big = areaFrac > 0.018, showVar = areaFrac > 0.007;
+      var tile = h('div', {class:'hm-tile', tabindex:0, 'aria-label': it.name + ', ' + it.sector + ', ' + fmtPct(it.pct) + ', monto operado $' + fmtN(it.monto, 0)}, [
+        h('span', {class:'hm-tk', style:'font-size:' + (big ? '14px' : '10px')}, it.tk),
+        showVar ? h('span', {class:'hm-vv', style:'font-size:' + (big ? '11.5px' : '9px')}, fmtPct(it.pct)) : null
+      ]);
+      tile.style.left = r.x + '%'; tile.style.top = r.y + '%'; tile.style.width = r.w + '%'; tile.style.height = r.h + '%';
+      tile.style.background = 'rgb(' + rgb.r + ',' + rgb.g + ',' + rgb.b + ')';
+      tile.style.color = textColorFor(rgb);
+      function show(){
+        clear(tip);
+        tip.appendChild(h('b', null, it.tk)); add(tip, ' — ' + it.name + ' (' + it.sector + ')');
+        tip.appendChild(h('br')); add(tip, fmtPct(it.pct) + ' · precio ' + fmtPrice(it.price));
+        tip.appendChild(h('br')); add(tip, 'Monto operado: $' + fmtN(it.monto, 0));
+        var wr = wrap.getBoundingClientRect(), tr = tile.getBoundingClientRect();
+        var cx = tr.left - wr.left + tr.width / 2;
+        cx = Math.max(90, Math.min(wr.width - 90, cx));
+        tip.style.left = cx + 'px'; tip.style.top = (tr.top - wr.top + Math.min(tr.height / 2, 24)) + 'px';
+        tip.classList.add('show');
+      }
+      function hide(){ tip.classList.remove('show'); }
+      tile.addEventListener('mouseenter', show); tile.addEventListener('focus', show);
+      tile.addEventListener('mouseleave', hide); tile.addEventListener('blur', hide);
+      container.appendChild(tile);
+    });
+  }
+
+  function renderSectors(containerId, dataArr){
+    var el = $(containerId); clear(el);
+    var groups = {};
+    dataArr.forEach(function(d){
+      var g = groups[d.sector] || (groups[d.sector] = {sector:d.sector, n:0, sum:0, monto:0});
+      g.n += 1; g.sum += d.pct; g.monto += d.monto;
+    });
+    var arr = Object.keys(groups).map(function(k){ var g = groups[k]; g.avg = g.sum / g.n; return g; });
+    arr.sort(function(a, b){ return b.monto - a.monto; });
+    var maxAbs = Math.max.apply(null, arr.map(function(g){ return Math.abs(g.avg); }).concat([0]));
+    arr.forEach(function(g){
+      var pct = maxAbs > 0 ? Math.min(100, Math.abs(g.avg) / maxAbs * 48) : 0;
+      el.appendChild(h('div', {class:'sector-row'}, [
+        h('span', {class:'sname'}, g.sector),
+        h('span', {class:'sbar-wrap'}, [h('div', {class:'sbar ' + (g.avg >= 0 ? 'pos' : 'neg'), style:'width:' + pct + '%'}), h('span', {class:'smid'})]),
+        h('span', {class:'svar', style:'color:' + (g.avg >= 0 ? 'var(--good)' : 'var(--bad)')}, fmtPct(g.avg)),
+        h('span', {class:'scount'}, g.n + ' esp.')
+      ]));
+    });
+  }
+
+  function moverRow(r){
+    return h('div', {class:'mover-row'}, [
+      h('span', {class:'tk'}, r.tk),
+      h('span', {class:'nm', title:r.name}, r.name),
+      h('span', {class:'px tab-nums'}, fmtPrice(r.price)),
+      h('span', {class:'vv tab-nums ' + (r.pct >= 0 ? 'var-up' : 'var-dn')}, fmtPct(r.pct))
+    ]);
+  }
+
+  function renderEquity(prefix, data, opts){
+    var stats = $(prefix + '-stats'); clear(stats);
+    var gEl = $(opts.gain), lEl = $(opts.loss); clear(gEl); clear(lEl);
+    if (!data || !data.length){
+      stats.appendChild(h('div', {class:'empty-box'}, 'Sin datos por el momento.'));
+      return;
+    }
+    var adv = 0, dec = 0, flat = 0, sum = 0, tot = 0;
+    data.forEach(function(d){ if (d.pct > 0) adv++; else if (d.pct < 0) dec++; else flat++; sum += d.pct; tot += d.monto; });
+    var n = data.length, avg = sum / n;
+    var top = data.slice().sort(function(a, b){ return b.monto - a.monto; })[0];
+    var pc = function(x){ return (x / n * 100) + '%'; };
+    stats.appendChild(h('div', {class:'stat-card'}, [
+      h('div', {class:'label'}, 'Amplitud del mercado'),
+      h('div', {class:'value up'}, adv + ' suben'),
+      h('div', {class:'sub'}, dec + ' bajan · ' + flat + ' sin cambios · ' + n + ' especies'),
+      h('div', {class:'breadth-bar'}, [h('span', {class:'up', style:'width:' + pc(adv)}), h('span', {class:'dn', style:'width:' + pc(dec)}), h('span', {class:'fl', style:'width:' + pc(flat)})])
+    ]));
+    stats.appendChild(h('div', {class:'stat-card'}, [
+      h('div', {class:'label'}, 'Variación promedio'),
+      h('div', {class:'value', style:'color:' + (avg >= 0 ? 'var(--good)' : 'var(--bad)')}, fmtPct(avg)),
+      h('div', {class:'sub'}, 'Promedio simple, ' + opts.totalLabel)
+    ]));
+    stats.appendChild(h('div', {class:'stat-card'}, [
+      h('div', {class:'label'}, 'Monto operado total'),
+      h('div', {class:'value'}, '$' + fmtN(tot / 1e6, 0) + ' M'),
+      h('div', {class:'sub'}, 'Millones de pesos · suma de ' + opts.totalLabel)
+    ]));
+    stats.appendChild(h('div', {class:'stat-card'}, [
+      h('div', {class:'label'}, 'Especie más operada'),
+      h('div', {class:'value'}, top.tk),
+      h('div', {class:'sub'}, top.name + ' · ' + fmtPct(top.pct))
+    ]));
+    var op = data.filter(function(d){ return d.monto > 0; });
+    op.slice().sort(function(a, b){ return b.pct - a.pct; }).slice(0, 5).forEach(function(r){ gEl.appendChild(moverRow(r)); });
+    op.slice().sort(function(a, b){ return a.pct - b.pct; }).slice(0, 5).forEach(function(r){ lEl.appendChild(moverRow(r)); });
+    var byMonto = data.slice().sort(function(a, b){ return b.monto - a.monto; });
+    var hm = byMonto.slice(0, opts.heatN);
+    renderHeatmap(opts.heat, hm, 5);
+    var hmMonto = hm.reduce(function(t, d){ return t + d.monto; }, 0);
+    $(opts.heatCount).textContent = hm.length + ' especies más operadas (de ' + n + ') · tamaño = monto operado';
+    renderSectors(opts.sectors, opts.sectorsAll ? data : hm);
+    return {n:n, hm:hm.length, share: tot ? hmMonto / tot * 100 : 0, adv:adv, dec:dec, flat:flat, avg:avg, hmData:hm};
+  }
+
+  function renderCedears(){
+    if (!M) return;
+    var data = M.cedears || [];
+    var r = renderEquity('cedears', data, {gain:'mover-gain', loss:'mover-loss', heat:'heatmap', heatCount:'heat-count', sectors:'sector-table',
+      heatN:45, totalLabel:data.length + ' especies con operaciones'});
+    if (!r) return;
+    var sec = {};
+    r.hmData.forEach(function(d){ var g = sec[d.sector] || (sec[d.sector] = {n:0, sum:0}); g.n++; g.sum += d.pct; });
+    $('cedears-intro-1').textContent = 'CEDEARs operados en BYMA en la rueda del ' + fmtDate(M.rueda) + ', con el panel completo de data912: ' + data.length + ' especies con operaciones. Se excluyeron las láminas en dólares (símbolo terminado en C o D con precio menor a $100 o menor a una quinta parte del de su par en pesos), las láminas D/C de especies que ya figuran en pesos y las especies sin operaciones o con datos inconsistentes.';
+    $('cedears-intro-2').textContent = 'El mapa de calor y la tabla sectorial toman las ' + r.hm + ' más operadas por monto, que concentran ' + fmtN(r.share, 1) + '% del monto total. En esta rueda ' + r.adv + ' de las ' + r.n + ' especies subieron, ' + r.dec + ' bajaron y ' + r.flat + ' no tuvieron cambios (variación promedio simple ' + fmtPct(r.avg) + '). Las especies sin clasificar se agrupan como "Sin clasificar".';
+    $('sector-desc').textContent = 'Variación promedio simple de las especies de cada sector, dentro de las ' + r.hm + ' más operadas de las ' + r.n + ' con operaciones.';
+  }
+
+  function renderAcciones(){
+    if (!M) return;
+    var data = M.acciones || [];
+    var r = renderEquity('acciones', data, {gain:'mover-gain-ar', loss:'mover-loss-ar', heat:'heatmap-ar', heatCount:'heat-count-ar', sectors:'sector-table-ar',
+      heatN:30, totalLabel:data.length + ' acciones', sectorsAll:true});
+    if (!r) return;
+    var sinOp = data.filter(function(d){ return d.monto === 0; }).map(function(d){ return d.tk; });
+    var lead = leadersAvg();
+    $('acciones-intro-1').textContent = 'Acciones argentinas operadas en BYMA en la rueda del ' + fmtDate(M.rueda) + ': ' + data.length + ' especies del Panel Líderes y Panel General, con cierres y variaciones de data912 contra la rueda anterior; el monto es precio por volumen (en pesos). ' +
+      (sinOp.length ? 'Sin operaciones en la rueda (se cuentan sin cambios): ' + sinOp.join(', ') + '.' : 'Todas las especies tuvieron operaciones en la rueda.') +
+      ' Se excluyeron las láminas en dólares (D/C) de especies que ya figuran en pesos.';
+    $('acciones-intro-2').textContent = 'No se muestra el índice Merval porque no hay una fuente pública confiable y automatizable. Como referencia propia: la variación promedio simple de las 10 acciones más operadas por monto fue ' + (lead != null ? fmtPct(lead) : 's/d') + '; no es un índice ponderado ni equivale al Merval.';
+    $('sector-desc-ar').textContent = 'Variación promedio simple de las especies de cada sector, sobre las ' + data.length + ' acciones del tablero.';
+  }
+
+  // =====================================================================
+  // Cupones: calculadora 100% en el navegador (no se envía nada a ningún servidor)
+  // =====================================================================
+  var CP_FAMS = [
+    {id:'all', label:'Todos'}, {id:'soberano_usd', label:'Soberanos USD'}, {id:'soberano_fija', label:'Boncap / tasa fija'},
+    {id:'cer', label:'CER'}, {id:'tamar', label:'TAMAR / duales'}, {id:'provincial', label:'Provinciales'},
+    {id:'bopreal', label:'BOPREAL'}, {id:'letras', label:'Letras'}, {id:'on', label:'ONs'}
+  ];
+  var FAM_LABEL = {soberano_usd:'Soberano USD', soberano_fija:'Tasa fija', cer:'CER', tamar:'TAMAR/dual', provincial:'Provincial', bopreal:'BOPREAL',
+    letra_lecap:'Letra LECAP', letra_lecer:'Letra Lecer', letra_dlk:'Letra dólar-linked', on:'ON'};
+  var ADJ_LABEL = {none:'Sin ajuste', CER:'Ajuste por CER', TAMAR:'Tasa TAMAR (variable)', BADLAR:'Tasa BADLAR (variable)', DL:'Dólar-linked (A3500)', other:'Ajuste especial / variable'};
+  var CP = {fam:'all', q:'', sel:null, list:[]};
+  var X = {};          // referencias a elementos del DOM de Cupones
+  var INSBY = {};
+  var MAX_LIST = 10;
+  var CP_LEYENDA = 'Cálculo ilustrativo. No incluye impuestos, comisiones ni garantiza montos. Consultá el prospecto/aviso oficial.';
+
+  function famGroup(ins){ return ins.family.indexOf('letra_') === 0 ? 'letras' : ins.family; }
+  function payCur(ins){ return ins.family === 'letra_dlk' ? 'ARS' : ins.currency_pay; }
+  function norm(t){ return String(t || '').normalize('NFD').replace(/[̀-ͯ]/g, '').toLowerCase(); }
+  function isVariable(ins){
+    return (ins.flags || []).indexOf('tasa_variable') >= 0 || (!ins.fixed_flows && ins.family !== 'letra_dlk');
+  }
+  function nonBiz(iso){
+    var w = weekdayOf(iso);
+    if (w === 0 || w === 6) return true;
+    return !!(M && M.feriados && M.feriados.indexOf(iso) >= 0);
+  }
+  function marketPrice100(ins){
+    var q = QUOTE[ins.ticker]; if (!q) return null;
+    if (ins.family === 'letra_dlk') return q.price != null ? q.price * 1000 : null;
+    if (ins.currency_pay === 'USD'){
+      if (q.price_usd != null) return q.price_usd;
+      var mep = M && M.indicadores && M.indicadores.mep ? M.indicadores.mep.valor : null;
+      return q.price != null && mep ? q.price / mep : null;
+    }
+    return q.price;
+  }
+  function dlkRef(ins){
+    var raw = ins.flows_per_100_vn || []; if (!raw.length) return null;
+    var l = raw[raw.length - 1]; return (l.interest + l.amortization) * 10;
+  }
+
+  // Flujos por VN. Fórmula: monto = flujo por 100 VN × VN/100 × factor.
+  //   CER: factor = F0 × (1+π)^(días desde la fecha de referencia / 30,4375)
+  //        F0 = CER(hoy)/CER(snapshot) si hay dato; si no, 1.   π = inflación mensual supuesta.
+  //   Dólar-linked: factor = A3500 supuesto / A3500 de referencia del cronograma; escala ×1000.
+  function calcFlows(ins, vn, A){
+    var raw = ins.flows_per_100_vn || [];
+    var variable = isVariable(ins);
+    var res = {rows:[], variable:variable, cur:payCur(ins), noSchedule: raw.length === 0, totInt:0, totAmo:0};
+    if (!raw.length) return res;
+    var today = todayISO(), mult = vn / 100, dlk = ins.family === 'letra_dlk';
+    if (ins.family === 'on' && ins.residual_pct > 0 && ins.residual_pct < 100) mult = mult * 100 / ins.residual_pct;   // ONs que amortizan: cotizan por 100 VN residuales
+    var scale = dlk ? 1000 : 1, f0 = 1, refDate = INS_SNAPSHOT;
+    if (ins.adjust === 'CER' && M && M.cer){ f0 = M.cer.factor; refDate = M.cer.fecha_hoy; }
+    var ref = dlk ? dlkRef(ins) : null;
+    var n = raw.length, suffix = new Array(n + 1); suffix[n] = 0;
+    for (var i = n - 1; i >= 0; i--) suffix[i] = suffix[i+1] + raw[i].amortization;
+    for (var j = 0; j < n; j++){
+      var f = raw[j];
+      if (f.date < today) continue;
+      var k = 1;
+      if (ins.adjust === 'CER') k = f0 * Math.pow(1 + A.pi, Math.max(0, dayNum(f.date) - dayNum(refDate)) / 30.4375);
+      if (dlk && ref && A.a3500 > 0) k = A.a3500 / ref;
+      var inte = variable ? null : f.interest * mult * k * scale;
+      var amo = f.amortization * mult * k * scale;
+      var row = {date:f.date, interest:inte, amort:amo, total: variable ? null : inte + amo, residual: suffix[j+1] * mult * k * scale, nonbiz: nonBiz(f.date)};
+      res.rows.push(row);
+      if (inte != null) res.totInt += inte;
+      res.totAmo += amo;
+    }
+    return res;
+  }
+
+  function readAssump(){
+    var pi = parseNum(X.pi.value); if (!isFinite(pi)) pi = 0;
+    var a = parseNum(X.a3500.value); if (!(a > 0)) a = 0;
+    var tc = parseNum(X.tc.value); if (!(tc > 0)) tc = 0;
+    return {pi: pi / 100, a3500: a, tc: tc, convert: X.convert.checked && tc > 0};
+  }
+
+  // ---- gráfico de barras (interés + amortización) por mes o por año ----
+  function bucketize(rows, gran){
+    var map = {};
+    rows.forEach(function(r){
+      var key = gran === 'year' ? r.date.slice(0,4) : r.date.slice(0,7);
+      var b = map[key] || (map[key] = {key:key, int:0, amo:0});
+      b.int += r.interest || 0; b.amo += r.amort || 0;
+    });
+    var keys = Object.keys(map).sort();
+    if (gran === 'month' && keys.length){
+      var out = [], y = +keys[0].slice(0,4), m = +keys[0].slice(5,7), ey = +keys[keys.length-1].slice(0,4), em = +keys[keys.length-1].slice(5,7);
+      while (y < ey || (y === ey && m <= em)){
+        var k = y + '-' + ('0' + m).slice(-2);
+        out.push(map[k] || {key:k, int:0, amo:0});
+        m++; if (m > 12){ m = 1; y++; }
+      }
+      return out;
+    }
+    return keys.map(function(k){ return map[k]; });
+  }
+  function granFor(rows){
+    if (!rows.length) return 'month';
+    var a = rows[0].date, b = rows[rows.length - 1].date;
+    var months = (+b.slice(0,4) - +a.slice(0,4)) * 12 + (+b.slice(5,7) - +a.slice(5,7));
+    return months > 48 ? 'year' : 'month';
+  }
+  function axisFmt(v){
+    if (v >= 1e9) return fmtN(v / 1e9, 1) + ' MM';
+    if (v >= 1e6) return fmtN(v / 1e6, 1) + ' M';
+    if (v >= 1e4) return fmtN(v / 1e3, 0) + ' mil';
+    return fmtN(v, v < 10 ? 2 : 0);
+  }
+  function renderBars(container, buckets, cur, gran){
+    clear(container);
+    if (!buckets.length) return;
+    var W = 520, H = 250, padL = 52, padR = 12, padT = 12, padB = 30;
+    var plotW = W - padL - padR, plotH = H - padT - padB;
+    var maxV = Math.max.apply(null, buckets.map(function(b){ return b.int + b.amo; }).concat([0]));
+    if (maxV <= 0) maxV = 1;
+    var step = niceStep(maxV), top = Math.ceil(maxV / step) * step;
+    function y(v){ return padT + plotH - v / top * plotH; }
+    var svg = s('svg', {viewBox:'0 0 ' + W + ' ' + H, 'class':'bars-svg', role:'img',
+      'aria-label':'Pagos por ' + (gran === 'year' ? 'año' : 'mes') + ' en ' + (cur === 'USD' ? 'dólares' : 'pesos')}, null);
+    for (var t = 0; t <= top + 1e-9; t += step){
+      var gy = y(t);
+      s('line', {'class':'grid-line', x1:padL, x2:W-padR, y1:gy, y2:gy}, svg);
+      s('text', {'class':'tick-label', x:padL-6, y:gy+3, 'text-anchor':'end'}, svg).textContent = axisFmt(t);
+    }
+    var slot = plotW / buckets.length, bw = Math.max(2, Math.min(34, slot * 0.7));
+    var every = Math.ceil(buckets.length / 10);
+    var nz = buckets.filter(function(b){ return b.int + b.amo > 0; }).length;
+    buckets.forEach(function(b, i){
+      var cx = padL + slot * (i + 0.5), x0 = cx - bw / 2;
+      var hi = b.int / top * plotH, ha = b.amo / top * plotH;
+      var g = s('g', {tabindex: (b.int + b.amo) > 0 ? 0 : -1, 'aria-label': (gran === 'year' ? b.key : b.key.slice(5) + '/' + b.key.slice(0,4)) + ': ' + fmtMoney(b.int + b.amo, cur)}, svg);
+      if (ha > 0) s('rect', {'class':'bar-amo', x:x0, y:padT + plotH - hi - ha, width:bw, height:ha}, g);
+      if (hi > 0) s('rect', {'class':'bar-int', x:x0, y:padT + plotH - hi, width:bw, height:hi}, g);
+      s('title', {}, g).textContent = (gran === 'year' ? b.key : b.key.slice(5) + '/' + b.key.slice(0,4)) + ' — Interés ' + fmtMoney(b.int, cur) + ' · Amortización ' + fmtMoney(b.amo, cur) + ' · Total ' + fmtMoney(b.int + b.amo, cur);
+      if ((nz <= 14 ? (b.int + b.amo) > 0 : i % every === 0)) s('text', {'class':'tick-label', x:cx, y:H-padB+14, 'text-anchor':'middle'}, svg).textContent = gran === 'year' ? b.key : b.key.slice(5) + '/' + b.key.slice(2,4);
+    });
+    s('line', {'class':'axis-line', x1:padL, x2:W-padR, y1:H-padB, y2:H-padB}, svg);
+    container.appendChild(svg);
+    container.appendChild(h('div', {class:'bars-legend'}, [
+      h('span', null, [h('i', {style:'background:var(--s-tamar)'}), 'Interés']),
+      h('span', null, [h('i', {style:'background:var(--accent)'}), 'Amortización']),
+      h('span', null, 'Pagos agrupados por ' + (gran === 'year' ? 'año' : 'mes') + ' · moneda: ' + (cur === 'USD' ? 'dólares (USD)' : 'pesos ($)'))
+    ]));
+  }
+
+  // ---- lista de instrumentos ----
+  function filteredIns(){
+    var toks = norm(CP.q).split(/\s+/).filter(Boolean);
+    return INS.filter(function(ins){
+      if (CP.fam !== 'all' && famGroup(ins) !== CP.fam) return false;
+      var hay = norm(ins.ticker + ' ' + ins.name + ' ' + (ins.issuer || '') + ' ' + (FAM_LABEL[ins.family] || ''));
+      return toks.every(function(t){ return hay.indexOf(t) >= 0; });
+    });
+  }
+  function renderPicks(){
+    var box = clear(X.picks);
+    var rows = filteredIns();
+    X.count.textContent = rows.length + ' de ' + INS.length + ' instrumentos';
+    if (!rows.length){ box.appendChild(h('div', {class:'info', style:'margin:8px'}, 'Sin resultados. Probá con otro ticker, nombre o emisor.')); return; }
+    rows.forEach(function(ins){
+      var warn = (ins.flags || []).some(function(f){ return f === 'estimado' || f === 'tasa_variable' || f === 'sin_analitica_iol'; });
+      box.appendChild(h('button', {type:'button', class:'pick', 'aria-pressed': CP.sel && CP.sel.ticker === ins.ticker ? 'true' : 'false', 'data-ticker':ins.ticker,
+        onclick:function(){ selectIns(ins.ticker); }}, [
+        h('span', {class:'tk'}, ins.ticker), h('span', {class:'pn'}, ins.name), h('span', {class:'pf'}, (warn ? '⚠ ' : '') + (FAM_LABEL[ins.family] || ''))
+      ]));
+    });
+  }
+
+  function selectIns(ticker){
+    var ins = INSBY[ticker]; if (!ins) return;
+    CP.sel = ins;
+    var dlk = ins.family === 'letra_dlk';
+    X.pi.disabled = ins.adjust !== 'CER';
+    X.a3500.disabled = !dlk;
+    if (dlk){
+      var may = M && M.indicadores && M.indicadores.mayorista && M.indicadores.mayorista.venta;
+      var ref = dlkRef(ins);
+      X.a3500.value = may ? fmtN(may, 2) : (ref ? fmtN(ref, 2) : '');
+    }
+    X.price.value = '';
+    renderPicks(); renderFicha(); renderResult(); renderPriceHint();
+  }
+  function renderPriceHint(){
+    var ins = CP.sel; if (!ins) return;
+    var p = marketPrice100(ins), cur = payCur(ins);
+    X.priceHint.textContent = p != null ? 'Precio de mercado por 100 VN: ' + fmtMoney(p, cur) + (ins.currency_pay === 'USD' && QUOTE[ins.ticker] && QUOTE[ins.ticker].price_usd == null ? ' (implícito: precio en pesos / MEP)' : '') + '. Si dejás el campo vacío se usa este precio.' : 'Sin precio de mercado disponible: ingresá un precio manual para usar el modo "monto a invertir".';
+    X.montoLbl.textContent = 'Monto a invertir (' + (cur === 'USD' ? 'USD' : '$') + ')';
+  }
+
+  function renderFicha(){
+    var box = clear(X.ficha);
+    var ins = CP.sel;
+    if (!ins){ box.appendChild(h('div', {class:'info'}, 'Elegí un instrumento de la lista para ver su ficha y calcular sus pagos.')); return; }
+    var q = QUOTE[ins.ticker];
+    var cur = payCur(ins);
+    var dl = h('dl', {class:'ficha'});
+    function item(l, v, wide){ dl.appendChild(h('div', {class: wide ? 'wide' : ''}, [h('dt', null, l), h('dd', null, v)])); }
+    item('Instrumento', ins.ticker + ' · ' + ins.name);
+    item('Emisor', ins.issuer || '—');
+    item('Moneda de pago', cur === 'USD' ? 'Dólares (USD)' : (ins.family === 'letra_dlk' ? 'Pesos, vinculados al dólar (A3500)' : 'Pesos ($)'));
+    item('Vencimiento', fmtDate(ins.maturity));
+    item('Ajuste', ADJ_LABEL[ins.adjust] || '—');
+    item('Capital residual vigente', fmtN(ins.residual_pct, 2) + '% de la VN original');
+    var p = marketPrice100(ins);
+    item('Última cotización', p != null ? fmtMoney(p, cur) + ' por 100 VN' + (q && q.pct != null ? ' (' + fmtPct(pctOf(q, {on: ins.family === 'on'})) + ')' : '') + (M ? ' · rueda del ' + fmtDate(M.rueda) : '') : 'Sin cotización disponible');
+    item('Cupón / condiciones', ins.coupon_text || '—', true);
+    box.appendChild(dl);
+    var fl = ins.flags || [];
+    if (fl.indexOf('estimado') >= 0) box.appendChild(h('div', {class:'alert'}, '⚠ Cronograma o monto estimado: no es una cifra oficial. Los pagos reales pueden diferir; verificá el prospecto o aviso de pago.'));
+    if (isVariable(ins)) box.appendChild(h('div', {class:'alert'}, '⚠ Tasa variable: los intereses futuros no se conocen, por lo que no se calculan montos de interés; solo se informan fechas y capital conocido.'));
+    if (!(ins.flows_per_100_vn || []).length) box.appendChild(h('div', {class:'alert'}, '⚠ Cronograma no disponible: no se calculan pagos para este instrumento.'));
+    else if (fl.indexOf('sin_analitica_iol') >= 0 && fl.indexOf('estimado') < 0 && !isVariable(ins)) box.appendChild(h('div', {class:'info'}, 'Cronograma obtenido de fuentes públicas y no verificado con la analítica de renta fija de IOL.'));
+    if (ins.family === 'on' && ins.residual_pct < 100) box.appendChild(h('div', {class:'info'}, 'ON que ya amortizó parte del capital: cotiza por cada 100 VN residuales, por lo que los VN ingresados se interpretan como nominales vigentes.'));
+    if (q && q.stale) box.appendChild(h('div', {class:'alert'}, 'La cotización no se pudo actualizar: se muestra el último dato conocido.'));
+  }
+
+  function currentCalc(){
+    var ins = CP.sel; if (!ins) return null;
+    var A = readAssump();
+    var mode = X.modeVn.checked ? 'vn' : 'monto';
+    var cur = payCur(ins);
+    var mkt = marketPrice100(ins);
+    var ov = parseNum(X.price.value);
+    var price100 = isFinite(ov) && ov > 0 ? ov : mkt;
+    var out = {ins:ins, A:A, mode:mode, cur:cur, price100:price100, manualPrice: isFinite(ov) && ov > 0, vn:null, monto:null, err:null};
+    if (mode === 'vn'){
+      var v = parseNum(X.vn.value);
+      if (!(v >= 1)) out.err = 'Ingresá una cantidad de nominales (VN) igual o mayor a 1.';
+      else { out.vn = Math.round(v); if (price100) out.monto = out.vn * price100 / 100; }
+    } else {
+      var m = parseNum(X.monto.value);
+      if (!(m > 0)) out.err = 'Ingresá un monto a invertir mayor a cero.';
+      else if (!price100) out.err = 'No hay precio de mercado para este instrumento: ingresá un precio manual.';
+      else {
+        out.vn = Math.floor(m / price100 * 100 + 1e-9);
+        if (out.vn < 1) out.err = 'El monto no alcanza para 1 nominal al precio indicado.';
+        else out.monto = out.vn * price100 / 100;
+      }
+    }
+    if (ins.family === 'letra_dlk' && !out.err && !(A.a3500 > 0)) out.err = 'Ingresá un A3500 supuesto mayor a cero.';
+    if (!out.err) out.res = calcFlows(ins, out.vn, A);
+    return out;
+  }
+
+  function moneyCell(v, cur, raw){
+    var td = h('td', {class:'tab-nums'}, v == null ? '—' : fmtN(v, 2));
+    if (raw && v != null) td.setAttribute('data-raw', String(v));
+    return td;
+  }
+
+  function renderResult(){
+    var box = clear(X.result);
+    var c = currentCalc();
+    X.addBtn.disabled = true;
+    if (!c){ return; }
+    var ins = c.ins, cur = c.cur;
+    box.appendChild(h('h3', null, 'Pagos futuros de ' + ins.ticker));
+    if (c.err){ box.appendChild(h('div', {class:'alert', role:'alert'}, c.err)); return; }
+    var res = c.res;
+    if (res.noSchedule){
+      box.appendChild(h('div', {class:'alert', role:'alert'}, 'Cronograma no disponible/estimado para este instrumento: no se calculan pagos. Consultá el prospecto o aviso oficial del emisor.'));
+      return;
+    }
+    if (!res.rows.length){
+      box.appendChild(h('div', {class:'info'}, 'No quedan pagos futuros en el cronograma cargado (el instrumento venció o el cronograma está desactualizado).'));
+      return;
+    }
+    X.addBtn.disabled = CP.list.length >= MAX_LIST && !CP.list.some(function(it){ return it.ticker === ins.ticker; });
+    // resumen de cantidad
+    var resumen = c.vn.toLocaleString ? fmtN(c.vn, 0) + ' VN' : c.vn + ' VN';
+    var sum = [h('div', {class:'info'}, [
+      h('b', null, resumen), c.monto != null ? ' · monto efectivo ' : '', c.monto != null ? h('b', {id:'cp-monto-efectivo', 'data-raw':String(c.monto)}, fmtMoney(c.monto, cur)) : '',
+      c.price100 ? ' (a ' + fmtMoney(c.price100, cur) + ' por 100 VN' + (c.manualPrice ? ', precio manual' : ', último precio de mercado') + ')' : ' (sin precio: no se calcula monto)',
+      c.mode === 'monto' ? '. Los VN se redondean hacia abajo a un entero.' : '.'
+    ])];
+    add(box, sum);
+    if (ins.adjust === 'CER'){
+      box.appendChild(h('div', {class:'info'}, 'Supuesto de inflación mensual: ' + fmtN(c.A.pi * 100, 2) + '%. ' + (c.A.pi === 0 ? 'Con 0% los pagos se expresan "a CER de hoy" y subestiman el flujo nominal esperado: el pago real será mayor si hay inflación.' : 'Los pagos se proyectan con ese ritmo constante desde ' + fmtDate(M && M.cer ? M.cer.fecha_hoy : INS_SNAPSHOT) + '.') + (M && M.cer ? '' : ' (No se pudo actualizar el índice CER: los flujos están a la fecha del cronograma.)')));
+    }
+    if (ins.family === 'letra_dlk') box.appendChild(h('div', {class:'info'}, 'Dólar-linked: el pago es VN × A3500 al vencimiento. Se supone un A3500 de $ ' + fmtN(c.A.a3500, 2) + ' (editable).'));
+    if (res.variable) box.appendChild(h('div', {class:'alert'}, '⚠ Tasa variable: no se calculan intereses; la tabla muestra solo fechas y capital conocido.'));
+    if ((ins.flags || []).indexOf('estimado') >= 0) box.appendChild(h('div', {class:'alert'}, '⚠ Cronograma estimado: los montos pueden diferir de los reales.'));
+
+    // totales
+    var tc = c.A.convert && cur === 'USD' ? c.A.tc : 0;
+    var totals = h('div', {class:'totals'}, [
+      h('div', {class:'tot'}, [h('div', {class:'l'}, 'Intereses'), h('div', {class:'v', id:'cp-tot-int', 'data-raw':String(res.totInt)}, res.variable ? 's/d' : fmtMoney(res.totInt, cur))]),
+      h('div', {class:'tot'}, [h('div', {class:'l'}, 'Amortización'), h('div', {class:'v', id:'cp-tot-amo', 'data-raw':String(res.totAmo)}, fmtMoney(res.totAmo, cur))]),
+      h('div', {class:'tot'}, [h('div', {class:'l'}, res.variable ? 'Capital a cobrar' : 'Total a cobrar'), h('div', {class:'v', id:'cp-tot-tot', 'data-raw':String(res.totInt + res.totAmo)}, fmtMoney(res.totInt + res.totAmo, cur))])
+    ]);
+    if (tc) totals.appendChild(h('div', {class:'tot'}, [h('div', {class:'l'}, 'Total en pesos (TC $ ' + fmtN(tc, 2) + ')'), h('div', {class:'v', id:'cp-tot-ars', 'data-raw':String((res.totInt + res.totAmo) * tc)}, fmtMoney((res.totInt + res.totAmo) * tc, 'ARS'))]));
+    box.appendChild(totals);
+
+    // tabla
+    var tb = h('tbody', {id:'cp-flows'});
+    var anyNonBiz = false;
+    res.rows.forEach(function(r){
+      if (r.nonbiz) anyNonBiz = true;
+      tb.appendChild(h('tr', {'data-fecha':r.date, 'data-int': r.interest == null ? '' : String(r.interest), 'data-amo':String(r.amort), 'data-tot': r.total == null ? '' : String(r.total), 'data-res':String(r.residual)}, [
+        h('td', {class:'l'}, [fmtDate(r.date), r.nonbiz ? h('span', {class:'nonbiz', title:'Fecha contractual inhábil: si es inhábil se paga el siguiente día hábil.'}, ' †') : null]),
+        h('td', {class:'tab-nums'}, r.interest == null ? 'variable' : fmtN(r.interest, 2)),
+        h('td', {class:'tab-nums'}, fmtN(r.amort, 2)),
+        h('td', {class:'tab-nums'}, r.total == null ? '—' : fmtN(r.total, 2)),
+        h('td', {class:'tab-nums'}, fmtN(r.residual, 2))
+      ]));
+    });
+    var tfoot = h('tfoot', null, h('tr', null, [h('td', {class:'l'}, 'Total'), h('td', {class:'tab-nums'}, res.variable ? '—' : fmtN(res.totInt, 2)), h('td', {class:'tab-nums'}, fmtN(res.totAmo, 2)), h('td', {class:'tab-nums'}, res.variable ? '—' : fmtN(res.totInt + res.totAmo, 2)), h('td')]));
+    box.appendChild(h('div', {class:'tbl-scroll'}, h('table', {'aria-label':'Pagos futuros de ' + ins.ticker + ' en ' + (cur === 'USD' ? 'dólares' : 'pesos')}, [
+      h('thead', null, h('tr', null, [h('th', {class:'l', scope:'col'}, 'Fecha'), h('th', {scope:'col'}, 'Interés (' + (cur === 'USD' ? 'USD' : '$') + ')'), h('th', {scope:'col'}, 'Amortización'), h('th', {scope:'col'}, 'Total'), h('th', {scope:'col', title:'Capital que queda pendiente de amortizar después del pago'}, 'Capital residual')])),
+      tb, tfoot])));
+    var notes = ['Moneda del flujo: ' + (cur === 'USD' ? 'dólares (USD)' : 'pesos ($)') + '.'];
+    if (anyNonBiz) notes.push('† Fecha contractual inhábil (fin de semana o feriado): si es inhábil se paga el siguiente día hábil.'); else notes.push('Si la fecha de pago es inhábil, se paga el siguiente día hábil.');
+    if (cur === 'USD' && ins.family !== 'on' && ins.residual_pct != null && !res.variable) notes.push('Control: la suma de amortizaciones futuras es ' + fmtN(res.totAmo, 2) + ' = capital residual (' + fmtN(ins.residual_pct, 2) + '%) × ' + fmtN(c.vn, 0) + ' / 100.');
+    box.appendChild(h('p', {class:'legend-line'}, notes.join(' ')));
+
+    // gráfico
+    var gran = granFor(res.rows);
+    var cw = h('div', {class:'chart-wrap', style:'padding:6px 0 0'}); box.appendChild(h('h3', {style:'margin-top:14px'}, 'Pagos por ' + (gran === 'year' ? 'año' : 'mes')));
+    box.appendChild(cw);
+    renderBars(cw, bucketize(res.rows, gran), cur, gran);
+    box.appendChild(h('p', {class:'legend-line'}, CP_LEYENDA));
+  }
+
+  // ---- lista de posiciones y calendario consolidado ----
+  function renderList(){
+    var ul = clear(X.posList);
+    X.posCount.textContent = CP.list.length + ' de ' + MAX_LIST + ' posiciones';
+    X.clearBtn.disabled = !CP.list.length;
+    CP.list.forEach(function(it, i){
+      ul.appendChild(h('li', null, [
+        h('span', null, [h('b', {class:'tk'}, it.ticker), ' · ' + fmtN(it.vn, 0) + ' VN · ' + (INSBY[it.ticker] ? INSBY[it.ticker].name : '')]),
+        h('button', {type:'button', class:'x', 'aria-label':'Quitar ' + it.ticker + ' de la lista', onclick:function(){ CP.list.splice(i, 1); renderList(); renderResult(); }}, 'Quitar')
+      ]));
+    });
+    renderConsol();
+  }
+  function renderConsol(){
+    var box = clear(X.consol);
+    if (!CP.list.length){ box.appendChild(h('div', {class:'info'}, 'Agregá instrumentos con el botón "Agregar a la lista" para ver el calendario mensual consolidado. Los montos en dólares y en pesos se muestran por separado.')); return; }
+    var A = readAssump();
+    var rowsBy = {USD:[], ARS:[]}, skipped = [], varNotes = [];
+    CP.list.forEach(function(it){
+      var ins = INSBY[it.ticker]; if (!ins) return;
+      var r = calcFlows(ins, it.vn, A);
+      if (r.noSchedule){ skipped.push(it.ticker + ' (cronograma no disponible)'); return; }
+      if (r.variable) varNotes.push(it.ticker);
+      r.rows.forEach(function(x){ rowsBy[r.cur].push(x); });
+    });
+    if (skipped.length) box.appendChild(h('div', {class:'alert'}, 'No se incluyen: ' + skipped.join(', ') + '.'));
+    if (varNotes.length) box.appendChild(h('div', {class:'alert'}, 'Tasa variable: de ' + varNotes.join(', ') + ' solo se incluye el capital conocido (sin intereses).'));
+    function section(cur, rows, title){
+      rows.sort(function(a, b){ return a.date < b.date ? -1 : a.date > b.date ? 1 : 0; });
+      var gran = granFor(rows), bks = bucketize(rows, gran);
+      var tb = h('tbody', {'data-cur':cur}), ti = 0, ta = 0;
+      bks.forEach(function(b){
+        if (b.int + b.amo <= 0) return;
+        ti += b.int; ta += b.amo;
+        tb.appendChild(h('tr', {'data-mes':b.key, 'data-tot':String(b.int + b.amo)}, [h('td', {class:'l'}, gran === 'year' ? b.key : b.key.slice(5) + '/' + b.key.slice(0,4)), h('td', {class:'tab-nums'}, fmtN(b.int, 2)), h('td', {class:'tab-nums'}, fmtN(b.amo, 2)), h('td', {class:'tab-nums'}, fmtN(b.int + b.amo, 2))]));
+      });
+      box.appendChild(h('div', {class:'cur-title'}, title));
+      var cw = h('div', {class:'chart-wrap', style:'padding:6px 0 0'}); box.appendChild(cw);
+      renderBars(cw, bks, cur, gran);
+      box.appendChild(h('div', {class:'tbl-scroll'}, h('table', {'aria-label':title}, [
+        h('thead', null, h('tr', null, [h('th', {class:'l', scope:'col'}, gran === 'year' ? 'Año' : 'Mes'), h('th', {scope:'col'}, 'Interés'), h('th', {scope:'col'}, 'Amortización'), h('th', {scope:'col'}, 'Total')])),
+        tb, h('tfoot', null, h('tr', null, [h('td', {class:'l'}, 'Total'), h('td', {class:'tab-nums'}, fmtN(ti, 2)), h('td', {class:'tab-nums'}, fmtN(ta, 2)), h('td', {class:'tab-nums', 'data-raw':String(ti + ta)}, fmtN(ti + ta, 2))]))])));
+      return {int:ti, amo:ta, bks:bks, gran:gran};
+    }
+    var usd = rowsBy.USD.length ? section('USD', rowsBy.USD, 'Calendario consolidado en dólares (USD)') : null;
+    var ars = rowsBy.ARS.length ? section('ARS', rowsBy.ARS, 'Calendario consolidado en pesos ($)') : null;
+    if (usd && ars && A.convert){
+      // conversión explícita con el tipo de cambio indicado
+      var all = rowsBy.ARS.concat(rowsBy.USD.map(function(r){ return {date:r.date, interest: r.interest == null ? null : r.interest * A.tc, amort:r.amort * A.tc}; }));
+      all.sort(function(a, b){ return a.date < b.date ? -1 : 1; });
+      var gran = granFor(all), bks = bucketize(all, gran);
+      box.appendChild(h('div', {class:'cur-title'}, 'Total en pesos, con los USD convertidos a $ ' + fmtN(A.tc, 2) + ' por dólar (conversión explícita)'));
+      var cw = h('div', {class:'chart-wrap', style:'padding:6px 0 0'}); box.appendChild(cw);
+      renderBars(cw, bks, 'ARS', gran);
+      var tot = bks.reduce(function(t, b){ return t + b.int + b.amo; }, 0);
+      box.appendChild(h('p', {class:'legend-line'}, 'Total general en pesos: ' + fmtMoney(tot, 'ARS') + '.'));
+    } else if (usd && ars){
+      box.appendChild(h('p', {class:'legend-line'}, 'Los importes en dólares y en pesos no se suman. Para verlos en una sola moneda, tildá "Convertir los pagos en USD a pesos" e indicá el tipo de cambio.'));
+    }
+    box.appendChild(h('p', {class:'legend-line'}, CP_LEYENDA));
+  }
+
+  // ---- próximos pagos ----
+  function renderProximos(){
+    var box = clear(X.prox);
+    var days = parseInt(X.proxDays.value, 10) || 30, fam = X.proxFam.value;
+    var A = readAssump();
+    var today = todayISO(), end = isoOfDay(dayNum(today) + days);
+    var rows = [];
+    INS.forEach(function(ins){
+      if (fam !== 'all' && famGroup(ins) !== fam) return;
+      var r = calcFlows(ins, 100, A);
+      if (r.noSchedule) return;
+      r.rows.forEach(function(x){
+        if (x.date >= today && x.date <= end) rows.push({date:x.date, ticker:ins.ticker, name:ins.name, cur:r.cur, interest:x.interest, amort:x.amort, total:x.total, nonbiz:x.nonbiz, variable:r.variable});
+      });
+    });
+    if (!rows.length){ box.appendChild(h('div', {class:'info'}, 'No hay pagos en los próximos ' + days + ' días para el filtro elegido.')); return; }
+    var cols = [
+      {key:'date', label:'Fecha', val:function(r){ return r.date; }, cell:function(r){ return [fmtDate(r.date), r.nonbiz ? h('span', {class:'nonbiz', title:'Fecha contractual inhábil: si es inhábil se paga el siguiente día hábil.'}, ' †') : null]; }},
+      {key:'tk', label:'Especie', left:true, val:function(r){ return r.ticker; }, cell:function(r){ return h('span', {class:'tk-wrap'}, [h('span', {class:'tk'}, r.ticker), h('span', {class:'tk-note'}, r.name)]); }},
+      {key:'cur', label:'Moneda', val:function(r){ return r.cur; }, cell:function(r){ return r.cur === 'USD' ? 'USD' : '$'; }},
+      {key:'int', label:'Interés', val:function(r){ return r.interest; }, cell:function(r){ return r.interest == null ? h('span', {class:'sd'}, 'variable') : h('span', {class:'tab-nums'}, fmtN(r.interest, 2)); }, firstDir:-1},
+      {key:'amo', label:'Amortización', val:function(r){ return r.amort; }, cell:function(r){ return h('span', {class:'tab-nums'}, fmtN(r.amort, 2)); }, firstDir:-1},
+      {key:'tot', label:'Total', val:function(r){ return r.total; }, cell:function(r){ return r.total == null ? '—' : h('span', {class:'tab-nums'}, fmtN(r.total, 2)); }, firstDir:-1}
+    ];
+    var wrap = h('div', {class:'tbl-scroll', style:'max-height:420px;overflow-y:auto'});
+    wrap.appendChild(sortableTable(cols, rows, {key:'date', dir:1}, {cls:'prox-table'}));
+    box.appendChild(h('p', {class:'legend-line', style:'margin:0 0 6px'}, rows.length + ' pagos entre el ' + fmtDate(today) + ' y el ' + fmtDate(end) + ', por cada 100 VN. Es información de calendario.'));
+    box.appendChild(wrap);
+    box.appendChild(h('p', {class:'legend-line'}, '† Fecha contractual inhábil: si es inhábil se paga el siguiente día hábil. CER: flujos ajustados al índice vigente (con la inflación mensual supuesta arriba). Letras dólar-linked: importes en pesos por 100 VN en dólares (A3500 supuesto arriba). ' + CP_LEYENDA));
+  }
+
+  function field(label, control, hint, idFor){
+    return h('div', {class:'field'}, [h('label', {for:idFor}, label), control, hint ? h('span', {class:'hint'}, hint) : null]);
+  }
+
+  function renderCupones(){
+    var root = clear($('cupones-root'));
+    if (!INS.length){ root.appendChild(h('div', {class:'load-error'}, 'No se pudieron cargar los cronogramas de pago. Probá recargar la página más tarde.')); return; }
+    root.appendChild(h('p', {class:'cp-disclaimer'}, [h('b', null, 'Calculadora de cupones. '), CP_LEYENDA + ' Todo se calcula en tu navegador: lo que ingresás no se envía a ningún servidor.']));
+
+    // columna izquierda: buscador
+    X.q = h('input', {type:'search', class:'inp', id:'cp-q', placeholder:'Ticker, nombre o emisor (ej.: TX28, Bonar, YPF)', autocomplete:'off', 'aria-controls':'cp-picks'});
+    X.q.addEventListener('input', function(){ CP.q = X.q.value; renderPicks(); });
+    X.count = h('div', {class:'hint', style:'font-size:11.5px;color:var(--ink-muted);margin:0 0 6px', 'aria-live':'polite'});
+    X.picks = h('div', {class:'pick-list', id:'cp-picks'});
+    var chips = h('div', {class:'fam-chips', role:'group', 'aria-label':'Filtrar por familia'});
+    CP_FAMS.forEach(function(f){
+      var b = h('button', {type:'button', class:'fchip', 'aria-pressed': f.id === CP.fam ? 'true' : 'false', 'data-fam':f.id, onclick:function(){
+        CP.fam = f.id; chips.querySelectorAll('.fchip').forEach(function(x){ x.setAttribute('aria-pressed', x.getAttribute('data-fam') === f.id ? 'true' : 'false'); }); renderPicks();
+      }}, f.label);
+      chips.appendChild(b);
+    });
+    var left = h('div', {class:'card'}, [h('h2', null, '1. Elegí el instrumento'), field('Buscar', X.q, null, 'cp-q'), chips, X.count, X.picks]);
+
+    // columna derecha
+    X.ficha = h('div', {id:'cp-ficha'});
+    X.modeVn = h('input', {type:'radio', name:'cp-mode', id:'cp-mode-vn', checked:true});
+    X.modeMonto = h('input', {type:'radio', name:'cp-mode', id:'cp-mode-monto'});
+    X.vn = h('input', {type:'text', inputmode:'decimal', class:'inp', id:'cp-vn', value:'1000', autocomplete:'off'});
+    X.monto = h('input', {type:'text', inputmode:'decimal', class:'inp', id:'cp-monto', value:'', placeholder:'Ej.: 1.000', autocomplete:'off'});
+    X.montoLbl = h('label', {for:'cp-monto'}, 'Monto a invertir');
+    X.price = h('input', {type:'text', inputmode:'decimal', class:'inp', id:'cp-price', placeholder:'Opcional', autocomplete:'off'});
+    X.priceHint = h('span', {class:'hint'});
+    X.pi = h('input', {type:'text', inputmode:'decimal', class:'inp', id:'cp-pi', value:'0', autocomplete:'off'});
+    X.a3500 = h('input', {type:'text', inputmode:'decimal', class:'inp', id:'cp-a3500', value: mayV ? fmtN(mayV, 2) : '', autocomplete:'off'});
+    var mepV = M && M.indicadores && M.indicadores.mep ? M.indicadores.mep.valor : null;
+    var mayV = M && M.indicadores && M.indicadores.mayorista && M.indicadores.mayorista.venta ? M.indicadores.mayorista.venta : null;
+    X.tc = h('input', {type:'text', inputmode:'decimal', class:'inp', id:'cp-tc', value: mepV ? fmtN(mepV, 2) : '', autocomplete:'off'});
+    X.convert = h('input', {type:'checkbox', id:'cp-convert'});
+
+    var modeRow = h('div', {class:'radio-row', role:'radiogroup', 'aria-label':'Modo de cálculo'}, [
+      h('label', null, [X.modeVn, 'Cantidad de nominales (VN)']), h('label', null, [X.modeMonto, 'Monto a invertir'])
+    ]);
+    var qty = h('div', {class:'card'}, [
+      h('h2', null, '2. Cantidad y supuestos'), modeRow,
+      h('div', {class:'assump'}, [
+        field('Nominales (VN)', X.vn, 'Se usa en el modo "cantidad de nominales".', 'cp-vn'),
+        h('div', {class:'field'}, [X.montoLbl, X.monto, h('span', {class:'hint'}, 'Se usa en el modo "monto". VN = monto / precio × 100, redondeado hacia abajo.')]),
+        h('div', {class:'field'}, [h('label', {for:'cp-price'}, 'Precio manual por 100 VN (opcional)'), X.price, X.priceHint])
+      ]),
+      h('h3', {style:'margin-top:6px'}, 'Supuestos editables'),
+      h('div', {class:'assump'}, [
+        field('Inflación mensual estimada, % (solo CER)', X.pi, '0% = "a CER de hoy": subestima el flujo nominal si hay inflación.', 'cp-pi'),
+        field('A3500 supuesto, $ por USD (solo dólar-linked)', X.a3500, 'Por defecto, el mayorista vigente si hay dato; si queda vacío se usa el A3500 de referencia del cronograma.', 'cp-a3500'),
+        field('Tipo de cambio para convertir USD a $', X.tc, mepV ? 'Por defecto: MEP calculado (AL30/AL30D).' : 'Sin dato de MEP: ingresalo manualmente.', 'cp-tc'),
+        h('div', {class:'field'}, [h('span', {class:'lbl'}, 'Conversión a pesos'), h('label', {style:'font-weight:500;font-size:13px;display:flex;gap:6px;align-items:center'}, [X.convert, 'Convertir los pagos en USD a pesos'])])
+      ])
+    ]);
+    X.result = h('div', {id:'cp-result', 'aria-live':'polite'});
+    X.addBtn = h('button', {type:'button', class:'btn sec', id:'cp-add'}, 'Agregar a la lista');
+    X.addBtn.addEventListener('click', function(){
+      var c = currentCalc(); if (!c || c.err || !c.res || c.res.noSchedule) return;
+      var ex = CP.list.filter(function(it){ return it.ticker === c.ins.ticker; })[0];
+      if (ex) ex.vn = c.vn; else if (CP.list.length < MAX_LIST) CP.list.push({ticker:c.ins.ticker, vn:c.vn});
+      renderList(); renderResult();
+    });
+    var resCard = h('div', {class:'card'}, [h('h2', null, '3. Resultado'), X.result, h('div', {class:'btn-row'}, [X.addBtn])]);
+    var right = h('div', {style:'display:flex;flex-direction:column;gap:18px;min-width:0'}, [h('div', {class:'card'}, [h('h2', null, 'Ficha del instrumento'), X.ficha]), qty, resCard]);
+    root.appendChild(h('div', {class:'cp-grid'}, [left, right]));
+
+    // lista
+    X.posList = h('ul', {class:'pos-list', id:'cp-pos'});
+    X.posCount = h('span', {class:'hint'});
+    X.clearBtn = h('button', {type:'button', class:'btn sec', id:'cp-clear'}, 'Borrar lista');
+    X.clearBtn.addEventListener('click', function(){ CP.list = []; renderList(); renderResult(); });
+    X.consol = h('div', {id:'cp-consol'});
+    root.appendChild(h('h2', {class:'sec-title'}, 'Calendario de pagos de tu lista'));
+    root.appendChild(h('p', {class:'grp-desc'}, 'Sumá hasta ' + MAX_LIST + ' posiciones para ver el calendario mensual consolidado. La lista vive solo en la memoria de esta página: se borra al recargar o con el botón "Borrar lista". Los importes en dólares y en pesos no se suman entre sí.'));
+    root.appendChild(h('div', {class:'card'}, [X.posList, h('div', {class:'btn-row', style:'align-items:center'}, [X.clearBtn, X.posCount]), X.consol]));
+
+    // próximos pagos
+    X.proxDays = h('select', {class:'inp', id:'cp-prox-days'}, [h('option', {value:'30'}, '30 días'), h('option', {value:'60'}, '60 días'), h('option', {value:'90'}, '90 días')]);
+    X.proxFam = h('select', {class:'inp', id:'cp-prox-fam'}, CP_FAMS.map(function(f){ return h('option', {value:f.id}, f.id === 'all' ? 'Todas las familias' : f.label); }));
+    X.prox = h('div', {id:'cp-prox'});
+    X.proxDays.addEventListener('change', renderProximos); X.proxFam.addEventListener('change', renderProximos);
+    root.appendChild(h('h2', {class:'sec-title'}, 'Próximos pagos'));
+    root.appendChild(h('p', {class:'grp-desc'}, 'Calendario de cupones y amortizaciones de todos los instrumentos de la pizarra, por cada 100 VN. Podés ordenar por cualquier columna; el orden es solo de lectura y no implica ningún juicio de valor.'));
+    root.appendChild(h('div', {class:'card'}, [h('div', {class:'mini-filters'}, [field('Ventana', X.proxDays, null, 'cp-prox-days'), field('Familia', X.proxFam, null, 'cp-prox-fam')]), X.prox]));
+
+    // cómo se calcula
+    root.appendChild(h('details', {class:'how card'}, [
+      h('summary', null, 'Cómo se calcula'),
+      h('div', null, [
+        h('p', null, ['Cada pago se toma del cronograma por cada 100 VN originales y se multiplica por ', h('code', null, 'VN / 100'), '. Si elegís el modo "monto", ', h('code', null, 'VN = monto / precio × 100'), ' (redondeado hacia abajo) y el monto efectivo es ', h('code', null, 'VN × precio / 100'), '.']),
+        h('p', null, [h('b', null, 'Bonos en USD y tasa fija: '), 'interés y amortización = flujo × VN/100, en la moneda de pago. El capital residual de cada fila es la suma de las amortizaciones posteriores.']),
+        h('p', null, [h('b', null, 'CER: '), 'los flujos del cronograma están en pesos ajustados por el CER de la fecha del cronograma. Se llevan a hoy con ', h('code', null, 'F0 = CER(hoy) / CER(cronograma)'), ' si hay dato (si no, F0 = 1) y se proyectan con la inflación mensual π que indiques: ', h('code', null, 'factor = F0 × (1 + π)^(días / 30,4375)'), ', con días contados desde la fecha de referencia del CER. Con π = 0% el resultado queda "a CER de hoy" y subestima el flujo nominal.']),
+        h('p', null, [h('b', null, 'Dólar-linked: '), 'el pago único es VN × A3500; el cronograma trae un valor final estimado con un A3500 de referencia, que se reescala por ', h('code', null, 'A3500 supuesto / A3500 de referencia'), '.']),
+        h('p', null, [h('b', null, 'Tasa variable (TAMAR, duales, etc.): '), 'los intereses futuros no se conocen, por lo que solo se muestran fechas y capital conocido.']),
+        h('p', null, [h('b', null, 'Fechas: '), 'son las contractuales. Si caen en fin de semana o feriado, el pago se hace el siguiente día hábil. No se descuentan impuestos, comisiones ni aranceles.']),
+        h('p', null, [h('b', null, 'Cronogramas: '), 'provienen de la analítica de renta fija de IOL y de fuentes públicas (prospectos y avisos) a la fecha ' + (INS_SNAPSHOT ? fmtDate(INS_SNAPSHOT) : '—') + '. Los instrumentos marcados como estimados pueden diferir de los términos oficiales.']),
+        h('p', null, CP_LEYENDA)
+      ])
+    ]));
+
+    // eventos de entradas
+    [X.vn, X.monto, X.price, X.pi, X.a3500, X.tc].forEach(function(e){ e.addEventListener('input', onInputs); });
+    [X.modeVn, X.modeMonto, X.convert].forEach(function(e){ e.addEventListener('change', onInputs); });
+    function onInputs(){
+      X.vn.disabled = !X.modeVn.checked; X.monto.disabled = !X.modeMonto.checked;
+      renderResult(); renderConsol(); renderProximos();
+    }
+    X.vn.disabled = false; X.monto.disabled = true;
+    renderPicks(); renderList(); renderProximos();
+    selectIns(INSBY.AL30 ? 'AL30' : INS[0].ticker);
+  }
+
+  var INS_SNAPSHOT = null;
+
+  // =====================================================================
+  // Pie y arranque
+  // =====================================================================
+  function renderFooter(){
+    var f = $('footer-src'); clear(f);
+    add(f, [
+      h('p', {class:'src'}, 'Fuentes: precios, variaciones y volúmenes de BYMA vía data912.com (API pública, con posibles demoras); cronogramas de pago de la analítica de renta fija de IOL y de fuentes públicas (prospectos y avisos de pago); titulares de los medios indicados en cada nota, tomados de sus feeds RSS (solo título, enlace, medio y hora).' + (M && M.indicadores && (M.indicadores.mayorista || M.indicadores.riesgo_pais) ? ' Dólar mayorista/blue: dolarapi.com; riesgo país y CER: argentinadatos.com.' : '')),
+      h('p', {class:'src'}, 'Cálculos propios (TIR, duración modificada, TNA/TEA, MEP y CCL implícitos, variaciones promedio, flujos proyectados): son estimaciones ilustrativas. La TIR usa el precio de la rueda como precio sucio, flujos futuros desde la liquidación T+1 hábil y base Actual/365. MEP = AL30 / AL30D y CCL = AL30 / AL30C. ⚠ marca estimaciones o datos con salvedades.')
+    ]);
+    if (ST && ST.ultima_corrida) f.appendChild(h('p', {class:'src'}, 'Última corrida del actualizador: ' + fmtDT(ST.ultima_corrida) + ' (hora de Buenos Aires)' + (ST.mensaje ? ' · ' + ST.mensaje : '') + '.'));
+  }
+
+  function init(res){
+    M = res[0]; N = res[1]; ST = res[2];
+    var im = res[3], io = res[4];
+    if (loadErrors.indexOf('market') >= 0 || !M){
+      $('load-error').appendChild(h('div', {class:'load-error'}, 'No se pudieron cargar los datos de mercado. Si abriste el archivo directamente desde tu computadora, publicalo en un servidor (por ejemplo GitHub Pages) o usá la versión preview; si ya está publicado, reintentá en unos minutos.'));
+    }
+    INS_SNAPSHOT = (im && im.snapshot) || null;
+    INS = [];
+    [im, io].forEach(function(src){ if (src && src.instruments) src.instruments.forEach(function(i){ INS.push(i); INSBY[i.ticker] = i; }); });
+    if (M){
+      (M.bonos || []).concat(M.letras || []).forEach(function(r){ QUOTE[r.ticker] = r; });
+      // desactualizar nada: se muestran tal cual
+    }
+    renderHeader(); renderNews(); renderBonos(); renderLetras(); renderCedears(); renderAcciones(); renderCupones(); renderFooter();
+  }
+
+  Promise.all([loadJSON('market'), loadJSON('news'), loadJSON('status'), loadJSON('instruments_main'), loadJSON('instruments_ons')]).then(init).catch(function(e){
+    $('load-error').appendChild(h('div', {class:'load-error'}, 'Error inesperado al iniciar la pizarra.'));
+    if (window.console) console.error(e);
+  });
+
+})();
+
+</script>
+</body>
+</html>
