@@ -1,11 +1,11 @@
 {
  "version_script": "1.0.0",
- "ultima_corrida": "2026-11-26T20:57:41-03:00",
+ "ultima_corrida": "2026-11-26T23:50:03-03:00",
  "modo": "cierre",
  "rueda": "2026-11-26",
  "mercado_actualizado": "2026-11-26T19:43:01-03:00",
  "mensaje": "sin cambios respecto de la corrida previa (misma rueda)",
- "fuentes": {"rss":{"estado":"ok","detalle":"7 de 7 feeds","hora":"2026-11-26T20:57:41-03:00"},"dolarapi":{"estado":"ok","hora":"2026-11-26T20:57:41-03:00"},"riesgo_pais":{"estado":"ok","hora":"2026-11-26T20:57:41-03:00"},"data912":{"estado":"ok","detalle":"5 de 5 endpoints","hora":"2026-11-26T20:57:41-03:00"},"cer":{"estado":"ok","hora":"2026-11-26T19:43:01-03:00"}},
+ "fuentes": {"rss":{"estado":"ok","detalle":"7 de 7 feeds","hora":"2026-11-26T23:50:03-03:00"},"dolarapi":{"estado":"ok","hora":"2026-11-26T23:50:03-03:00"},"riesgo_pais":{"estado":"ok","hora":"2026-11-26T23:50:03-03:00"},"data912":{"estado":"ok","detalle":"5 de 5 endpoints","hora":"2026-11-26T23:50:03-03:00"},"cer":{"estado":"ok","hora":"2026-11-26T19:43:01-03:00"}},
  "huella": {"hash":"68c7337b8dba06fc64db559942828d5c9ba4edbd","tickers":22},
  "feriados_a_confirmar": ["2027-03-25"]
 }
