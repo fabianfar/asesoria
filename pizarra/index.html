@@ -12,7 +12,9 @@
 <meta property="og:description" content="Bonos, letras, CEDEARs y acciones argentinas con datos de la última rueda, titulares y calculadora de cupones. Información con fines educativos.">
 <meta property="og:site_name" content="Farías Finanzas">
 <meta name="twitter:card" content="summary">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%231c4d73'/%3E%3Cpath d='M6 22l6-7 5 4 9-11' fill='none' stroke='%23fff' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+<link rel="icon" href="../img/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../img/favicon-64.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="../img/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
@@ -402,6 +404,14 @@
   .brand-line{ display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
   .brand-line .brand-eyebrow{ margin:0; }
   .brand-link{ color:var(--accent); text-decoration:none; }
+  /* logo Farías Finanzas (isotipo Capullo) */
+  :root{ --logo-ring:#1F4A3A; --logo-name:#1F4A3A; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --logo-ring:#F6F1E7; --logo-name:#F6F1E7; } }
+  :root[data-theme="dark"]{ --logo-ring:#F6F1E7; --logo-name:#F6F1E7; }
+  .brand-link{ display:inline-flex; align-items:center; gap:10px; }
+  .brand-logo{ width:36px; height:36px; flex:none; }
+  .brand-name{ font-family:"Source Serif 4", Georgia, serif; font-size:21px; font-weight:700; letter-spacing:0; text-transform:none; color:var(--logo-name); }
+  .brand-link:hover .brand-name{ text-decoration:underline; text-underline-offset:3px; }
   .theme-btn{
     font-size:12px; font-weight:500; color:var(--ink-2); background:var(--surface); border:1px solid var(--border-strong);
     border-radius:100px; padding:4px 11px; cursor:pointer; line-height:1.4;
@@ -573,7 +583,7 @@
   <header class="top">
     <div>
       <div class="brand-line">
-        <p class="brand-eyebrow"><a class="brand-link" href="https://fariasfinanzas.com.ar/">Farías Finanzas</a></p>
+        <p class="brand-eyebrow"><a class="brand-link" href="https://fariasfinanzas.com.ar/" aria-label="Farías Finanzas, ir a la página principal"><svg class="brand-logo" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="44" fill="none" stroke="var(--logo-ring)" stroke-width="16" stroke-dasharray="207 69" transform="rotate(-90 60 60)"/><circle cx="60" cy="60" r="44" fill="none" stroke="#C9962E" stroke-width="16" stroke-dasharray="62 214" stroke-dashoffset="-214" transform="rotate(-90 60 60)"/><path d="M60 78 C60 66 60 58 60 50 M60 62 C52 60 47 54 46 46 C54 47 59 53 60 62 M60 56 C66 53 71 48 72 40 C64 41 61 47 60 56" fill="none" stroke="var(--logo-ring)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="brand-name">Farías Finanzas</span></a></p>
         <button type="button" class="theme-btn" id="theme-btn" aria-label="Cambiar tema de color">Tema: automático</button>
       </div>
       <h1>Pizarra de Mercado AR</h1>
