@@ -21,10 +21,10 @@
 <style>
 
   :root{
-    --bg:            #f6f4ee;
-    --bg-plane:      #f1efe7;
+    --bg:            #e7e9e5;
+    --bg-plane:      #e1e4df;
     --surface:       #ffffff;
-    --surface-2:     #f4f2ec;
+    --surface-2:     #f2f3f0;
     --border:        rgba(15,26,23,0.12);
     --border-strong: rgba(15,26,23,0.22);
     --ink:           #10201b;
@@ -574,6 +574,21 @@
   .tbl-scroll thead th.l, .tbl-scroll thead th:first-child{ text-align:left; }
   .pt-label{ pointer-events:none; }
 
+
+  /* ---------- pestañas con marco (Farías Finanzas) ---------- */
+  :root{ --tab-active:#1F4A3A; --tab-active-ink:#ffffff; }
+  @media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){ --tab-active:#F6F1E7; --tab-active-ink:#12181a; } }
+  :root[data-theme="dark"]{ --tab-active:#F6F1E7; --tab-active-ink:#12181a; }
+  .tabs{ display:flex; flex-wrap:wrap; gap:8px; border-bottom:none; margin-bottom:26px; }
+  .tab-btn{
+    margin:0; padding:9px 18px; font-size:14.5px; font-weight:600; color:var(--ink-2);
+    background:var(--surface); border:1.5px solid var(--border-strong); border-radius:999px;
+    translate:none; box-shadow:0 1px 2px rgba(15,26,23,0.06);
+    transition:background-color .15s, border-color .15s, color .15s;
+  }
+  .tab-btn:hover{ color:var(--ink); border-color:var(--tab-active); }
+  .tab-btn.active{ background:var(--tab-active); border-color:var(--tab-active); color:var(--tab-active-ink); }
+  @media (max-width:560px){ .tabs{ gap:6px; } .tab-btn{ padding:8px 14px; font-size:14px; } }
 </style>
 </head>
 <body>
